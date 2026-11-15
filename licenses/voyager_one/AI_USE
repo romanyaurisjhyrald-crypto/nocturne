@@ -1,0 +1,28 @@
+# AI use disclosure
+
+## Tools and contribution
+
+OpenAI ChatGPT/Codex was used during development to generate and revise substantial portions of the HTML, CSS and JavaScript; procedural illustrations and directional animations; interface layout; synthesized sound-effect code; educational descriptions; English/Spanish localization; documentation; and verification scripts. The project creator supplied the game concept, requested mechanics, artistic direction, feedback and revision decisions. This is an AI-assisted project, not a claim of entirely hand-written code or hand-drawn artwork.
+
+The visible illustrations are rendered by Canvas/SVG code created with AI assistance. No downloaded NASA photographs, generated-video files or recorded music are bundled. Visible in-game labels identify AI-generated code-drawn artwork, and Voyager's exported memory images include the same label. Audio effects are synthesized at runtime by AI-assisted Web Audio code; no standalone generated audio files are bundled.
+
+NASA/JPL pages and Horizons are the sources of mission history and numerical data. AI helped compile and explain those references; it is not the scientific authority or the origin of the underlying NASA/JPL measurements. See SOURCES.md and SCIENCE_REVIEW.md. Font authors and licenses are listed separately in THIRD_PARTY_NOTICES.md.
+
+## Dates
+
+The creator reports development on November 14–15, 2026. This is a creator-provided date statement, not an independent certification of the development period or event eligibility. The official 2026 event page lists November 14–15. Code and content continue to receive the revisions documented in source versions.
+
+## Text to reuse in the final report / project submission
+
+> We used OpenAI ChatGPT/Codex to assist with substantial code generation and revision, interface design, procedural artwork, animations, synthesized sound effects, educational text, translations and documentation. The project creator provided the concept, gameplay requirements, artistic direction and iterative feedback. NASA/JPL resources and Horizons provide the cited scientific facts and numerical source data. The games explicitly distinguish historical information from fictional mechanics and accelerated simulation. AI-assisted artwork is labeled. Full sources, licensing, AI-use details and scientific limitations are available through each game's Extras and public documentation.
+
+Copy this disclosure into the official project submission's AI/tools field and relevant final-report section. A notice in the game does not populate or submit the competition form. If the team used additional tools outside this conversation, add them to the disclosure before submission.
+
+## Official guidance checked on November 15, 2026
+
+- Global Organizing Team on AI use, acknowledgments and image labeling: https://github.com/nasa/spaceapps/discussions/1849
+- Global Organizing Team on project submission fields: https://github.com/nasa/spaceapps/discussions/1858
+- Official 2026 event page: https://www.spaceappschallenge.org/2026/
+- Official legal terms: https://www.spaceappschallenge.org/legal/
+
+This documentation does not certify acceptance or eligibility. The team remains responsible for its submission and the rules of its selected challenge and local event.

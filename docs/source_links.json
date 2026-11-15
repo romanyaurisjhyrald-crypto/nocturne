@@ -1,0 +1,52 @@
+{
+  "stories/space_guardians.html": [
+    "https://images-api.nasa.gov/search?",
+    "https://images.nasa.gov/",
+    "https://svs.gsfc.nasa.gov/31285/",
+    "https://svs.gsfc.nasa.gov/vis/a030000/a031200/a031285/eta-carina-cliffs-webb-STScI-01G8GX1KMWX2XA4PK2EWM7KE3R-hw_resolution_print.jpg"
+  ],
+  "stories/html/oppy/index.html": [
+    "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-highlights/",
+    "https://science.nasa.gov/mission/mer-opportunity/",
+    "https://science.nasa.gov/resource/exposing-the-rock-in-impact-craters/",
+    "https://science.nasa.gov/resource/opportunitys-last-message/",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "https://www.nasa.gov/news-release/nasas-record-setting-opportunity-rover-mission-on-mars-comes-to-end/"
+  ],
+  "stories/html/silent_mirror/index.html": [
+    "https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/ap11_reflector.html",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "https://www.nasa.gov/wp-content/uploads/static/history/alsj/HamishALSEP.html"
+  ],
+  "stories/html/small_discoveries/index.html": [
+    "https://science.nasa.gov/mission/mars-pathfinder/",
+    "https://science.nasa.gov/mission/mars-phoenix/",
+    "https://science.nasa.gov/mission/mer-opportunity/",
+    "https://science.nasa.gov/mission/mer-spirit/",
+    "https://science.nasa.gov/mission/surveyor-1/",
+    "https://science.nasa.gov/mission/surveyor-3/",
+    "https://science.nasa.gov/mission/viking-1/",
+    "https://science.nasa.gov/mission/viking/spacecraft-and-science/",
+    "https://science.nasa.gov/moon/weather-on-the-moon/",
+    "https://science.nasa.gov/photojournal/spirits-hardware-up-close-on-mars/",
+    "https://science.nasa.gov/planetary-science/programs/mars-exploration/",
+    "https://science.nasa.gov/resource/scene-of-a-martian-landing/",
+    "https://www.jpl.nasa.gov/images/pia16456-impact-scars-from-msl-cruise-stage-and-two-balance-weights/",
+    "https://www.jpl.nasa.gov/images/pia22959-insight-deploys-its-wind-and-thermal-shield/",
+    "https://www.jpl.nasa.gov/news/press_kits/insight/landing/mission/spacecraft/",
+    "https://www.jpl.nasa.gov/news/press_kits/mars_2020/landing/mission/spacecraft/getting_to_mars/",
+    "https://www.nasa.gov/history/50-years-ago-apollo-15-on-the-moon-at-hadley-apennine/",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/\\n\\nA",
+    "https://www.nasa.gov/specials/apollo50th/missions.html",
+    "https://www.nasa.gov/wp-content/uploads/2023/12/nasa-usg-lunar-historic-sites-reva.pdf",
+    "https://www.nasa.gov/wp-content/uploads/static/history/SP-4029/Apollo_18-33_Lunar_Surface_Experiments.htm"
+  ],
+  "stories/html/voyager_one/index.html": [
+    "https://science.nasa.gov/mission/dawn/faq/",
+    "https://science.nasa.gov/mission/voyager/frequently-asked-questions/",
+    "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "https://ssd.jpl.nasa.gov/horizons/",
+    "https://www.nasa.gov/history/40-years-ago-voyager-1-explores-saturn/",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/\\n\\nA"
+  ]
+}

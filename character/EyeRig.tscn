@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://character/eye_rig.gd" id="1"]
+[ext_resource type="Script" path="res://character/eye_ink.gd" id="2"]
+
+[node name="EyeRig" type="Node2D"]
+script = ExtResource("1")
+
+[node name="DeformContainer" type="Node2D" parent="."]
+
+[node name="Outline" type="Polygon2D" parent="DeformContainer"]
+color = Color(0.09, 0.06, 0.13, 1)
+
+[node name="Sclera" type="Polygon2D" parent="DeformContainer"]
+clip_children = 2
+color = Color(1, 0.98, 0.95, 1)
+
+[node name="Iris" type="Node2D" parent="DeformContainer/Sclera"]
+
+[node name="Color" type="Polygon2D" parent="DeformContainer/Sclera/Iris"]
+color = Color(0.32, 0.19, 0.48, 1)
+
+[node name="Pupil" type="Polygon2D" parent="DeformContainer/Sclera/Iris"]
+color = Color(0.055, 0.035, 0.085, 1)
+
+[node name="Highlights" type="Node2D" parent="DeformContainer/Sclera"]
+
+[node name="Main" type="Polygon2D" parent="DeformContainer/Sclera/Highlights"]
+position = Vector2(-10, -13)
+color = Color(1, 1, 1, 1)
+
+[node name="Small" type="Polygon2D" parent="DeformContainer/Sclera/Highlights"]
+position = Vector2(10, 11)
+color = Color(1, 1, 1, 0.8)
+
+[node name="UpperLid" type="Polygon2D" parent="DeformContainer"]
+color = Color(0.64, 0.52, 0.71, 1)
+
+[node name="LowerLid" type="Polygon2D" parent="DeformContainer"]
+color = Color(0.64, 0.52, 0.71, 1)
+
+[node name="UpperEdge" type="Line2D" parent="DeformContainer"]
+width = 4.0
+default_color = Color(0.09, 0.06, 0.13, 1)
+antialiased = true
+
+[node name="LowerEdge" type="Line2D" parent="DeformContainer"]
+width = 2.5
+default_color = Color(0.09, 0.06, 0.13, 1)
+antialiased = true
+
+[node name="BlinkTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Ink" type="Node2D" parent="DeformContainer"]
+script = ExtResource("2")

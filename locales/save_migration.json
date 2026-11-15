@@ -1,0 +1,30 @@
+{
+  "actions": [
+    {
+      "previous": "conversar",
+      "current": "talk"
+    },
+    {
+      "previous": "acariciar",
+      "current": "pet"
+    },
+    {
+      "previous": "alimentar",
+      "current": "feed"
+    },
+    {
+      "previous": "observar",
+      "current": "observe"
+    },
+    {
+      "previous": "cansado",
+      "current": "tired"
+    },
+    {
+      "previous": "tocar",
+      "current": "touch"
+    }
+  ],
+  "previous_theme_flag": "celeste_theme",
+  "previous_application_name": "Lúmien · Nocturne"
+}

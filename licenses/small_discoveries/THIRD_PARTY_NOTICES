@@ -1,0 +1,57 @@
+# Third-party notices and license scope
+
+Project: Keepers of the legacy · Moon & Mars
+
+## Original project materials
+
+SPDX license identifier: MIT. The root `LICENSE` applies to the project-specific source code, procedural Canvas drawing code, original SVG icons, translations and accompanying original documentation, to the extent that the project contributors hold rights in those materials. Referenced facts and external resources are not claimed as the contributors' exclusive property.
+
+The grant does not relicense third-party fonts, NASA materials, trademarks, external websites, hosting services or development tools. Their own terms remain applicable. No NASA sponsorship, partnership or endorsement is claimed.
+
+## Fonts used by both games
+
+The stylesheet imports DM Sans and Space Grotesk from Google Fonts. The games do not bundle local font binaries. The following complete license notices are included for attribution and for anyone adapting or redistributing the project:
+
+### DM Sans
+
+- Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts)
+- License: SIL Open Font License 1.1 (SPDX: OFL-1.1).
+- Complete preserved notice: `licenses/DM-Sans-OFL.txt` (also published at `legal/DM-Sans-OFL.txt`).
+- Upstream license: https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt
+- Retrieved license SHA-256: `9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1`.
+
+### Space Grotesk
+
+- Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)
+- License: SIL Open Font License 1.1 (SPDX: OFL-1.1).
+- Complete preserved notice: `licenses/Space-Grotesk-OFL.txt` (also published at `legal/Space-Grotesk-OFL.txt`).
+- Upstream license: https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/OFL.txt
+- Retrieved license SHA-256: `564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72`.
+
+The OFL permits use and embedding under its conditions. Redistributed font software must keep the applicable copyright and license notices; it must not be sold on its own. Any reserved-font-name restrictions remain applicable. The MIT license of this project does not replace either font's OFL license.
+
+Google Fonts documentation: https://developers.google.com/fonts/faq
+
+CSS fallback font names refer to fonts supplied by the user's platform; the source package does not redistribute those font files.
+
+## Scientific references and NASA identifiers
+
+Historical facts, mission dates, scientific explanations and source links are documented in `SOURCES.md`. Source text in the games summarizes mission information; it does not embed the cited websites or their photographs. The games use project-specific Canvas/SVG illustrations, not downloaded NASA photos, official logos, sprite packs or third-party sound recordings.
+
+NASA's media and brand rules remain separate from this project's MIT license:
+https://www.nasa.gov/nasa-brand-center/images-and-media/
+
+A citation is not a claim that every item on a cited website is unrestricted or that its trademarks may be reused. Third-party content appearing on an external NASA page may have its own owner. No such external image files are included in these games.
+
+## Verification tools (not part of the distributed game)
+
+- LinkeDOM 0.18.15 — ISC; used for DOM interaction checks. https://github.com/WebReflection/linkedom
+- @napi-rs/canvas 0.1.100 — MIT; used to render and inspect Canvas artwork during verification. https://github.com/Brooooooklyn/canvas
+
+These tools were installed in a separate development workspace. Their packages and binaries are not included in the downloadable game source or the deployed application. The application has no bundled third-party JavaScript runtime libraries.
+
+## Distribution
+
+A complete public source snapshot is available at `source.zip`, including the original source files, README, MIT license, scientific references and preserved font notices. It excludes Git history, credentials, browser saves, private hosting configuration and the source ZIP itself. Serve its `dist/` directory over HTTP to run the game.
+
+Public access and open-source licensing are different: the MIT license and downloadable source provide explicit reuse terms for the original project materials. This documentation does not itself submit the project to Space Apps or certify compliance with every competition rule.

@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#14233c"><meta name="description" content="An illustrated Moon adventure about Apollo retroreflectors, light and distance."><title>The Silent Mirror · A message of light</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PCEtLSBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogTUlULiBDb3B5cmlnaHQgKGMpIDIwMjYgVGhlIFNpbGVudCBNaXJyb3IgY29udHJpYnV0b3JzLiBBSS1hc3Npc3RlZCBTVkcgYXJ0d29yay4gLS0+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMjAiIGZpbGw9IiMyNjM4NTAiLz48cGF0aCBkPSJNNDQgMTJhMjMgMjMgMCAxIDAgOSAzMyAyNCAyNCAwIDAgMS05LTMzIiBmaWxsPSIjZjBkZmI0Ii8+PHBhdGggZD0ibTQzIDIwIDMgOCA4IDMtOCAzLTMgOC0zLTgtOC0zIDgtM1oiIGZpbGw9IiM5MmUyZTciLz48L3N2Zz4K" type="image/svg+xml"><style>
+/* SPDX-License-Identifier: MIT. Copyright (c) 2026 The Silent Mirror contributors. See LICENSE.txt and CREDITS.md for third-party exceptions. */
+:root{--ink:#edf6fb;--muted:#afc2d7;--bg:#132039;--cyan:#a0e3e3;--gold:#f1d592;--line:#9abdd33d;--font:ui-rounded,'Trebuchet MS',system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 80% 0%,#2b3656,transparent 60%),#101b2f;font-family:var(--font)}button,select{font:inherit}button{cursor:pointer;color:inherit}button:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:5px}[hidden]{display:none!important}.shell{max-width:1680px;margin:auto;padding:0 43px}header{height:98px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#e6f3f6;font-size:24px;font-weight:800;letter-spacing:-1.1px}.brand img{width:37px;height:37px}.header-note{font-size:9px;letter-spacing:2px;color:#a4b7ce}.header-tools{display:flex;gap:9px;align-items:center}.icon,select{border:1px solid #91b6cf55;background:#1b2c45b3;border-radius:50%;width:37px;height:37px;display:grid;place-items:center;font-size:18px}.icon:hover{background:#354a67}select{width:auto;max-width:107px;border-radius:8px;padding:7px 10px;color:#e9f6ff;font-size:11px;display:block;color-scheme:dark}.icon[aria-pressed=true]{color:var(--gold);border-color:#e0ce8b88}.game{position:relative;height:calc(100svh - 194px);min-height:590px;max-height:870px;overflow:hidden;border-radius:19px;border:1px solid #8db7c755;box-shadow:0 16px 70px #040c2430;background:#1a2a45;isolation:isolate}.game canvas{width:100%;height:100%;display:block;touch-action:none}.vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 120px #070c2426}.location{position:absolute;top:27px;left:31px;display:flex;align-items:center;gap:8px;color:#9eacc3}.location span{width:5px;height:5px;background:var(--gold);border-radius:50%;box-shadow:0 0 10px #ffdc7a77}.location b{font-size:8px;letter-spacing:1.8px;font-weight:600}.home{position:absolute;left:6%;top:21%;max-width:525px}.eyebrow{font-size:9px;letter-spacing:1.9px;font-weight:700;color:#b7d8e2;display:flex;align-items:center;gap:10px}.eyebrow i{display:block;width:20px;height:1px;background:#7ca3b6}h1{font-size:clamp(44px,4.8vw,76px);font-weight:800;letter-spacing:-2.8px;line-height:1.12;margin:23px 0 22px}h1 em{color:#e7d7b0;font-style:normal}.home>p{font-size:16px;line-height:1.9;color:#b4c6da;max-width:350px;margin-bottom:30px}.primary{display:inline-flex;align-items:center;justify-content:center;gap:21px;background:linear-gradient(135deg,#9cced3,#76aebc);color:#112c3c;border:1px solid #d0f1edaa;border-radius:10px;padding:16px 21px;font-size:13px;font-weight:800;box-shadow:0 3px 0 #3c6b83,inset 0 1px #e3ffff88;transition:transform .18s,filter .18s}.primary:hover{filter:brightness(1.12);transform:translateY(-2px)}.primary:active{transform:translateY(2px);box-shadow:none}.primary:disabled{opacity:.5;cursor:default;transform:none}.home small{display:block;font-size:10px;color:#9bb0c7;margin-top:21px}.moon-note{position:absolute;right:12%;top:29%;font-size:17px;color:#d1d9df;transform:rotate(6deg);font-weight:600;pointer-events:none}.note-arrow{display:block;font-size:43px;margin:3px 0 0 38px;color:#91a9c1}.home-bottom{position:absolute;right:30px;bottom:28px;text-align:right;color:#9dafc5}.home-bottom>span{font-size:9px;letter-spacing:2px}.home-bottom p{font-size:12px;line-height:1.7;margin-bottom:0}.below{min-height:55px;display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:10px;color:#8da3bd}.below>span:last-child{font-size:9px;color:#7e94ad}footer{min-height:40px;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:10px;color:#8fa2ba}.text-button{border:0;background:none;font-size:11px;color:#acc5d9;padding:8px 0;cursor:pointer;text-underline-offset:4px}.text-button:hover{text-decoration:underline}.hud{position:absolute;right:27px;top:22px;display:flex;align-items:center;gap:13px}.echoes{display:flex;align-items:center;gap:11px;padding:11px 15px;background:#172b44e3;backdrop-filter:blur(12px);border:1px solid #aacdda40;border-radius:12px}.hud-icon{font-size:26px;color:#f1d390}.echoes small{font-size:7px;letter-spacing:1.3px;display:block;color:#9ab7cc}.echoes b{display:block;font-size:17px;margin-top:3px}.mission{position:absolute;left:31px;top:84px;pointer-events:none;max-width:460px}.mission>span{font-size:9px;letter-spacing:1.4px;color:#decda6}.mission h2{font-size:25px;letter-spacing:-.6px;line-height:1.3;margin:11px 0 7px}.mission p{font-size:12px;line-height:1.7;color:#adbed4;margin:0;max-width:340px}.bottom-controls{position:absolute;left:27px;right:27px;bottom:23px;display:flex;align-items:end;justify-content:space-between;gap:22px}.dpad{display:grid;grid-template:repeat(2,40px)/repeat(3,40px);gap:5px;touch-action:none;user-select:none}.dpad button{border:1px solid #92b6ce66;border-radius:10px;background:#213853e8;font-size:22px;box-shadow:0 3px 0 #0a172e}.dpad button.pressed,.dpad button:hover{background:#45627c}.up{grid-area:1/2}.left{grid-area:2/1}.down{grid-area:2/2}.right{grid-area:2/3}.alignment{text-align:center;max-width:280px;flex:1;padding-bottom:5px}.alignment>span{font-size:12px;color:#c7e9ed;font-weight:700}.align-rail{height:4px;background:#4c608066;border-radius:8px;margin:11px 0;overflow:hidden}.align-rail i{height:100%;display:block;background:#a6dfe1;width:0;transition:width .15s}.alignment small{font-size:9px;color:#9eafc5;line-height:1.5}.fire{padding:14px 18px;min-height:48px}.fire kbd{border:1px solid #24495a55;border-radius:4px;font-size:8px;padding:4px;font-family:var(--font);font-weight:600}.feedback{position:absolute;top:40%;left:50%;transform:translateX(-50%);max-width:85%;width:max-content;border:1px solid #a5d7e966;border-radius:12px;background:#142a45ec;padding:12px 20px;font-size:13px;line-height:1.6;text-align:center;color:#ddf1f4;opacity:0;pointer-events:none;transition:opacity .2s;z-index:3}.feedback.show{opacity:1}.flight-info{position:absolute;top:31%;left:10%;display:flex;flex-direction:column;gap:9px;pointer-events:none}.flight-info>span{font-size:11px;letter-spacing:1px;color:#dfd4b4}.flight-info>b{font-size:35px;letter-spacing:-1px;color:#bfeff0}.flight-info>small{font-size:9px;color:#a9bad0}.overlay{position:absolute;inset:0;z-index:7;background:#0712247a;backdrop-filter:blur(7px);display:grid;place-items:center;padding:25px;overflow:auto}.card{border:1px solid #96bbce61;background:linear-gradient(145deg,#2b3e59f0,#172941f5);border-radius:19px;box-shadow:0 20px 70px #030b2538;padding:31px;color:#eff7fb}.intro{max-width:480px;text-align:center}.card-star{font-size:38px;color:#e6d29b}.intro .eyebrow{justify-content:center;margin-top:16px;font-size:8px}.card h2{font-size:29px;letter-spacing:-.7px;line-height:1.3;margin:17px 0}.card p{font-size:14px;line-height:1.85;color:#bacbdf}.steps{padding:9px 17px;background:#1428428c;border-radius:12px;margin:22px 0 26px;text-align:left}.steps p{display:flex;gap:13px;font-size:12px;line-height:1.7}.steps b{color:#e7d6a7;font-size:10px;letter-spacing:1px;margin-top:2px}.pause-card{text-align:center}.pause-card .text-button{display:block;margin:14px auto 0}.discovery{max-width:820px;display:grid;grid-template-columns:32% 1fr;padding:0;overflow:hidden}.discovery-art{background:linear-gradient(155deg,#6c7d90,#34465f);padding:30px 20px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:25px}.prism-art{font-size:95px;line-height:1;color:#b6edf1;text-shadow:0 0 22px #b9f6ff33}.prism-art>span{display:block;font-size:45px;margin-top:-11px;letter-spacing:-8px}.discovery-art>small{font-size:11px;letter-spacing:1.6px;color:#f0deb5}.signal-path{font-size:20px;color:#e8d8aa;display:flex;gap:12px;align-items:center}.signal-path>span:nth-child(2){font-size:12px}.discovery-copy{padding:29px 32px}.discovery-copy>.eyebrow{font-size:7px;letter-spacing:1.3px}.discovery-copy h2{font-size:29px}.discovery-copy p{font-size:14px;line-height:1.8}.why{border-left:2px solid #a9d4d6;padding-left:15px;margin:20px 0}.why h3{color:#a7dce0;font-size:10px;letter-spacing:.7px;margin:0 0 8px}.why p{font-size:13px;margin:0}.measurement{margin:20px 0;padding:14px 17px;background:#14254099;border-radius:10px;border:1px solid #a6c5d32e}.measurement>b{font-size:25px;color:#e6d4a4;display:block}.measurement>span{font-size:8px;line-height:1.6;color:#a3b9cd;display:block;margin-top:6px}details{font-size:11px;margin-top:13px;color:#b6d8e1}summary{cursor:pointer}details p{font-size:11px!important}code{display:block;font-size:9px;line-height:1.8;overflow-wrap:anywhere;color:#d4edf4}.discovery .primary{font-size:12px;padding:14px 18px}.ending{position:absolute;inset:0;z-index:8;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:35px;background:radial-gradient(ellipse at 50% 30%,#2f4561f0,#12243df5)}.ending-orbit{font-size:80px;position:relative;color:#eadcb8;line-height:1;margin-bottom:33px}.ending-orbit>span{position:absolute;right:-28px;bottom:8px;color:#9de5e7;font-size:30px}.ending .eyebrow{font-size:8px}.ending h2{font-size:clamp(30px,4vw,48px);letter-spacing:-1.2px;margin:20px 0}.ending>p{max-width:475px;font-size:15px;line-height:1.9;color:#bfcee0}.ending blockquote{color:#f1ddb0;max-width:500px;font-size:20px;line-height:1.7;margin:17px 0}.ending .end-fact{font-size:12px;max-width:420px;margin-bottom:29px;color:#9ebdcd}dialog{max-width:460px;width:calc(100% - 30px);max-height:85svh;overflow:auto;background:#1c304a;border:1px solid #a3cdd25c;border-radius:19px;padding:35px;color:#f0f7fb;box-shadow:0 20px 80px #0005}dialog::backdrop{background:#061125aa;backdrop-filter:blur(5px)}dialog h2{font-size:27px;margin:10px 0 22px}dialog p{font-size:13px;line-height:1.9;color:#bbccdf}dialog a{color:#a9e6ea;text-underline-offset:4px}.close{position:absolute;right:14px;top:14px;width:29px;height:29px;font-size:23px}.game.aiming canvas{cursor:crosshair}
+@media(max-width:1000px){.shell{padding:0 25px}.header-note{font-size:8px;letter-spacing:1px}.home{max-width:420px}h1{font-size:56px}.home>p{font-size:14px;max-width:300px}.moon-note{right:9%;font-size:15px}.game{min-height:570px}.discovery{max-width:720px}.discovery-copy{padding:25px}.discovery-copy h2{font-size:26px}.discovery-copy p{font-size:13px}}
+@media(max-width:650px){.shell{padding:0 13px}header{height:76px;gap:10px}.brand{font-size:20px;gap:7px}.brand img{width:30px;height:30px}.header-note{display:none}.header-tools{gap:6px}.icon{width:32px;height:32px;font-size:16px}select{font-size:10px;max-width:88px;padding:7px}.game{height:calc(100svh - 170px);min-height:690px;max-height:950px;border-radius:15px}.location{left:20px;top:21px}.location b{font-size:6px;letter-spacing:1px}.home{left:8%;right:7%;top:11%}.home .eyebrow{font-size:7px;letter-spacing:1.5px}h1{font-size:46px;letter-spacing:-1.8px;margin:16px 0}.home>p{font-size:12px;line-height:1.8;max-width:260px;margin-bottom:20px}.primary{font-size:11px;padding:14px 17px;gap:14px}.home small{font-size:9px;margin-top:16px}.moon-note{top:58%;right:12%;font-size:13px}.note-arrow{font-size:30px;margin-left:20px}.home-bottom{right:20px;bottom:23px}.home-bottom p{font-size:10px}.home-bottom>span{font-size:7px}.below{min-height:54px;flex-direction:column;justify-content:center;gap:7px;font-size:9px;text-align:center}.below>span:last-child{font-size:8px}footer{font-size:8px;min-height:35px}footer .text-button{font-size:8px}.hud{right:17px;top:48px;gap:10px}.echoes{padding:8px 11px;gap:8px}.echoes small{font-size:6px}.echoes b{font-size:14px}.hud-icon{font-size:22px}.mission{left:20px;top:116px;right:20px;max-width:300px}.mission>span{font-size:8px}.mission h2{font-size:21px;margin:9px 0 5px}.mission p{font-size:11px;max-width:275px}.bottom-controls{left:17px;right:17px;bottom:23px;gap:10px;align-items:end}.dpad{grid-template:repeat(2,37px)/repeat(3,37px);gap:4px}.dpad button{font-size:20px}.fire{font-size:11px;padding:13px 14px;gap:9px;min-height:44px}.fire kbd{display:none}.alignment{position:absolute;left:0;right:0;bottom:111px;max-width:240px;margin:auto}.alignment>span{font-size:11px}.alignment small{font-size:8px}.align-rail{margin:8px 0;height:3px}.flight-info{top:auto;bottom:143px;left:20px;gap:7px}.flight-info>b{font-size:29px}.flight-info>span{font-size:9px}.flight-info>small{font-size:8px}.feedback{font-size:11px;top:34%;padding:11px 15px}.overlay{padding:17px}.card{padding:24px}.card h2{font-size:25px}.card p{font-size:13px}.intro{max-width:390px}.intro .eyebrow{font-size:7px;letter-spacing:1px}.steps{margin:18px 0 22px;padding:6px 13px}.steps p{font-size:11px}.discovery{grid-template-columns:1fr;max-width:410px;width:100%;padding:0}.discovery-art{padding:14px 20px;flex-direction:row;gap:20px}.prism-art{font-size:46px}.prism-art>span{font-size:24px;margin-top:-5px;letter-spacing:-4px}.discovery-art>small{font-size:9px}.signal-path{font-size:15px;gap:7px}.discovery-copy{padding:23px}.discovery-copy h2{font-size:25px;margin:13px 0}.discovery-copy p{font-size:12px;line-height:1.8}.why{margin:16px 0;padding-left:12px}.why h3{font-size:9px}.discovery-copy>.eyebrow{font-size:6px;letter-spacing:1px}.measurement{padding:12px 14px;margin:17px 0}.measurement>b{font-size:23px}.discovery .primary{font-size:11px;padding:13px 16px}.ending{padding:25px}.ending h2{font-size:30px}.ending>p{font-size:13px}.ending blockquote{font-size:18px}.ending .end-fact{font-size:11px}.ending-orbit{font-size:65px;margin-bottom:24px}.ending .eyebrow{font-size:7px}.ending .primary{font-size:11px}.game.observe-home .location{opacity:.85}}
+@media(max-width:360px){.brand{font-size:17px}.brand img{width:26px;height:26px}.header-tools{gap:4px}select{max-width:77px}.game{min-height:700px}h1{font-size:42px}.discovery-copy{padding:20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+.home-bottom p{white-space:pre-line}
+
+.story-progress{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--gold);font-size:9px;letter-spacing:1.3px;margin-bottom:12px}.intro .history-fact{border-left:2px solid var(--cyan);background:#1428428c;padding:12px 15px;text-align:left;font-size:12px;line-height:1.7;margin:22px 0}.intro-actions{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:24px}.intro h2:focus{outline:none}.intro-actions .primary{max-width:100%}.intro{width:100%}
+
+footer{flex-wrap:wrap;row-gap:5px;padding-bottom:12px}
+
+/* Persistent image attribution stays clear of controls and never captures input. */
+.ai-artwork-notice{position:absolute;right:12px;bottom:3px;z-index:40;pointer-events:none;max-width:calc(100% - 24px);padding:2px 7px;border:1px solid #bedee76b;border-radius:5px;background:#14233af5;color:#f5f9ff;font:500 9px/1.35 system-ui,sans-serif;letter-spacing:0;text-align:center;white-space:normal;overflow-wrap:anywhere}
+
+</style>  <!-- SPDX-License-Identifier: MIT. See LICENSE.txt and CREDITS.md for scope and third-party notices. -->
+  <meta name="ai-disclosure" content="Illustrations generated with assistance from OpenAI ChatGPT/Codex; see CREDITS.md for scope and human contributions.">
+<!--
+MIT License
+
+Copyright (c) 2026 The Silent Mirror contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+# Credits and Third-Party Resources — The Silent Mirror
+
+Current browser-game release · License documentation updated November 15, 2026.
+
+Public game: https://el-espejo-silencioso.splendidspoonbill3.chatgpt.site/
+
+## License scope and exceptions
+
+The project's own current browser-game HTML, CSS, JavaScript, translations, original SVG assets, procedural drawing and sound code, tests, and accompanying new documentation are offered under the MIT License in LICENSE, to the extent the contributors hold licensable rights. Keep its copyright and permission notice when redistributing substantial portions.
+
+MIT does not replace the licenses or terms of third-party resources, font software, scientific source documents, NASA material, trademarks or browser-provided components. Merely citing a source does not relicense that source. External reference pages are not included in the source ZIP.
+
+The copyright notice uses a collective project attribution; it does not assert a registered organization, identify individual legal owners, or claim exclusive rights in AI-generated material. This notice records the project owner's instruction to release the project's own materials under MIT; it is not an independent certification of originality or competition eligibility.
+
+## Contributions and AI assistance
+
+Project direction, audience, feature requests, selection of subject matter and iteration were provided by the project owner through this conversation. OpenAI ChatGPT/Codex assisted with implementation, English text, Spanish translations, procedural SVG/Canvas illustrations, synthesized audio code, checks and documentation. No invented individual or team names are credited here. The team should record its actual members and contributions in the official submission.
+
+The current browser game does not call a generative AI service during play. Its images are SVG files or Canvas drawings produced by code, rather than downloaded NASA photographs. Its short sound effects are synthesized with the Web Audio API, without bundled music or recordings. This disclosure records assistance; it does not imply NASA review or approval.
+
+## Independence and scientific context
+
+This is an independent educational project, not an official NASA product. NASA has not endorsed it. Scientific references describe real missions; characters' emotions and the playable journey are simplified storytelling. No NASA logo is bundled with the current game artwork. NASA names, marks and external materials are not licensed by this project's MIT notice.
+
+NASA media guidance: https://www.nasa.gov/nasa-brand-center/images-and-media/
+
+## Competition documentation boundary
+
+These files document licensing, resource origins and AI assistance. They do not certify eligibility for NASA Space Apps. The team must independently complete the submission's references and AI-use fields, verify at least one source against its challenge's official resource list, and record the true development dates. Any applicable requirements concerning AI-image labeling or other submission formats remain separate from this license notice.
+
+## Current game asset inventory
+
+- dist/game.js: original Canvas observatory, Moon, crater textures, telescope, schematic reflector sites, laser-pulse animation and synthesized sound implementation.
+- dist/assets/moon.svg: original geometric Moon-and-star project icon created through AI-assisted SVG code.
+- dist/copy.js: English source educational text.
+- dist/translations.es.js: separate Spanish translation catalogue.
+- No external photographs, font binaries, recorded audio, game engine or third-party JavaScript library is bundled in this browser game. Fonts are supplied by the user's system.
+
+## Scientific references and their use
+
+- NASA / International Laser Ranging Service, Apollo 11 reflector information — arrays, corner-cube prisms and laser ranging: https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/ap11_reflector.html
+- NASA Apollo Lunar Surface Journal, ALSEP experiments — Apollo surface equipment and passive reflector context: https://www.nasa.gov/wp-content/uploads/static/history/alsj/HamishALSEP.html
+- NIST, To the Moon and Back in 2.5 Seconds — timing the round-trip journey and historical explanation: https://www.nist.gov/history/moon-and-back-25-seconds
+
+The game summarizes these subjects in its own educational text. It does not reproduce the sources' photographs. Apollo 11's panel is introduced in 1969; Apollo 14 and Apollo 15 panels in 1971. The observatory sends and detects light on Earth; the Moon arrays are passive. The three rounds all use the same 384,400 km teaching example, not real measurements from the three landing sites. The laser travel animation is slowed, and distances, sizes and positions are schematic.
+
+## Visible illustration disclosure
+
+The current game displays "AI-generated illustrations · ChatGPT/Codex" in English and "Ilustraciones generadas con IA · ChatGPT/Codex" in Spanish. This describes SVG and Canvas illustrations created through AI-assisted code under the project owner's direction; it does not describe real NASA photographs or claim NASA authorship.
+
+The disclosure is visible inside the game scene throughout the introduction, observations, discoveries and ending. It remains visible when the controls or lesson overlays are shown.
+
+This notice does not claim that a generative AI service runs during play. The source code and synthesized audio implementation remain disclosed as AI-assisted in this document and in the source-package metadata. The notice records the illustration origin; it does not certify competition eligibility.
+
+-->
+<script>
+/* Shared, dependency-free mouse companion and educational mission passport. */
+(() => {
+  'use strict';
+  const config = {"title": ["El espejo silencioso", "The Silent Mirror"], "intro": ["¡Ayuda al ratón a atrapar tres ecos de luz! Apunta, recibe el regreso del pulso y resuelve los retos de distancia.", "Help the mouse catch three light echoes! Aim, receive the returning pulse and solve distance challenges."], "questions": [{"label": ["Eco de ida y vuelta", "Round-trip echo"], "prompt": ["La luz tarda 2,56 s en ir y volver. Usando 300 000 km/s, ¿a qué distancia está la Luna?", "Light takes 2.56 s to go and return. Using 300,000 km/s, how far away is the Moon?"], "answers": [["384 000 km", "384,000 km"], ["768 000 km", "768,000 km"], ["150 000 km", "150,000 km"]], "correct": 0, "explanation": ["Distancia = velocidad × tiempo / 2. Dividimos entre dos porque medimos la ida y el regreso. Es un ejemplo aproximado.", "Distance = speed × time / 2. We divide by two because the measured journey includes both directions. This is an approximate example."], "hint": ["El tiempo incluye dos trayectos iguales.", "The time includes two equal legs."]}, {"label": ["Detective de distancias", "Distance detective"], "prompt": ["Si la Luna se aleja, ¿qué cambia en el eco?", "If the Moon moves farther away, what happens to the echo?"], "answers": [["Regresa antes", "It returns sooner"], ["Tarda más en regresar", "It takes longer to return"], ["La luz se detiene", "Light stops"]], "correct": 1, "explanation": ["Una distancia mayor exige más tiempo de viaje a la misma velocidad de la luz.", "A greater distance requires more travel time at the same speed of light."], "hint": ["Piensa en un camino más largo a la misma velocidad.", "Think of a longer path at the same speed."]}, {"label": ["Guardián del reflector", "Reflector keeper"], "prompt": ["¿Para qué sirve el retrorreflector lunar?", "What does a lunar retroreflector do?"], "answers": [["Produce viento", "It makes wind"], ["Acelera la luz", "It speeds up light"], ["Devuelve luz hacia su origen", "It sends light back toward its source"]], "correct": 2, "explanation": ["El reflector permite detectar un pequeño retorno del pulso láser y medir su tiempo de viaje.", "The reflector lets us detect a small return from the laser pulse and measure its travel time."], "hint": ["Su nombre contiene la idea de reflejar.", "Its name gives a clue: reflect."]}], "id": "silent_mirror"};
+  const key = 'mouse_passport_v1_' + config.id;
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (_) {}
+  const events = new Set(Array.isArray(saved.events) ? saved.events.filter(x => typeof x === 'string') : []);
+  const medals = new Set(Array.isArray(saved.medals) ? saved.medals.filter(x => Number.isInteger(x) && x >= 0 && x < 3) : []);
+  let panel, feedback = '', selected = -1;
+  const es = () => document.documentElement.lang.toLowerCase().startsWith('es');
+  const t = pair => pair[es() ? 0 : 1];
+  function persist() { try { localStorage.setItem(key, JSON.stringify({events:[...events],medals:[...medals]})); } catch (_) {} }
+  function draw(c, x, y, scale = 1, moving = false) {
+    if (!c || scale <= 0) return;
+    c.save(); c.translate(x, y); c.scale(scale, scale);
+    const bounce = moving && !matchMedia('(prefers-reduced-motion: reduce)').matches ? Math.sin(performance.now() / 95) * 3 : 0;
+    c.translate(0, bounce); c.lineCap = 'round'; c.lineJoin = 'round';
+    c.strokeStyle = '#49344f'; c.lineWidth = 3;
+    c.beginPath(); c.moveTo(20, 15); c.bezierCurveTo(57, 31, 55, -12, 37, -2); c.stroke();
+    const oval = (x,y,rx,ry,color) => { c.beginPath(); c.ellipse(x,y,rx,ry,0,0,Math.PI*2); c.fillStyle=color; c.fill(); c.stroke(); };
+    oval(-20,-32,18,21,'#6ce1df'); oval(20,-32,18,21,'#6ce1df');
+    c.lineWidth=1; oval(-20,-32,11,14,'#c2a6e5'); oval(20,-32,11,14,'#c2a6e5');
+    c.lineWidth=3; oval(0,4,26,29,'#69dbdf'); oval(-13,28,10,5,'#87ece4'); oval(13,28,10,5,'#87ece4');
+    oval(0,-14,28,23,'#8cece5');
+    c.strokeStyle='#f49434'; c.lineWidth=5;
+    oval(-14,-17,13,14,'#ffe9b64d'); oval(14,-17,13,14,'#ffe9b64d');
+    c.beginPath(); c.moveTo(-1,-18); c.lineTo(1,-18); c.stroke();
+    c.strokeStyle='#49344f'; c.lineWidth=3;
+    for(const side of [-1,1]) { c.beginPath(); c.moveTo(side*14-2,-20); c.lineTo(side*14+2,-14); c.stroke(); }
+    c.strokeStyle='#ffffff'; c.lineWidth=2;
+    for(const side of [-1,1]) { c.beginPath(); c.moveTo(side*14-5,-25); c.lineTo(side*14,-28); c.stroke(); }
+    c.fillStyle='#60405e'; c.beginPath(); c.arc(0,-5,3,0,Math.PI*2); c.fill(); c.restore();
+  }
+  function render() {
+    if (!panel) return;
+    panel.replaceChildren();
+    const header=document.createElement('div'); header.className='mouse-passport-header';
+    const portrait=document.createElement('canvas'); portrait.width=120;portrait.height=110;portrait.setAttribute('aria-hidden','true'); draw(portrait.getContext('2d'),55,65,.9);
+    header.append(portrait);
+    const title=document.createElement('h2'); title.textContent=t(config.title)+' · '+medals.size+'/3 ★';header.append(title);panel.append(header);
+    const intro=document.createElement('p');intro.textContent=t(config.intro);panel.append(intro);
+    const hint=document.createElement('p');hint.textContent=t(['El ratón es tu guía imaginario; las misiones espaciales reales no llevaban este personaje. Cada acción distinta desbloquea un reto. Sin penalización por equivocarte.','The mouse is your imaginary guide; the real missions did not carry this character. Each distinct action unlocks a challenge. Mistakes carry no penalty.']);panel.append(hint);
+    const list=document.createElement('div');list.className='mouse-challenges';panel.append(list);
+    config.questions.forEach((q,i)=>{
+      const button=document.createElement('button');button.type='button';button.disabled=events.size<=i;
+      button.textContent=(medals.has(i)?'★ ':events.size<=i?'🔒 ':'☆ ')+t(q.label);
+      button.addEventListener('click',()=>{selected=i;feedback='';render();panel.querySelector('.mouse-question')?.focus();});list.append(button);
+    });
+    if(selected>=0 && events.size>selected){
+      const q=config.questions[selected],box=document.createElement('div');box.className='mouse-question';box.tabIndex=-1;
+      const text=document.createElement('h3');text.textContent=t(q.prompt);box.append(text);
+      q.answers.forEach((a,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t(a);b.disabled=medals.has(selected);b.addEventListener('click',()=>{
+        if(i===q.correct){medals.add(selected);persist();feedback=t(['¡Medalla conseguida! ','Medal earned! '])+t(q.explanation);}
+        else feedback=t(['Prueba otra vez. Pista: ','Try again. Hint: '])+t(q.hint);
+        render();
+      });box.append(b);});
+      const result=document.createElement('p');result.setAttribute('role','status');result.textContent=feedback || (medals.has(selected)?t(q.explanation):'');box.append(result);panel.append(box);
+    }
+    if(medals.size===3){const done=document.createElement('p');done.className='mouse-complete';done.textContent=t(['¡Pasaporte completo! Has ganado tus tres medallas de exploración.','Passport complete! You earned all three exploration medals.']);panel.append(done);}
+  }
+  function record(id) {
+    id=String(id);if(events.has(id))return;events.add(id);persist();render();
+    const notice=document.getElementById('mouse-notice');if(!notice)return;
+    notice.textContent=t(['¡Descubrimiento registrado! Abajo te espera un reto del ratón.','Discovery recorded! A mouse challenge awaits below.']);
+    clearTimeout(record.timeout);record.timeout=setTimeout(()=>{notice.textContent='';},4500);
+  }
+  window.MouseMission={draw,record};
+  document.addEventListener('DOMContentLoaded',()=>{
+    const style=document.createElement('style');style.textContent=`
+      #mouse-passport{box-sizing:border-box;width:min(100%,1100px);margin:24px auto;padding:22px;border:3px solid #49344f;border-radius:28px 12px 28px 12px;background:#fff5db;color:#49344f;font:16px/1.5 system-ui;box-shadow:7px 7px 0 #efaa56}
+      .mouse-passport-header{display:flex;align-items:center;gap:12px}.mouse-passport-header canvas{width:90px;height:83px;flex:none}.mouse-passport-header h2{font-size:clamp(18px,3vw,26px);margin:0}
+      #mouse-passport p{max-width:85ch}#mouse-passport button{font:inherit;cursor:pointer;border:2px solid #49344f;border-radius:16px;padding:12px 16px;margin:5px;background:#b5eeea;color:#37283b;min-height:44px}
+      #mouse-passport button:disabled{opacity:.6;cursor:default}#mouse-passport button:focus-visible{outline:3px solid #e66c27;outline-offset:3px}.mouse-question{margin-top:20px;border-top:2px dashed #c58d63;padding-top:10px}.mouse-question h3{font-size:18px}.mouse-complete{font-weight:bold;color:#345d51}
+      #mouse-notice{position:fixed;left:50%;top:12px;transform:translateX(-50%);z-index:9999;pointer-events:none;background:#49344f;color:#fff5db;border-radius:16px;font:14px/1.4 system-ui;text-align:center;max-width:85vw}#mouse-notice:not(:empty){padding:12px 20px}
+      @media(max-width:500px){#mouse-passport{padding:14px}.mouse-question button{display:block;width:100%;margin:8px 0}}
+    `;document.head.append(style);
+    panel=document.createElement('section');panel.id='mouse-passport';panel.setAttribute('aria-label','Mission passport');
+    // Keep gameplay unobstructed; challenges live below the original game.
+    document.body.append(panel);const notice=document.createElement('div');notice.id='mouse-notice';notice.setAttribute('role','status');document.body.append(notice);
+    new MutationObserver(()=>{feedback='';render();}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});render();
+  });
+})();
+
+</script></head>
+<body>
+<div class="shell"><header><a class="brand" href="#" aria-label="Home"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PCEtLSBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogTUlULiBDb3B5cmlnaHQgKGMpIDIwMjYgVGhlIFNpbGVudCBNaXJyb3IgY29udHJpYnV0b3JzLiBBSS1hc3Npc3RlZCBTVkcgYXJ0d29yay4gLS0+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMjAiIGZpbGw9IiMyNjM4NTAiLz48cGF0aCBkPSJNNDQgMTJhMjMgMjMgMCAxIDAgOSAzMyAyNCAyNCAwIDAgMS05LTMzIiBmaWxsPSIjZjBkZmI0Ii8+PHBhdGggZD0ibTQzIDIwIDMgOCA4IDMtOCAzLTMgOC0zLTgtOC0zIDgtM1oiIGZpbGw9IiM5MmUyZTciLz48L3N2Zz4K" alt="" width="37" height="37"><span data-copy="brand">moonlight.</span></a><span class="header-note" data-copy="headerNote">LITTLE EXPLORERS / GREAT DISCOVERIES</span><div class="header-tools"><select id="language" aria-label="Language / Idioma"><option value="es">Español</option><option value="en">English</option></select><button class="icon" id="sound" aria-pressed="false" data-aria="soundOn">♫</button><button class="icon" id="help" data-aria="help">?</button></div></header>
+<main><section class="game" id="game" data-aria="gameLabel"><canvas id="sky" width="1440" height="760" data-aria="canvasLabel"></canvas><div class="vignette"></div><span class="ai-artwork-notice" id="artworkNotice" data-copy="aiDisclosure">AI-generated illustrations · ChatGPT/Codex</span><div class="location"><span></span><b data-copy="location">EARTH ↔ MOON / LUNAR OBSERVATORY</b></div>
+<div class="home" id="home"><div class="eyebrow"><i></i><span data-copy="eyebrow">AN APOLLO ADVENTURE</span></div><h1><span data-copy="hero1">The silent</span><br><em data-copy="hero2">mirror.</em></h1><p data-copy="heroBody">A little light leaves Earth. A quiet mirror sends it home. Will you help it find its way?</p><button class="primary" id="start"><span data-copy="start">Begin the adventure</span><span>↗</span></button><small data-copy="homeNote">No rush. Three discoveries waiting for you.</small></div>
+<div class="moon-note" id="moonNote"><span data-copy="moonNote">A secret on the Moon…</span><span class="note-arrow">⤵</span></div>
+<div class="home-bottom" id="homeBottom"><span>1969 — 1971</span><p data-copy="homeBottom">Little mirrors.<br>Great discoveries.</p></div>
+<div class="hud" id="hud" hidden><div class="echoes"><span class="hud-icon">✧</span><div><small data-copy="echoes">RETURNED SIGNALS</small><b id="echoCount">0 / 3</b></div></div><button class="icon" id="pause" data-aria="pause">Ⅱ</button></div>
+<div class="mission" id="mission" hidden><span id="missionKicker"></span><h2 id="missionTitle"></h2><p id="missionText"></p></div>
+<div class="flight-info" id="flightInfo" hidden aria-live="polite"><span id="flightLabel"></span><b id="timer">0.00 s</b><small data-copy="slowMotion">Slowed animation · example timing</small></div>
+<div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+<div class="bottom-controls" id="bottomControls" hidden><div class="dpad" data-aria="directions"><button class="up" data-dir="up" data-aria="up">↑</button><button class="left" data-dir="left" data-aria="left">←</button><button class="down" data-dir="down" data-aria="down">↓</button><button class="right" data-dir="right" data-aria="right">→</button></div><div class="alignment"><span id="alignLabel"></span><div class="align-rail"><i id="alignFill"></i></div><small data-copy="aimTip">Arrow keys, buttons or touch the glowing panel</small></div><button class="primary fire" id="fire"><span>✧</span><span data-copy="send">Send light</span><kbd data-copy="space">SPACE</kbd></button></div>
+<div class="overlay" id="intro" hidden><article class="intro card"><div class="story-progress"><span id="introProgress"></span><span id="introYear"></span></div><span class="card-star" aria-hidden="true">✦</span><div id="introEyebrow" class="eyebrow" data-copy="introEyebrow">BEFORE WE SEND OUR LIGHT</div><h2 id="introTitle" tabindex="-1" data-copy="introTitle">The Moon has a little secret.</h2><p id="introBody" data-copy="introBody">Apollo astronauts left panels of special prisms on the Moon. They return light towards where it came from.</p><p class="history-fact" id="historyFact"></p><div class="steps" id="introSteps"><p><b>01</b><span data-copy="intro1">Aim the telescope at the glowing panel.</span></p><p><b>02</b><span data-copy="intro2">Send a pulse of light and watch it return.</span></p><p><b>03</b><span data-copy="intro3">Discover what its journey can tell us.</span></p></div><div class="intro-actions"><button class="text-button" id="introBack" data-copy="historyBack">Back</button><button class="primary" id="begin"><span id="introButton" data-copy="begin">Prepare the telescope</span><span>→</span></button></div></article></div>
+<div class="overlay" id="pauseOverlay" hidden><article class="card pause-card"><span class="card-star">☾</span><h2 data-copy="pauseTitle">A quiet little pause.</h2><p data-copy="pauseBody">The Moon can wait a moment.</p><button class="primary" id="resume"><span data-copy="resume">Continue observing</span><span>→</span></button><button class="text-button" id="goHome" data-copy="goHome">Back to the beginning</button></article></div>
+<div class="overlay" id="discovery" hidden><article class="discovery card"><div class="discovery-art"><div class="prism-art" aria-hidden="true">◇<span>◇ ◇</span></div><small id="discoveryMission"></small><div class="signal-path" aria-hidden="true"><span>◉</span><span>⟶ ✧ ⟵</span><span>☾</span></div></div><div class="discovery-copy"><div class="eyebrow" data-copy="discoveryEyebrow">LIGHT RECEIVED · A NEW DISCOVERY</div><h2 id="discoveryTitle"></h2><p id="discoveryWhat"></p><div class="why"><h3 data-copy="why">Why does it matter?</h3><p id="discoveryWhy"></p></div><div class="measurement" id="measurement" hidden><b>≈ 384 400 km</b><span data-copy="exampleDistance">Example distance, not a real measurement</span><details><summary data-copy="calculation">How do we calculate it?</summary><p data-copy="formula">Distance = light speed × round-trip time ÷ 2.</p><code>299 792.458 km/s × 2.56444 s ÷ 2 ≈ 384 400 km</code><p data-copy="rounding">The timing on the clock is rounded. This is a teaching example.</p></details></div><button class="primary" id="next"><span id="nextText"></span><span>→</span></button></div></article></div>
+<div class="ending" id="ending" hidden><div class="ending-orbit" aria-hidden="true">☾<span>✧</span></div><div class="eyebrow" data-copy="endEyebrow">SOME THINGS STAY TO HELP US</div><h2 data-copy="endTitle">Quiet. But not forgotten.</h2><p data-copy="endBody">The astronauts came home. The panels stayed on the Moon. Their special shape lets light find its way back to Earth.</p><blockquote data-copy="endQuote">A quiet mirror can still tell us a great deal.</blockquote><p class="end-fact" data-copy="endFact">The reflector needs no battery: observatories on Earth send and detect the light.</p><button class="primary" id="replay"><span data-copy="replay">Send another message of light</span><span>↗</span></button></div>
+</section><div class="below"><span data-copy="controlsNote">↑ ↓ ← → to aim · Space to send · P to pause</span><span data-copy="scaleNote">Illustrated model · distances and sizes are not to scale</span></div></main>
+<footer><span data-copy="footer">A little adventure. A real scientific idea.</span><button class="text-button" id="sources" data-copy="sources">Inspired by Apollo science ↗</button><a class="text-button" href="data:text/html;base64,PCFkb2N0eXBlIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij48bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLGluaXRpYWwtc2NhbGU9MSI+PHRpdGxlPkNyZWRpdHMgYW5kIExpY2Vuc2Ug4oCUIFRoZSBTaWxlbnQgTWlycm9yPC90aXRsZT48c3R5bGU+Ym9keXttYXJnaW46MDtiYWNrZ3JvdW5kOiMxNDIzM2E7Y29sb3I6I2VlZjVmYTtmb250OjE2cHgvMS44IHN5c3RlbS11aSxzYW5zLXNlcmlmfW1haW57bWF4LXdpZHRoOjg1MHB4O21hcmdpbjphdXRvO3BhZGRpbmc6MzVweCAyMnB4IDY1cHh9YXtjb2xvcjojYjdlNmVmO292ZXJmbG93LXdyYXA6YW55d2hlcmV9aDF7Zm9udC1zaXplOmNsYW1wKDI2cHgsNXZ3LDM4cHgpO2xpbmUtaGVpZ2h0OjEuM31oMntmb250LXNpemU6MjNweDtjb2xvcjojZjJkNWE0O21hcmdpbi10b3A6MzhweH1saXttYXJnaW46MTJweCAwfW5hdntkaXNwbGF5OmZsZXg7ZmxleC13cmFwOndyYXA7Z2FwOjE0cHggMjVweDtwYWRkaW5nOjIycHggMDtib3JkZXItYm90dG9tOjFweCBzb2xpZCAjYjdlNmVmNDB9YTpmb2N1cy12aXNpYmxle291dGxpbmU6M3B4IHNvbGlkICNmMmQ1YTQ7b3V0bGluZS1vZmZzZXQ6NHB4fXB7b3ZlcmZsb3ctd3JhcDphbnl3aGVyZX08L3N0eWxlPjwvaGVhZD48Ym9keT48bWFpbj48YSBocmVmPSIuLyI+4oaQIEJhY2sgdG8gdGhlIGdhbWU8L2E+PG5hdiBhcmlhLWxhYmVsPSJQcm9qZWN0IGRvY3VtZW50cyI+PGEgaHJlZj0iZGF0YTp0ZXh0L3BsYWluO2Jhc2U2NCxUVWxVSUV4cFkyVnVjMlVLQ2tOdmNIbHlhV2RvZENBb1l5a2dNakF5TmlCVWFHVWdVMmxzWlc1MElFMXBjbkp2Y2lCamIyNTBjbWxpZFhSdmNuTUtDbEJsY20xcGMzTnBiMjRnYVhNZ2FHVnlaV0o1SUdkeVlXNTBaV1FzSUdaeVpXVWdiMllnWTJoaGNtZGxMQ0IwYnlCaGJua2djR1Z5YzI5dUlHOWlkR0ZwYm1sdVp5QmhJR052Y0hrS2IyWWdkR2hwY3lCemIyWjBkMkZ5WlNCaGJtUWdZWE56YjJOcFlYUmxaQ0JrYjJOMWJXVnVkR0YwYVc5dUlHWnBiR1Z6SUNoMGFHVWdJbE52Wm5SM1lYSmxJaWtzSUhSdklHUmxZV3dLYVc0Z2RHaGxJRk52Wm5SM1lYSmxJSGRwZEdodmRYUWdjbVZ6ZEhKcFkzUnBiMjRzSUdsdVkyeDFaR2x1WnlCM2FYUm9iM1YwSUd4cGJXbDBZWFJwYjI0Z2RHaGxJSEpwWjJoMGN3cDBieUIxYzJVc0lHTnZjSGtzSUcxdlpHbG1lU3dnYldWeVoyVXNJSEIxWW14cGMyZ3NJR1JwYzNSeWFXSjFkR1VzSUhOMVlteHBZMlZ1YzJVc0lHRnVaQzl2Y2lCelpXeHNDbU52Y0dsbGN5QnZaaUIwYUdVZ1UyOW1kSGRoY21Vc0lHRnVaQ0IwYnlCd1pYSnRhWFFnY0dWeWMyOXVjeUIwYnlCM2FHOXRJSFJvWlNCVGIyWjBkMkZ5WlNCcGN3cG1kWEp1YVhOb1pXUWdkRzhnWkc4Z2MyOHNJSE4xWW1wbFkzUWdkRzhnZEdobElHWnZiR3h2ZDJsdVp5QmpiMjVrYVhScGIyNXpPZ29LVkdobElHRmliM1psSUdOdmNIbHlhV2RvZENCdWIzUnBZMlVnWVc1a0lIUm9hWE1nY0dWeWJXbHpjMmx2YmlCdWIzUnBZMlVnYzJoaGJHd2dZbVVnYVc1amJIVmtaV1FnYVc0Z1lXeHNDbU52Y0dsbGN5QnZjaUJ6ZFdKemRHRnVkR2xoYkNCd2IzSjBhVzl1Y3lCdlppQjBhR1VnVTI5bWRIZGhjbVV1Q2dwVVNFVWdVMDlHVkZkQlVrVWdTVk1nVUZKUFZrbEVSVVFnSWtGVElFbFRJaXdnVjBsVVNFOVZWQ0JYUVZKU1FVNVVXU0JQUmlCQlRsa2dTMGxPUkN3Z1JWaFFVa1ZUVXlCUFVncEpUVkJNU1VWRUxDQkpUa05NVlVSSlRrY2dRbFZVSUU1UFZDQk1TVTFKVkVWRUlGUlBJRlJJUlNCWFFWSlNRVTVVU1VWVElFOUdJRTFGVWtOSVFVNVVRVUpKVEVsVVdTd0tSa2xVVGtWVFV5QkdUMUlnUVNCUVFWSlVTVU5WVEVGU0lGQlZVbEJQVTBVZ1FVNUVJRTVQVGtsT1JsSkpUa2RGVFVWT1ZDNGdTVTRnVGs4Z1JWWkZUbFFnVTBoQlRFd2dWRWhGQ2tGVlZFaFBVbE1nVDFJZ1EwOVFXVkpKUjBoVUlFaFBURVJGVWxNZ1FrVWdURWxCUWt4RklFWlBVaUJCVGxrZ1EweEJTVTBzSUVSQlRVRkhSVk1nVDFJZ1QxUklSVklLVEVsQlFrbE1TVlJaTENCWFNFVlVTRVZTSUVsT0lFRk9JRUZEVkVsUFRpQlBSaUJEVDA1VVVrRkRWQ3dnVkU5U1ZDQlBVaUJQVkVoRlVsZEpVMFVzSUVGU1NWTkpUa2NnUmxKUFRTd0tUMVZVSUU5R0lFOVNJRWxPSUVOUFRrNUZRMVJKVDA0Z1YwbFVTQ0JVU0VVZ1UwOUdWRmRCVWtVZ1QxSWdWRWhGSUZWVFJTQlBVaUJQVkVoRlVpQkVSVUZNU1U1SFV5QkpUaUJVU0VVS1UwOUdWRmRCVWtVdUNnPT0iPk1JVCBMaWNlbnNlPC9hPjxhIGhyZWY9ImRhdGE6dGV4dC9wbGFpbjtiYXNlNjQsSXlCRGNtVmthWFJ6SUdGdVpDQlVhR2x5WkMxUVlYSjBlU0JTWlhOdmRYSmpaWE1nNG9DVUlGUm9aU0JUYVd4bGJuUWdUV2x5Y205eUNncERkWEp5Wlc1MElHSnliM2R6WlhJdFoyRnRaU0J5Wld4bFlYTmxJTUszSUV4cFkyVnVjMlVnWkc5amRXMWxiblJoZEdsdmJpQjFjR1JoZEdWa0lFNXZkbVZ0WW1WeUlERTFMQ0F5TURJMkxnb0tVSFZpYkdsaklHZGhiV1U2SUdoMGRIQnpPaTh2Wld3dFpYTndaV3B2TFhOcGJHVnVZMmx2YzI4dWMzQnNaVzVrYVdSemNHOXZibUpwYkd3ekxtTm9ZWFJuY0hRdWMybDBaUzhLQ2lNaklFeHBZMlZ1YzJVZ2MyTnZjR1VnWVc1a0lHVjRZMlZ3ZEdsdmJuTUtDbFJvWlNCd2NtOXFaV04wSjNNZ2IzZHVJR04xY25KbGJuUWdZbkp2ZDNObGNpMW5ZVzFsSUVoVVRVd3NJRU5UVXl3Z1NtRjJZVk5qY21sd2RDd2dkSEpoYm5Oc1lYUnBiMjV6TENCdmNtbG5hVzVoYkNCVFZrY2dZWE56WlhSekxDQndjbTlqWldSMWNtRnNJR1J5WVhkcGJtY2dZVzVrSUhOdmRXNWtJR052WkdVc0lIUmxjM1J6TENCaGJtUWdZV05qYjIxd1lXNTVhVzVuSUc1bGR5QmtiMk4xYldWdWRHRjBhVzl1SUdGeVpTQnZabVpsY21Wa0lIVnVaR1Z5SUhSb1pTQk5TVlFnVEdsalpXNXpaU0JwYmlCTVNVTkZUbE5GTENCMGJ5QjBhR1VnWlhoMFpXNTBJSFJvWlNCamIyNTBjbWxpZFhSdmNuTWdhRzlzWkNCc2FXTmxibk5oWW14bElISnBaMmgwY3k0Z1MyVmxjQ0JwZEhNZ1kyOXdlWEpwWjJoMElHRnVaQ0J3WlhKdGFYTnphVzl1SUc1dmRHbGpaU0IzYUdWdUlISmxaR2x6ZEhKcFluVjBhVzVuSUhOMVluTjBZVzUwYVdGc0lIQnZjblJwYjI1ekxnb0tUVWxVSUdSdlpYTWdibTkwSUhKbGNHeGhZMlVnZEdobElHeHBZMlZ1YzJWeklHOXlJSFJsY20xeklHOW1JSFJvYVhKa0xYQmhjblI1SUhKbGMyOTFjbU5sY3l3Z1ptOXVkQ0J6YjJaMGQyRnlaU3dnYzJOcFpXNTBhV1pwWXlCemIzVnlZMlVnWkc5amRXMWxiblJ6TENCT1FWTkJJRzFoZEdWeWFXRnNMQ0IwY21Ga1pXMWhjbXR6SUc5eUlHSnliM2R6WlhJdGNISnZkbWxrWldRZ1kyOXRjRzl1Wlc1MGN5NGdUV1Z5Wld4NUlHTnBkR2x1WnlCaElITnZkWEpqWlNCa2IyVnpJRzV2ZENCeVpXeHBZMlZ1YzJVZ2RHaGhkQ0J6YjNWeVkyVXVJRVY0ZEdWeWJtRnNJSEpsWm1WeVpXNWpaU0J3WVdkbGN5QmhjbVVnYm05MElHbHVZMngxWkdWa0lHbHVJSFJvWlNCemIzVnlZMlVnV2tsUUxnb0tWR2hsSUdOdmNIbHlhV2RvZENCdWIzUnBZMlVnZFhObGN5QmhJR052Ykd4bFkzUnBkbVVnY0hKdmFtVmpkQ0JoZEhSeWFXSjFkR2x2YmpzZ2FYUWdaRzlsY3lCdWIzUWdZWE56WlhKMElHRWdjbVZuYVhOMFpYSmxaQ0J2Y21kaGJtbDZZWFJwYjI0c0lHbGtaVzUwYVdaNUlHbHVaR2wyYVdSMVlXd2diR1ZuWVd3Z2IzZHVaWEp6TENCdmNpQmpiR0ZwYlNCbGVHTnNkWE5wZG1VZ2NtbG5hSFJ6SUdsdUlFRkpMV2RsYm1WeVlYUmxaQ0J0WVhSbGNtbGhiQzRnVkdocGN5QnViM1JwWTJVZ2NtVmpiM0prY3lCMGFHVWdjSEp2YW1WamRDQnZkMjVsY2lkeklHbHVjM1J5ZFdOMGFXOXVJSFJ2SUhKbGJHVmhjMlVnZEdobElIQnliMnBsWTNRbmN5QnZkMjRnYldGMFpYSnBZV3h6SUhWdVpHVnlJRTFKVkRzZ2FYUWdhWE1nYm05MElHRnVJR2x1WkdWd1pXNWtaVzUwSUdObGNuUnBabWxqWVhScGIyNGdiMllnYjNKcFoybHVZV3hwZEhrZ2IzSWdZMjl0Y0dWMGFYUnBiMjRnWld4cFoybGlhV3hwZEhrdUNnb2pJeUJEYjI1MGNtbGlkWFJwYjI1eklHRnVaQ0JCU1NCaGMzTnBjM1JoYm1ObENncFFjbTlxWldOMElHUnBjbVZqZEdsdmJpd2dZWFZrYVdWdVkyVXNJR1psWVhSMWNtVWdjbVZ4ZFdWemRITXNJSE5sYkdWamRHbHZiaUJ2WmlCemRXSnFaV04wSUcxaGRIUmxjaUJoYm1RZ2FYUmxjbUYwYVc5dUlIZGxjbVVnY0hKdmRtbGtaV1FnWW5rZ2RHaGxJSEJ5YjJwbFkzUWdiM2R1WlhJZ2RHaHliM1ZuYUNCMGFHbHpJR052Ym5abGNuTmhkR2x2Ymk0Z1QzQmxia0ZKSUVOb1lYUkhVRlF2UTI5a1pYZ2dZWE56YVhOMFpXUWdkMmwwYUNCcGJYQnNaVzFsYm5SaGRHbHZiaXdnUlc1bmJHbHphQ0IwWlhoMExDQlRjR0Z1YVhOb0lIUnlZVzV6YkdGMGFXOXVjeXdnY0hKdlkyVmtkWEpoYkNCVFZrY3ZRMkZ1ZG1GeklHbHNiSFZ6ZEhKaGRHbHZibk1zSUhONWJuUm9aWE5wZW1Wa0lHRjFaR2x2SUdOdlpHVXNJR05vWldOcmN5QmhibVFnWkc5amRXMWxiblJoZEdsdmJpNGdUbThnYVc1MlpXNTBaV1FnYVc1a2FYWnBaSFZoYkNCdmNpQjBaV0Z0SUc1aGJXVnpJR0Z5WlNCamNtVmthWFJsWkNCb1pYSmxMaUJVYUdVZ2RHVmhiU0J6YUc5MWJHUWdjbVZqYjNKa0lHbDBjeUJoWTNSMVlXd2diV1Z0WW1WeWN5QmhibVFnWTI5dWRISnBZblYwYVc5dWN5QnBiaUIwYUdVZ2IyWm1hV05wWVd3Z2MzVmliV2x6YzJsdmJpNEtDbFJvWlNCamRYSnlaVzUwSUdKeWIzZHpaWElnWjJGdFpTQmtiMlZ6SUc1dmRDQmpZV3hzSUdFZ1oyVnVaWEpoZEdsMlpTQkJTU0J6WlhKMmFXTmxJR1IxY21sdVp5QndiR0Y1TGlCSmRITWdhVzFoWjJWeklHRnlaU0JUVmtjZ1ptbHNaWE1nYjNJZ1EyRnVkbUZ6SUdSeVlYZHBibWR6SUhCeWIyUjFZMlZrSUdKNUlHTnZaR1VzSUhKaGRHaGxjaUIwYUdGdUlHUnZkMjVzYjJGa1pXUWdUa0ZUUVNCd2FHOTBiMmR5WVhCb2N5NGdTWFJ6SUhOb2IzSjBJSE52ZFc1a0lHVm1abVZqZEhNZ1lYSmxJSE41Ym5Sb1pYTnBlbVZrSUhkcGRHZ2dkR2hsSUZkbFlpQkJkV1JwYnlCQlVFa3NJSGRwZEdodmRYUWdZblZ1Wkd4bFpDQnRkWE5wWXlCdmNpQnlaV052Y21ScGJtZHpMaUJVYUdseklHUnBjMk5zYjNOMWNtVWdjbVZqYjNKa2N5QmhjM05wYzNSaGJtTmxPeUJwZENCa2IyVnpJRzV2ZENCcGJYQnNlU0JPUVZOQklISmxkbWxsZHlCdmNpQmhjSEJ5YjNaaGJDNEtDaU1qSUVsdVpHVndaVzVrWlc1alpTQmhibVFnYzJOcFpXNTBhV1pwWXlCamIyNTBaWGgwQ2dwVWFHbHpJR2x6SUdGdUlHbHVaR1Z3Wlc1a1pXNTBJR1ZrZFdOaGRHbHZibUZzSUhCeWIycGxZM1FzSUc1dmRDQmhiaUJ2Wm1acFkybGhiQ0JPUVZOQklIQnliMlIxWTNRdUlFNUJVMEVnYUdGeklHNXZkQ0JsYm1SdmNuTmxaQ0JwZEM0Z1UyTnBaVzUwYVdacFl5QnlaV1psY21WdVkyVnpJR1JsYzJOeWFXSmxJSEpsWVd3Z2JXbHpjMmx2Ym5NN0lHTm9ZWEpoWTNSbGNuTW5JR1Z0YjNScGIyNXpJR0Z1WkNCMGFHVWdjR3hoZVdGaWJHVWdhbTkxY201bGVTQmhjbVVnYzJsdGNHeHBabWxsWkNCemRHOXllWFJsYkd4cGJtY3VJRTV2SUU1QlUwRWdiRzluYnlCcGN5QmlkVzVrYkdWa0lIZHBkR2dnZEdobElHTjFjbkpsYm5RZ1oyRnRaU0JoY25SM2IzSnJMaUJPUVZOQklHNWhiV1Z6TENCdFlYSnJjeUJoYm1RZ1pYaDBaWEp1WVd3Z2JXRjBaWEpwWVd4eklHRnlaU0J1YjNRZ2JHbGpaVzV6WldRZ1lua2dkR2hwY3lCd2NtOXFaV04wSjNNZ1RVbFVJRzV2ZEdsalpTNEtDazVCVTBFZ2JXVmthV0VnWjNWcFpHRnVZMlU2SUdoMGRIQnpPaTh2ZDNkM0xtNWhjMkV1WjI5MkwyNWhjMkV0WW5KaGJtUXRZMlZ1ZEdWeUwybHRZV2RsY3kxaGJtUXRiV1ZrYVdFdkNnb2pJeUJEYjIxd1pYUnBkR2x2YmlCa2IyTjFiV1Z1ZEdGMGFXOXVJR0p2ZFc1a1lYSjVDZ3BVYUdWelpTQm1hV3hsY3lCa2IyTjFiV1Z1ZENCc2FXTmxibk5wYm1jc0lISmxjMjkxY21ObElHOXlhV2RwYm5NZ1lXNWtJRUZKSUdGemMybHpkR0Z1WTJVdUlGUm9aWGtnWkc4Z2JtOTBJR05sY25ScFpua2daV3hwWjJsaWFXeHBkSGtnWm05eUlFNUJVMEVnVTNCaFkyVWdRWEJ3Y3k0Z1ZHaGxJSFJsWVcwZ2JYVnpkQ0JwYm1SbGNHVnVaR1Z1ZEd4NUlHTnZiWEJzWlhSbElIUm9aU0J6ZFdKdGFYTnphVzl1SjNNZ2NtVm1aWEpsYm1ObGN5QmhibVFnUVVrdGRYTmxJR1pwWld4a2N5d2dkbVZ5YVdaNUlHRjBJR3hsWVhOMElHOXVaU0J6YjNWeVkyVWdZV2RoYVc1emRDQnBkSE1nWTJoaGJHeGxibWRsSjNNZ2IyWm1hV05wWVd3Z2NtVnpiM1Z5WTJVZ2JHbHpkQ3dnWVc1a0lISmxZMjl5WkNCMGFHVWdkSEoxWlNCa1pYWmxiRzl3YldWdWRDQmtZWFJsY3k0Z1FXNTVJR0Z3Y0d4cFkyRmliR1VnY21WeGRXbHlaVzFsYm5SeklHTnZibU5sY201cGJtY2dRVWt0YVcxaFoyVWdiR0ZpWld4cGJtY2diM0lnYjNSb1pYSWdjM1ZpYldsemMybHZiaUJtYjNKdFlYUnpJSEpsYldGcGJpQnpaWEJoY21GMFpTQm1jbTl0SUhSb2FYTWdiR2xqWlc1elpTQnViM1JwWTJVdUNnb2pJeUJEZFhKeVpXNTBJR2RoYldVZ1lYTnpaWFFnYVc1MlpXNTBiM0o1Q2dvdElHUnBjM1F2WjJGdFpTNXFjem9nYjNKcFoybHVZV3dnUTJGdWRtRnpJRzlpYzJWeWRtRjBiM0o1TENCTmIyOXVMQ0JqY21GMFpYSWdkR1Y0ZEhWeVpYTXNJSFJsYkdWelkyOXdaU3dnYzJOb1pXMWhkR2xqSUhKbFpteGxZM1J2Y2lCemFYUmxjeXdnYkdGelpYSXRjSFZzYzJVZ1lXNXBiV0YwYVc5dUlHRnVaQ0J6ZVc1MGFHVnphWHBsWkNCemIzVnVaQ0JwYlhCc1pXMWxiblJoZEdsdmJpNEtMU0JrYVhOMEwyRnpjMlYwY3k5dGIyOXVMbk4yWnpvZ2IzSnBaMmx1WVd3Z1oyVnZiV1YwY21saklFMXZiMjR0WVc1a0xYTjBZWElnY0hKdmFtVmpkQ0JwWTI5dUlHTnlaV0YwWldRZ2RHaHliM1ZuYUNCQlNTMWhjM05wYzNSbFpDQlRWa2NnWTI5a1pTNEtMU0JrYVhOMEwyTnZjSGt1YW5NNklFVnVaMnhwYzJnZ2MyOTFjbU5sSUdWa2RXTmhkR2x2Ym1Gc0lIUmxlSFF1Q2kwZ1pHbHpkQzkwY21GdWMyeGhkR2x2Ym5NdVpYTXVhbk02SUhObGNHRnlZWFJsSUZOd1lXNXBjMmdnZEhKaGJuTnNZWFJwYjI0Z1kyRjBZV3h2WjNWbExnb3RJRTV2SUdWNGRHVnlibUZzSUhCb2IzUnZaM0poY0doekxDQm1iMjUwSUdKcGJtRnlhV1Z6TENCeVpXTnZjbVJsWkNCaGRXUnBieXdnWjJGdFpTQmxibWRwYm1VZ2IzSWdkR2hwY21RdGNHRnlkSGtnU21GMllWTmpjbWx3ZENCc2FXSnlZWEo1SUdseklHSjFibVJzWldRZ2FXNGdkR2hwY3lCaWNtOTNjMlZ5SUdkaGJXVXVJRVp2Ym5SeklHRnlaU0J6ZFhCd2JHbGxaQ0JpZVNCMGFHVWdkWE5sY2lkeklITjVjM1JsYlM0S0NpTWpJRk5qYVdWdWRHbG1hV01nY21WbVpYSmxibU5sY3lCaGJtUWdkR2hsYVhJZ2RYTmxDZ290SUU1QlUwRWdMeUJKYm5SbGNtNWhkR2x2Ym1Gc0lFeGhjMlZ5SUZKaGJtZHBibWNnVTJWeWRtbGpaU3dnUVhCdmJHeHZJREV4SUhKbFpteGxZM1J2Y2lCcGJtWnZjbTFoZEdsdmJpRGlnSlFnWVhKeVlYbHpMQ0JqYjNKdVpYSXRZM1ZpWlNCd2NtbHpiWE1nWVc1a0lHeGhjMlZ5SUhKaGJtZHBibWM2SUdoMGRIQnpPaTh2YVd4eWN5NW5jMlpqTG01aGMyRXVaMjkyTDIxcGMzTnBiMjV6TDNOaGRHVnNiR2wwWlY5dGFYTnphVzl1Y3k5amRYSnlaVzUwWDIxcGMzTnBiMjV6TDJGd01URmZjbVZtYkdWamRHOXlMbWgwYld3S0xTQk9RVk5CSUVGd2IyeHNieUJNZFc1aGNpQlRkWEptWVdObElFcHZkWEp1WVd3c0lFRk1VMFZRSUdWNGNHVnlhVzFsYm5SeklPS0FsQ0JCY0c5c2JHOGdjM1Z5Wm1GalpTQmxjWFZwY0cxbGJuUWdZVzVrSUhCaGMzTnBkbVVnY21WbWJHVmpkRzl5SUdOdmJuUmxlSFE2SUdoMGRIQnpPaTh2ZDNkM0xtNWhjMkV1WjI5MkwzZHdMV052Ym5SbGJuUXZkWEJzYjJGa2N5OXpkR0YwYVdNdmFHbHpkRzl5ZVM5aGJITnFMMGhoYldsemFFRk1VMFZRTG1oMGJXd0tMU0JPU1ZOVUxDQlVieUIwYUdVZ1RXOXZiaUJoYm1RZ1FtRmpheUJwYmlBeUxqVWdVMlZqYjI1a2N5RGlnSlFnZEdsdGFXNW5JSFJvWlNCeWIzVnVaQzEwY21sd0lHcHZkWEp1WlhrZ1lXNWtJR2hwYzNSdmNtbGpZV3dnWlhod2JHRnVZWFJwYjI0NklHaDBkSEJ6T2k4dmQzZDNMbTVwYzNRdVoyOTJMMmhwYzNSdmNua3ZiVzl2YmkxaGJtUXRZbUZqYXkweU5TMXpaV052Ym1SekNncFVhR1VnWjJGdFpTQnpkVzF0WVhKcGVtVnpJSFJvWlhObElITjFZbXBsWTNSeklHbHVJR2wwY3lCdmQyNGdaV1IxWTJGMGFXOXVZV3dnZEdWNGRDNGdTWFFnWkc5bGN5QnViM1FnY21Wd2NtOWtkV05sSUhSb1pTQnpiM1Z5WTJWekp5QndhRzkwYjJkeVlYQm9jeTRnUVhCdmJHeHZJREV4SjNNZ2NHRnVaV3dnYVhNZ2FXNTBjbTlrZFdObFpDQnBiaUF4T1RZNU95QkJjRzlzYkc4Z01UUWdZVzVrSUVGd2IyeHNieUF4TlNCd1lXNWxiSE1nYVc0Z01UazNNUzRnVkdobElHOWljMlZ5ZG1GMGIzSjVJSE5sYm1SeklHRnVaQ0JrWlhSbFkzUnpJR3hwWjJoMElHOXVJRVZoY25Sb095QjBhR1VnVFc5dmJpQmhjbkpoZVhNZ1lYSmxJSEJoYzNOcGRtVXVJRlJvWlNCMGFISmxaU0J5YjNWdVpITWdZV3hzSUhWelpTQjBhR1VnYzJGdFpTQXpPRFFzTkRBd0lHdHRJSFJsWVdOb2FXNW5JR1Y0WVcxd2JHVXNJRzV2ZENCeVpXRnNJRzFsWVhOMWNtVnRaVzUwY3lCbWNtOXRJSFJvWlNCMGFISmxaU0JzWVc1a2FXNW5JSE5wZEdWekxpQlVhR1VnYkdGelpYSWdkSEpoZG1Wc0lHRnVhVzFoZEdsdmJpQnBjeUJ6Ykc5M1pXUXNJR0Z1WkNCa2FYTjBZVzVqWlhNc0lITnBlbVZ6SUdGdVpDQndiM05wZEdsdmJuTWdZWEpsSUhOamFHVnRZWFJwWXk0S0NpTWpJRlpwYzJsaWJHVWdhV3hzZFhOMGNtRjBhVzl1SUdScGMyTnNiM04xY21VS0NsUm9aU0JqZFhKeVpXNTBJR2RoYldVZ1pHbHpjR3hoZVhNZ0lrRkpMV2RsYm1WeVlYUmxaQ0JwYkd4MWMzUnlZWFJwYjI1eklNSzNJRU5vWVhSSFVGUXZRMjlrWlhnaUlHbHVJRVZ1WjJ4cGMyZ2dZVzVrSUNKSmJIVnpkSEpoWTJsdmJtVnpJR2RsYm1WeVlXUmhjeUJqYjI0Z1NVRWd3cmNnUTJoaGRFZFFWQzlEYjJSbGVDSWdhVzRnVTNCaGJtbHphQzRnVkdocGN5QmtaWE5qY21saVpYTWdVMVpISUdGdVpDQkRZVzUyWVhNZ2FXeHNkWE4wY21GMGFXOXVjeUJqY21WaGRHVmtJSFJvY205MVoyZ2dRVWt0WVhOemFYTjBaV1FnWTI5a1pTQjFibVJsY2lCMGFHVWdjSEp2YW1WamRDQnZkMjVsY2lkeklHUnBjbVZqZEdsdmJqc2dhWFFnWkc5bGN5QnViM1FnWkdWelkzSnBZbVVnY21WaGJDQk9RVk5CSUhCb2IzUnZaM0poY0doeklHOXlJR05zWVdsdElFNUJVMEVnWVhWMGFHOXljMmhwY0M0S0NsUm9aU0JrYVhOamJHOXpkWEpsSUdseklIWnBjMmxpYkdVZ2FXNXphV1JsSUhSb1pTQm5ZVzFsSUhOalpXNWxJSFJvY205MVoyaHZkWFFnZEdobElHbHVkSEp2WkhWamRHbHZiaXdnYjJKelpYSjJZWFJwYjI1ekxDQmthWE5qYjNabGNtbGxjeUJoYm1RZ1pXNWthVzVuTGlCSmRDQnlaVzFoYVc1eklIWnBjMmxpYkdVZ2QyaGxiaUIwYUdVZ1kyOXVkSEp2YkhNZ2IzSWdiR1Z6YzI5dUlHOTJaWEpzWVhseklHRnlaU0J6YUc5M2JpNEtDbFJvYVhNZ2JtOTBhV05sSUdSdlpYTWdibTkwSUdOc1lXbHRJSFJvWVhRZ1lTQm5aVzVsY21GMGFYWmxJRUZKSUhObGNuWnBZMlVnY25WdWN5QmtkWEpwYm1jZ2NHeGhlUzRnVkdobElITnZkWEpqWlNCamIyUmxJR0Z1WkNCemVXNTBhR1Z6YVhwbFpDQmhkV1JwYnlCcGJYQnNaVzFsYm5SaGRHbHZiaUJ5WlcxaGFXNGdaR2x6WTJ4dmMyVmtJR0Z6SUVGSkxXRnpjMmx6ZEdWa0lHbHVJSFJvYVhNZ1pHOWpkVzFsYm5RZ1lXNWtJR2x1SUhSb1pTQnpiM1Z5WTJVdGNHRmphMkZuWlNCdFpYUmhaR0YwWVM0Z1ZHaGxJRzV2ZEdsalpTQnlaV052Y21SeklIUm9aU0JwYkd4MWMzUnlZWFJwYjI0Z2IzSnBaMmx1T3lCcGRDQmtiMlZ6SUc1dmRDQmpaWEowYVdaNUlHTnZiWEJsZEdsMGFXOXVJR1ZzYVdkcFltbHNhWFI1TGdvPSIgZG93bmxvYWQ+RG93bmxvYWQgY3JlZGl0czwvYT48YSBocmVmPSJkb3dubG9hZHMvU2lsZW50LU1pcnJvci1Tb3VyY2UtTUlULnppcCIgZG93bmxvYWQ+RG93bmxvYWQgY3VycmVudCBzb3VyY2UgY29kZTwvYT48L25hdj48aDE+Q3JlZGl0cyBhbmQgVGhpcmQtUGFydHkgUmVzb3VyY2VzIOKAlCBUaGUgU2lsZW50IE1pcnJvcjwvaDE+PHA+Q3VycmVudCBicm93c2VyLWdhbWUgcmVsZWFzZSDCtyBMaWNlbnNlIGRvY3VtZW50YXRpb24gdXBkYXRlZCBOb3ZlbWJlciAxNSwgMjAyNi48L3A+PHA+UHVibGljIGdhbWU6IDxhIGhyZWY9Imh0dHBzOi8vZWwtZXNwZWpvLXNpbGVuY2lvc28uc3BsZW5kaWRzcG9vbmJpbGwzLmNoYXRncHQuc2l0ZS8iIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciI+aHR0cHM6Ly9lbC1lc3Blam8tc2lsZW5jaW9zby5zcGxlbmRpZHNwb29uYmlsbDMuY2hhdGdwdC5zaXRlLzwvYT48L3A+PGgyPkxpY2Vuc2Ugc2NvcGUgYW5kIGV4Y2VwdGlvbnM8L2gyPjxwPlRoZSBwcm9qZWN0JiN4Mjc7cyBvd24gY3VycmVudCBicm93c2VyLWdhbWUgSFRNTCwgQ1NTLCBKYXZhU2NyaXB0LCB0cmFuc2xhdGlvbnMsIG9yaWdpbmFsIFNWRyBhc3NldHMsIHByb2NlZHVyYWwgZHJhd2luZyBhbmQgc291bmQgY29kZSwgdGVzdHMsIGFuZCBhY2NvbXBhbnlpbmcgbmV3IGRvY3VtZW50YXRpb24gYXJlIG9mZmVyZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlIGluIExJQ0VOU0UsIHRvIHRoZSBleHRlbnQgdGhlIGNvbnRyaWJ1dG9ycyBob2xkIGxpY2Vuc2FibGUgcmlnaHRzLiBLZWVwIGl0cyBjb3B5cmlnaHQgYW5kIHBlcm1pc3Npb24gbm90aWNlIHdoZW4gcmVkaXN0cmlidXRpbmcgc3Vic3RhbnRpYWwgcG9ydGlvbnMuPC9wPjxwPk1JVCBkb2VzIG5vdCByZXBsYWNlIHRoZSBsaWNlbnNlcyBvciB0ZXJtcyBvZiB0aGlyZC1wYXJ0eSByZXNvdXJjZXMsIGZvbnQgc29mdHdhcmUsIHNjaWVudGlmaWMgc291cmNlIGRvY3VtZW50cywgTkFTQSBtYXRlcmlhbCwgdHJhZGVtYXJrcyBvciBicm93c2VyLXByb3ZpZGVkIGNvbXBvbmVudHMuIE1lcmVseSBjaXRpbmcgYSBzb3VyY2UgZG9lcyBub3QgcmVsaWNlbnNlIHRoYXQgc291cmNlLiBFeHRlcm5hbCByZWZlcmVuY2UgcGFnZXMgYXJlIG5vdCBpbmNsdWRlZCBpbiB0aGUgc291cmNlIFpJUC48L3A+PHA+VGhlIGNvcHlyaWdodCBub3RpY2UgdXNlcyBhIGNvbGxlY3RpdmUgcHJvamVjdCBhdHRyaWJ1dGlvbjsgaXQgZG9lcyBub3QgYXNzZXJ0IGEgcmVnaXN0ZXJlZCBvcmdhbml6YXRpb24sIGlkZW50aWZ5IGluZGl2aWR1YWwgbGVnYWwgb3duZXJzLCBvciBjbGFpbSBleGNsdXNpdmUgcmlnaHRzIGluIEFJLWdlbmVyYXRlZCBtYXRlcmlhbC4gVGhpcyBub3RpY2UgcmVjb3JkcyB0aGUgcHJvamVjdCBvd25lciYjeDI3O3MgaW5zdHJ1Y3Rpb24gdG8gcmVsZWFzZSB0aGUgcHJvamVjdCYjeDI3O3Mgb3duIG1hdGVyaWFscyB1bmRlciBNSVQ7IGl0IGlzIG5vdCBhbiBpbmRlcGVuZGVudCBjZXJ0aWZpY2F0aW9uIG9mIG9yaWdpbmFsaXR5IG9yIGNvbXBldGl0aW9uIGVsaWdpYmlsaXR5LjwvcD48aDI+Q29udHJpYnV0aW9ucyBhbmQgQUkgYXNzaXN0YW5jZTwvaDI+PHA+UHJvamVjdCBkaXJlY3Rpb24sIGF1ZGllbmNlLCBmZWF0dXJlIHJlcXVlc3RzLCBzZWxlY3Rpb24gb2Ygc3ViamVjdCBtYXR0ZXIgYW5kIGl0ZXJhdGlvbiB3ZXJlIHByb3ZpZGVkIGJ5IHRoZSBwcm9qZWN0IG93bmVyIHRocm91Z2ggdGhpcyBjb252ZXJzYXRpb24uIE9wZW5BSSBDaGF0R1BUL0NvZGV4IGFzc2lzdGVkIHdpdGggaW1wbGVtZW50YXRpb24sIEVuZ2xpc2ggdGV4dCwgU3BhbmlzaCB0cmFuc2xhdGlvbnMsIHByb2NlZHVyYWwgU1ZHL0NhbnZhcyBpbGx1c3RyYXRpb25zLCBzeW50aGVzaXplZCBhdWRpbyBjb2RlLCBjaGVja3MgYW5kIGRvY3VtZW50YXRpb24uIE5vIGludmVudGVkIGluZGl2aWR1YWwgb3IgdGVhbSBuYW1lcyBhcmUgY3JlZGl0ZWQgaGVyZS4gVGhlIHRlYW0gc2hvdWxkIHJlY29yZCBpdHMgYWN0dWFsIG1lbWJlcnMgYW5kIGNvbnRyaWJ1dGlvbnMgaW4gdGhlIG9mZmljaWFsIHN1Ym1pc3Npb24uPC9wPjxwPlRoZSBjdXJyZW50IGJyb3dzZXIgZ2FtZSBkb2VzIG5vdCBjYWxsIGEgZ2VuZXJhdGl2ZSBBSSBzZXJ2aWNlIGR1cmluZyBwbGF5LiBJdHMgaW1hZ2VzIGFyZSBTVkcgZmlsZXMgb3IgQ2FudmFzIGRyYXdpbmdzIHByb2R1Y2VkIGJ5IGNvZGUsIHJhdGhlciB0aGFuIGRvd25sb2FkZWQgTkFTQSBwaG90b2dyYXBocy4gSXRzIHNob3J0IHNvdW5kIGVmZmVjdHMgYXJlIHN5bnRoZXNpemVkIHdpdGggdGhlIFdlYiBBdWRpbyBBUEksIHdpdGhvdXQgYnVuZGxlZCBtdXNpYyBvciByZWNvcmRpbmdzLiBUaGlzIGRpc2Nsb3N1cmUgcmVjb3JkcyBhc3Npc3RhbmNlOyBpdCBkb2VzIG5vdCBpbXBseSBOQVNBIHJldmlldyBvciBhcHByb3ZhbC48L3A+PGgyPkluZGVwZW5kZW5jZSBhbmQgc2NpZW50aWZpYyBjb250ZXh0PC9oMj48cD5UaGlzIGlzIGFuIGluZGVwZW5kZW50IGVkdWNhdGlvbmFsIHByb2plY3QsIG5vdCBhbiBvZmZpY2lhbCBOQVNBIHByb2R1Y3QuIE5BU0EgaGFzIG5vdCBlbmRvcnNlZCBpdC4gU2NpZW50aWZpYyByZWZlcmVuY2VzIGRlc2NyaWJlIHJlYWwgbWlzc2lvbnM7IGNoYXJhY3RlcnMmI3gyNzsgZW1vdGlvbnMgYW5kIHRoZSBwbGF5YWJsZSBqb3VybmV5IGFyZSBzaW1wbGlmaWVkIHN0b3J5dGVsbGluZy4gTm8gTkFTQSBsb2dvIGlzIGJ1bmRsZWQgd2l0aCB0aGUgY3VycmVudCBnYW1lIGFydHdvcmsuIE5BU0EgbmFtZXMsIG1hcmtzIGFuZCBleHRlcm5hbCBtYXRlcmlhbHMgYXJlIG5vdCBsaWNlbnNlZCBieSB0aGlzIHByb2plY3QmI3gyNztzIE1JVCBub3RpY2UuPC9wPjxwPk5BU0EgbWVkaWEgZ3VpZGFuY2U6IDxhIGhyZWY9Imh0dHBzOi8vd3d3Lm5hc2EuZ292L25hc2EtYnJhbmQtY2VudGVyL2ltYWdlcy1hbmQtbWVkaWEvIiByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIiPmh0dHBzOi8vd3d3Lm5hc2EuZ292L25hc2EtYnJhbmQtY2VudGVyL2ltYWdlcy1hbmQtbWVkaWEvPC9hPjwvcD48aDI+Q29tcGV0aXRpb24gZG9jdW1lbnRhdGlvbiBib3VuZGFyeTwvaDI+PHA+VGhlc2UgZmlsZXMgZG9jdW1lbnQgbGljZW5zaW5nLCByZXNvdXJjZSBvcmlnaW5zIGFuZCBBSSBhc3Npc3RhbmNlLiBUaGV5IGRvIG5vdCBjZXJ0aWZ5IGVsaWdpYmlsaXR5IGZvciBOQVNBIFNwYWNlIEFwcHMuIFRoZSB0ZWFtIG11c3QgaW5kZXBlbmRlbnRseSBjb21wbGV0ZSB0aGUgc3VibWlzc2lvbiYjeDI3O3MgcmVmZXJlbmNlcyBhbmQgQUktdXNlIGZpZWxkcywgdmVyaWZ5IGF0IGxlYXN0IG9uZSBzb3VyY2UgYWdhaW5zdCBpdHMgY2hhbGxlbmdlJiN4Mjc7cyBvZmZpY2lhbCByZXNvdXJjZSBsaXN0LCBhbmQgcmVjb3JkIHRoZSB0cnVlIGRldmVsb3BtZW50IGRhdGVzLiBBbnkgYXBwbGljYWJsZSByZXF1aXJlbWVudHMgY29uY2VybmluZyBBSS1pbWFnZSBsYWJlbGluZyBvciBvdGhlciBzdWJtaXNzaW9uIGZvcm1hdHMgcmVtYWluIHNlcGFyYXRlIGZyb20gdGhpcyBsaWNlbnNlIG5vdGljZS48L3A+PGgyPkN1cnJlbnQgZ2FtZSBhc3NldCBpbnZlbnRvcnk8L2gyPjx1bD48bGk+ZGlzdC9nYW1lLmpzOiBvcmlnaW5hbCBDYW52YXMgb2JzZXJ2YXRvcnksIE1vb24sIGNyYXRlciB0ZXh0dXJlcywgdGVsZXNjb3BlLCBzY2hlbWF0aWMgcmVmbGVjdG9yIHNpdGVzLCBsYXNlci1wdWxzZSBhbmltYXRpb24gYW5kIHN5bnRoZXNpemVkIHNvdW5kIGltcGxlbWVudGF0aW9uLjwvbGk+PGxpPmRpc3QvYXNzZXRzL21vb24uc3ZnOiBvcmlnaW5hbCBnZW9tZXRyaWMgTW9vbi1hbmQtc3RhciBwcm9qZWN0IGljb24gY3JlYXRlZCB0aHJvdWdoIEFJLWFzc2lzdGVkIFNWRyBjb2RlLjwvbGk+PGxpPmRpc3QvY29weS5qczogRW5nbGlzaCBzb3VyY2UgZWR1Y2F0aW9uYWwgdGV4dC48L2xpPjxsaT5kaXN0L3RyYW5zbGF0aW9ucy5lcy5qczogc2VwYXJhdGUgU3BhbmlzaCB0cmFuc2xhdGlvbiBjYXRhbG9ndWUuPC9saT48bGk+Tm8gZXh0ZXJuYWwgcGhvdG9ncmFwaHMsIGZvbnQgYmluYXJpZXMsIHJlY29yZGVkIGF1ZGlvLCBnYW1lIGVuZ2luZSBvciB0aGlyZC1wYXJ0eSBKYXZhU2NyaXB0IGxpYnJhcnkgaXMgYnVuZGxlZCBpbiB0aGlzIGJyb3dzZXIgZ2FtZS4gRm9udHMgYXJlIHN1cHBsaWVkIGJ5IHRoZSB1c2VyJiN4Mjc7cyBzeXN0ZW0uPC9saT48L3VsPjxoMj5TY2llbnRpZmljIHJlZmVyZW5jZXMgYW5kIHRoZWlyIHVzZTwvaDI+PHVsPjxsaT5OQVNBIC8gSW50ZXJuYXRpb25hbCBMYXNlciBSYW5naW5nIFNlcnZpY2UsIEFwb2xsbyAxMSByZWZsZWN0b3IgaW5mb3JtYXRpb24g4oCUIGFycmF5cywgY29ybmVyLWN1YmUgcHJpc21zIGFuZCBsYXNlciByYW5naW5nOiA8YSBocmVmPSJodHRwczovL2lscnMuZ3NmYy5uYXNhLmdvdi9taXNzaW9ucy9zYXRlbGxpdGVfbWlzc2lvbnMvY3VycmVudF9taXNzaW9ucy9hcDExX3JlZmxlY3Rvci5odG1sIiByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIiPmh0dHBzOi8vaWxycy5nc2ZjLm5hc2EuZ292L21pc3Npb25zL3NhdGVsbGl0ZV9taXNzaW9ucy9jdXJyZW50X21pc3Npb25zL2FwMTFfcmVmbGVjdG9yLmh0bWw8L2E+PC9saT48bGk+TkFTQSBBcG9sbG8gTHVuYXIgU3VyZmFjZSBKb3VybmFsLCBBTFNFUCBleHBlcmltZW50cyDigJQgQXBvbGxvIHN1cmZhY2UgZXF1aXBtZW50IGFuZCBwYXNzaXZlIHJlZmxlY3RvciBjb250ZXh0OiA8YSBocmVmPSJodHRwczovL3d3dy5uYXNhLmdvdi93cC1jb250ZW50L3VwbG9hZHMvc3RhdGljL2hpc3RvcnkvYWxzai9IYW1pc2hBTFNFUC5odG1sIiByZWw9Im5vb3BlbmVyIG5vcmVmZXJyZXIiPmh0dHBzOi8vd3d3Lm5hc2EuZ292L3dwLWNvbnRlbnQvdXBsb2Fkcy9zdGF0aWMvaGlzdG9yeS9hbHNqL0hhbWlzaEFMU0VQLmh0bWw8L2E+PC9saT48bGk+TklTVCwgVG8gdGhlIE1vb24gYW5kIEJhY2sgaW4gMi41IFNlY29uZHMg4oCUIHRpbWluZyB0aGUgcm91bmQtdHJpcCBqb3VybmV5IGFuZCBoaXN0b3JpY2FsIGV4cGxhbmF0aW9uOiA8YSBocmVmPSJodHRwczovL3d3dy5uaXN0Lmdvdi9oaXN0b3J5L21vb24tYW5kLWJhY2stMjUtc2Vjb25kcyIgcmVsPSJub29wZW5lciBub3JlZmVycmVyIj5odHRwczovL3d3dy5uaXN0Lmdvdi9oaXN0b3J5L21vb24tYW5kLWJhY2stMjUtc2Vjb25kczwvYT48L2xpPjwvdWw+PHA+VGhlIGdhbWUgc3VtbWFyaXplcyB0aGVzZSBzdWJqZWN0cyBpbiBpdHMgb3duIGVkdWNhdGlvbmFsIHRleHQuIEl0IGRvZXMgbm90IHJlcHJvZHVjZSB0aGUgc291cmNlcyYjeDI3OyBwaG90b2dyYXBocy4gQXBvbGxvIDExJiN4Mjc7cyBwYW5lbCBpcyBpbnRyb2R1Y2VkIGluIDE5Njk7IEFwb2xsbyAxNCBhbmQgQXBvbGxvIDE1IHBhbmVscyBpbiAxOTcxLiBUaGUgb2JzZXJ2YXRvcnkgc2VuZHMgYW5kIGRldGVjdHMgbGlnaHQgb24gRWFydGg7IHRoZSBNb29uIGFycmF5cyBhcmUgcGFzc2l2ZS4gVGhlIHRocmVlIHJvdW5kcyBhbGwgdXNlIHRoZSBzYW1lIDM4NCw0MDAga20gdGVhY2hpbmcgZXhhbXBsZSwgbm90IHJlYWwgbWVhc3VyZW1lbnRzIGZyb20gdGhlIHRocmVlIGxhbmRpbmcgc2l0ZXMuIFRoZSBsYXNlciB0cmF2ZWwgYW5pbWF0aW9uIGlzIHNsb3dlZCwgYW5kIGRpc3RhbmNlcywgc2l6ZXMgYW5kIHBvc2l0aW9ucyBhcmUgc2NoZW1hdGljLjwvcD48aDI+VmlzaWJsZSBpbGx1c3RyYXRpb24gZGlzY2xvc3VyZTwvaDI+PHA+VGhlIGdhbWUgZGlzcGxheXMg4oCcQUktZ2VuZXJhdGVkIGlsbHVzdHJhdGlvbnMgwrcgQ2hhdEdQVC9Db2RleOKAnSwgdHJhbnNsYXRlZCBpbnRvIFNwYW5pc2ggd2hlbiBzZWxlY3RlZC4gVGhlIGFydHdvcmsgd2FzIGNyZWF0ZWQgdGhyb3VnaCBBSS1hc3Npc3RlZCBTVkcgYW5kIENhbnZhcyBjb2RlIHVuZGVyIHRoZSBwcm9qZWN0IG93bmVy4oCZcyBkaXJlY3Rpb24uIEl0IGlzIG5vdCBOQVNBIHBob3RvZ3JhcGh5LiBUaGUgZGlzY2xvc3VyZSBpcyB2aXNpYmxlIGluc2lkZSB0aGUgZ2FtZSBzY2VuZSB0aHJvdWdob3V0IHRoZSBpbnRyb2R1Y3Rpb24sIG9ic2VydmF0aW9ucywgZGlzY292ZXJpZXMgYW5kIGVuZGluZy4gSXQgcmVtYWlucyB2aXNpYmxlIHdoZW4gdGhlIGNvbnRyb2xzIG9yIGxlc3NvbiBvdmVybGF5cyBhcmUgc2hvd24uPC9wPjxwPkZ1bGwgQUkgY29udHJpYnV0aW9uIGRldGFpbHMgYW5kIGxpbWl0YXRpb25zIHJlbWFpbiBpbiB0aGUgZG93bmxvYWRhYmxlIGRhdGE6dGV4dC9wbGFpbjtiYXNlNjQsSXlCRGNtVmthWFJ6SUdGdVpDQlVhR2x5WkMxUVlYSjBlU0JTWlhOdmRYSmpaWE1nNG9DVUlGUm9aU0JUYVd4bGJuUWdUV2x5Y205eUNncERkWEp5Wlc1MElHSnliM2R6WlhJdFoyRnRaU0J5Wld4bFlYTmxJTUszSUV4cFkyVnVjMlVnWkc5amRXMWxiblJoZEdsdmJpQjFjR1JoZEdWa0lFNXZkbVZ0WW1WeUlERTFMQ0F5TURJMkxnb0tVSFZpYkdsaklHZGhiV1U2SUdoMGRIQnpPaTh2Wld3dFpYTndaV3B2TFhOcGJHVnVZMmx2YzI4dWMzQnNaVzVrYVdSemNHOXZibUpwYkd3ekxtTm9ZWFJuY0hRdWMybDBaUzhLQ2lNaklFeHBZMlZ1YzJVZ2MyTnZjR1VnWVc1a0lHVjRZMlZ3ZEdsdmJuTUtDbFJvWlNCd2NtOXFaV04wSjNNZ2IzZHVJR04xY25KbGJuUWdZbkp2ZDNObGNpMW5ZVzFsSUVoVVRVd3NJRU5UVXl3Z1NtRjJZVk5qY21sd2RDd2dkSEpoYm5Oc1lYUnBiMjV6TENCdmNtbG5hVzVoYkNCVFZrY2dZWE56WlhSekxDQndjbTlqWldSMWNtRnNJR1J5WVhkcGJtY2dZVzVrSUhOdmRXNWtJR052WkdVc0lIUmxjM1J6TENCaGJtUWdZV05qYjIxd1lXNTVhVzVuSUc1bGR5QmtiMk4xYldWdWRHRjBhVzl1SUdGeVpTQnZabVpsY21Wa0lIVnVaR1Z5SUhSb1pTQk5TVlFnVEdsalpXNXpaU0JwYmlCTVNVTkZUbE5GTENCMGJ5QjBhR1VnWlhoMFpXNTBJSFJvWlNCamIyNTBjbWxpZFhSdmNuTWdhRzlzWkNCc2FXTmxibk5oWW14bElISnBaMmgwY3k0Z1MyVmxjQ0JwZEhNZ1kyOXdlWEpwWjJoMElHRnVaQ0J3WlhKdGFYTnphVzl1SUc1dmRHbGpaU0IzYUdWdUlISmxaR2x6ZEhKcFluVjBhVzVuSUhOMVluTjBZVzUwYVdGc0lIQnZjblJwYjI1ekxnb0tUVWxVSUdSdlpYTWdibTkwSUhKbGNHeGhZMlVnZEdobElHeHBZMlZ1YzJWeklHOXlJSFJsY20xeklHOW1JSFJvYVhKa0xYQmhjblI1SUhKbGMyOTFjbU5sY3l3Z1ptOXVkQ0J6YjJaMGQyRnlaU3dnYzJOcFpXNTBhV1pwWXlCemIzVnlZMlVnWkc5amRXMWxiblJ6TENCT1FWTkJJRzFoZEdWeWFXRnNMQ0IwY21Ga1pXMWhjbXR6SUc5eUlHSnliM2R6WlhJdGNISnZkbWxrWldRZ1kyOXRjRzl1Wlc1MGN5NGdUV1Z5Wld4NUlHTnBkR2x1WnlCaElITnZkWEpqWlNCa2IyVnpJRzV2ZENCeVpXeHBZMlZ1YzJVZ2RHaGhkQ0J6YjNWeVkyVXVJRVY0ZEdWeWJtRnNJSEpsWm1WeVpXNWpaU0J3WVdkbGN5QmhjbVVnYm05MElHbHVZMngxWkdWa0lHbHVJSFJvWlNCemIzVnlZMlVnV2tsUUxnb0tWR2hsSUdOdmNIbHlhV2RvZENCdWIzUnBZMlVnZFhObGN5QmhJR052Ykd4bFkzUnBkbVVnY0hKdmFtVmpkQ0JoZEhSeWFXSjFkR2x2YmpzZ2FYUWdaRzlsY3lCdWIzUWdZWE56WlhKMElHRWdjbVZuYVhOMFpYSmxaQ0J2Y21kaGJtbDZZWFJwYjI0c0lHbGtaVzUwYVdaNUlHbHVaR2wyYVdSMVlXd2diR1ZuWVd3Z2IzZHVaWEp6TENCdmNpQmpiR0ZwYlNCbGVHTnNkWE5wZG1VZ2NtbG5hSFJ6SUdsdUlFRkpMV2RsYm1WeVlYUmxaQ0J0WVhSbGNtbGhiQzRnVkdocGN5QnViM1JwWTJVZ2NtVmpiM0prY3lCMGFHVWdjSEp2YW1WamRDQnZkMjVsY2lkeklHbHVjM1J5ZFdOMGFXOXVJSFJ2SUhKbGJHVmhjMlVnZEdobElIQnliMnBsWTNRbmN5QnZkMjRnYldGMFpYSnBZV3h6SUhWdVpHVnlJRTFKVkRzZ2FYUWdhWE1nYm05MElHRnVJR2x1WkdWd1pXNWtaVzUwSUdObGNuUnBabWxqWVhScGIyNGdiMllnYjNKcFoybHVZV3hwZEhrZ2IzSWdZMjl0Y0dWMGFYUnBiMjRnWld4cFoybGlhV3hwZEhrdUNnb2pJeUJEYjI1MGNtbGlkWFJwYjI1eklHRnVaQ0JCU1NCaGMzTnBjM1JoYm1ObENncFFjbTlxWldOMElHUnBjbVZqZEdsdmJpd2dZWFZrYVdWdVkyVXNJR1psWVhSMWNtVWdjbVZ4ZFdWemRITXNJSE5sYkdWamRHbHZiaUJ2WmlCemRXSnFaV04wSUcxaGRIUmxjaUJoYm1RZ2FYUmxjbUYwYVc5dUlIZGxjbVVnY0hKdmRtbGtaV1FnWW5rZ2RHaGxJSEJ5YjJwbFkzUWdiM2R1WlhJZ2RHaHliM1ZuYUNCMGFHbHpJR052Ym5abGNuTmhkR2x2Ymk0Z1QzQmxia0ZKSUVOb1lYUkhVRlF2UTI5a1pYZ2dZWE56YVhOMFpXUWdkMmwwYUNCcGJYQnNaVzFsYm5SaGRHbHZiaXdnUlc1bmJHbHphQ0IwWlhoMExDQlRjR0Z1YVhOb0lIUnlZVzV6YkdGMGFXOXVjeXdnY0hKdlkyVmtkWEpoYkNCVFZrY3ZRMkZ1ZG1GeklHbHNiSFZ6ZEhKaGRHbHZibk1zSUhONWJuUm9aWE5wZW1Wa0lHRjFaR2x2SUdOdlpHVXNJR05vWldOcmN5QmhibVFnWkc5amRXMWxiblJoZEdsdmJpNGdUbThnYVc1MlpXNTBaV1FnYVc1a2FYWnBaSFZoYkNCdmNpQjBaV0Z0SUc1aGJXVnpJR0Z5WlNCamNtVmthWFJsWkNCb1pYSmxMaUJVYUdVZ2RHVmhiU0J6YUc5MWJHUWdjbVZqYjNKa0lHbDBjeUJoWTNSMVlXd2diV1Z0WW1WeWN5QmhibVFnWTI5dWRISnBZblYwYVc5dWN5QnBiaUIwYUdVZ2IyWm1hV05wWVd3Z2MzVmliV2x6YzJsdmJpNEtDbFJvWlNCamRYSnlaVzUwSUdKeWIzZHpaWElnWjJGdFpTQmtiMlZ6SUc1dmRDQmpZV3hzSUdFZ1oyVnVaWEpoZEdsMlpTQkJTU0J6WlhKMmFXTmxJR1IxY21sdVp5QndiR0Y1TGlCSmRITWdhVzFoWjJWeklHRnlaU0JUVmtjZ1ptbHNaWE1nYjNJZ1EyRnVkbUZ6SUdSeVlYZHBibWR6SUhCeWIyUjFZMlZrSUdKNUlHTnZaR1VzSUhKaGRHaGxjaUIwYUdGdUlHUnZkMjVzYjJGa1pXUWdUa0ZUUVNCd2FHOTBiMmR5WVhCb2N5NGdTWFJ6SUhOb2IzSjBJSE52ZFc1a0lHVm1abVZqZEhNZ1lYSmxJSE41Ym5Sb1pYTnBlbVZrSUhkcGRHZ2dkR2hsSUZkbFlpQkJkV1JwYnlCQlVFa3NJSGRwZEdodmRYUWdZblZ1Wkd4bFpDQnRkWE5wWXlCdmNpQnlaV052Y21ScGJtZHpMaUJVYUdseklHUnBjMk5zYjNOMWNtVWdjbVZqYjNKa2N5QmhjM05wYzNSaGJtTmxPeUJwZENCa2IyVnpJRzV2ZENCcGJYQnNlU0JPUVZOQklISmxkbWxsZHlCdmNpQmhjSEJ5YjNaaGJDNEtDaU1qSUVsdVpHVndaVzVrWlc1alpTQmhibVFnYzJOcFpXNTBhV1pwWXlCamIyNTBaWGgwQ2dwVWFHbHpJR2x6SUdGdUlHbHVaR1Z3Wlc1a1pXNTBJR1ZrZFdOaGRHbHZibUZzSUhCeWIycGxZM1FzSUc1dmRDQmhiaUJ2Wm1acFkybGhiQ0JPUVZOQklIQnliMlIxWTNRdUlFNUJVMEVnYUdGeklHNXZkQ0JsYm1SdmNuTmxaQ0JwZEM0Z1UyTnBaVzUwYVdacFl5QnlaV1psY21WdVkyVnpJR1JsYzJOeWFXSmxJSEpsWVd3Z2JXbHpjMmx2Ym5NN0lHTm9ZWEpoWTNSbGNuTW5JR1Z0YjNScGIyNXpJR0Z1WkNCMGFHVWdjR3hoZVdGaWJHVWdhbTkxY201bGVTQmhjbVVnYzJsdGNHeHBabWxsWkNCemRHOXllWFJsYkd4cGJtY3VJRTV2SUU1QlUwRWdiRzluYnlCcGN5QmlkVzVrYkdWa0lIZHBkR2dnZEdobElHTjFjbkpsYm5RZ1oyRnRaU0JoY25SM2IzSnJMaUJPUVZOQklHNWhiV1Z6TENCdFlYSnJjeUJoYm1RZ1pYaDBaWEp1WVd3Z2JXRjBaWEpwWVd4eklHRnlaU0J1YjNRZ2JHbGpaVzV6WldRZ1lua2dkR2hwY3lCd2NtOXFaV04wSjNNZ1RVbFVJRzV2ZEdsalpTNEtDazVCVTBFZ2JXVmthV0VnWjNWcFpHRnVZMlU2SUdoMGRIQnpPaTh2ZDNkM0xtNWhjMkV1WjI5MkwyNWhjMkV0WW5KaGJtUXRZMlZ1ZEdWeUwybHRZV2RsY3kxaGJtUXRiV1ZrYVdFdkNnb2pJeUJEYjIxd1pYUnBkR2x2YmlCa2IyTjFiV1Z1ZEdGMGFXOXVJR0p2ZFc1a1lYSjVDZ3BVYUdWelpTQm1hV3hsY3lCa2IyTjFiV1Z1ZENCc2FXTmxibk5wYm1jc0lISmxjMjkxY21ObElHOXlhV2RwYm5NZ1lXNWtJRUZKSUdGemMybHpkR0Z1WTJVdUlGUm9aWGtnWkc4Z2JtOTBJR05sY25ScFpua2daV3hwWjJsaWFXeHBkSGtnWm05eUlFNUJVMEVnVTNCaFkyVWdRWEJ3Y3k0Z1ZHaGxJSFJsWVcwZ2JYVnpkQ0JwYm1SbGNHVnVaR1Z1ZEd4NUlHTnZiWEJzWlhSbElIUm9aU0J6ZFdKdGFYTnphVzl1SjNNZ2NtVm1aWEpsYm1ObGN5QmhibVFnUVVrdGRYTmxJR1pwWld4a2N5d2dkbVZ5YVdaNUlHRjBJR3hsWVhOMElHOXVaU0J6YjNWeVkyVWdZV2RoYVc1emRDQnBkSE1nWTJoaGJHeGxibWRsSjNNZ2IyWm1hV05wWVd3Z2NtVnpiM1Z5WTJVZ2JHbHpkQ3dnWVc1a0lISmxZMjl5WkNCMGFHVWdkSEoxWlNCa1pYWmxiRzl3YldWdWRDQmtZWFJsY3k0Z1FXNTVJR0Z3Y0d4cFkyRmliR1VnY21WeGRXbHlaVzFsYm5SeklHTnZibU5sY201cGJtY2dRVWt0YVcxaFoyVWdiR0ZpWld4cGJtY2diM0lnYjNSb1pYSWdjM1ZpYldsemMybHZiaUJtYjNKdFlYUnpJSEpsYldGcGJpQnpaWEJoY21GMFpTQm1jbTl0SUhSb2FYTWdiR2xqWlc1elpTQnViM1JwWTJVdUNnb2pJeUJEZFhKeVpXNTBJR2RoYldVZ1lYTnpaWFFnYVc1MlpXNTBiM0o1Q2dvdElHUnBjM1F2WjJGdFpTNXFjem9nYjNKcFoybHVZV3dnUTJGdWRtRnpJRzlpYzJWeWRtRjBiM0o1TENCTmIyOXVMQ0JqY21GMFpYSWdkR1Y0ZEhWeVpYTXNJSFJsYkdWelkyOXdaU3dnYzJOb1pXMWhkR2xqSUhKbFpteGxZM1J2Y2lCemFYUmxjeXdnYkdGelpYSXRjSFZzYzJVZ1lXNXBiV0YwYVc5dUlHRnVaQ0J6ZVc1MGFHVnphWHBsWkNCemIzVnVaQ0JwYlhCc1pXMWxiblJoZEdsdmJpNEtMU0JrYVhOMEwyRnpjMlYwY3k5dGIyOXVMbk4yWnpvZ2IzSnBaMmx1WVd3Z1oyVnZiV1YwY21saklFMXZiMjR0WVc1a0xYTjBZWElnY0hKdmFtVmpkQ0JwWTI5dUlHTnlaV0YwWldRZ2RHaHliM1ZuYUNCQlNTMWhjM05wYzNSbFpDQlRWa2NnWTI5a1pTNEtMU0JrYVhOMEwyTnZjSGt1YW5NNklFVnVaMnhwYzJnZ2MyOTFjbU5sSUdWa2RXTmhkR2x2Ym1Gc0lIUmxlSFF1Q2kwZ1pHbHpkQzkwY21GdWMyeGhkR2x2Ym5NdVpYTXVhbk02SUhObGNHRnlZWFJsSUZOd1lXNXBjMmdnZEhKaGJuTnNZWFJwYjI0Z1kyRjBZV3h2WjNWbExnb3RJRTV2SUdWNGRHVnlibUZzSUhCb2IzUnZaM0poY0doekxDQm1iMjUwSUdKcGJtRnlhV1Z6TENCeVpXTnZjbVJsWkNCaGRXUnBieXdnWjJGdFpTQmxibWRwYm1VZ2IzSWdkR2hwY21RdGNHRnlkSGtnU21GMllWTmpjbWx3ZENCc2FXSnlZWEo1SUdseklHSjFibVJzWldRZ2FXNGdkR2hwY3lCaWNtOTNjMlZ5SUdkaGJXVXVJRVp2Ym5SeklHRnlaU0J6ZFhCd2JHbGxaQ0JpZVNCMGFHVWdkWE5sY2lkeklITjVjM1JsYlM0S0NpTWpJRk5qYVdWdWRHbG1hV01nY21WbVpYSmxibU5sY3lCaGJtUWdkR2hsYVhJZ2RYTmxDZ290SUU1QlUwRWdMeUJKYm5SbGNtNWhkR2x2Ym1Gc0lFeGhjMlZ5SUZKaGJtZHBibWNnVTJWeWRtbGpaU3dnUVhCdmJHeHZJREV4SUhKbFpteGxZM1J2Y2lCcGJtWnZjbTFoZEdsdmJpRGlnSlFnWVhKeVlYbHpMQ0JqYjNKdVpYSXRZM1ZpWlNCd2NtbHpiWE1nWVc1a0lHeGhjMlZ5SUhKaGJtZHBibWM2SUdoMGRIQnpPaTh2YVd4eWN5NW5jMlpqTG01aGMyRXVaMjkyTDIxcGMzTnBiMjV6TDNOaGRHVnNiR2wwWlY5dGFYTnphVzl1Y3k5amRYSnlaVzUwWDIxcGMzTnBiMjV6TDJGd01URmZjbVZtYkdWamRHOXlMbWgwYld3S0xTQk9RVk5CSUVGd2IyeHNieUJNZFc1aGNpQlRkWEptWVdObElFcHZkWEp1WVd3c0lFRk1VMFZRSUdWNGNHVnlhVzFsYm5SeklPS0FsQ0JCY0c5c2JHOGdjM1Z5Wm1GalpTQmxjWFZwY0cxbGJuUWdZVzVrSUhCaGMzTnBkbVVnY21WbWJHVmpkRzl5SUdOdmJuUmxlSFE2SUdoMGRIQnpPaTh2ZDNkM0xtNWhjMkV1WjI5MkwzZHdMV052Ym5SbGJuUXZkWEJzYjJGa2N5OXpkR0YwYVdNdmFHbHpkRzl5ZVM5aGJITnFMMGhoYldsemFFRk1VMFZRTG1oMGJXd0tMU0JPU1ZOVUxDQlVieUIwYUdVZ1RXOXZiaUJoYm1RZ1FtRmpheUJwYmlBeUxqVWdVMlZqYjI1a2N5RGlnSlFnZEdsdGFXNW5JSFJvWlNCeWIzVnVaQzEwY21sd0lHcHZkWEp1WlhrZ1lXNWtJR2hwYzNSdmNtbGpZV3dnWlhod2JHRnVZWFJwYjI0NklHaDBkSEJ6T2k4dmQzZDNMbTVwYzNRdVoyOTJMMmhwYzNSdmNua3ZiVzl2YmkxaGJtUXRZbUZqYXkweU5TMXpaV052Ym1SekNncFVhR1VnWjJGdFpTQnpkVzF0WVhKcGVtVnpJSFJvWlhObElITjFZbXBsWTNSeklHbHVJR2wwY3lCdmQyNGdaV1IxWTJGMGFXOXVZV3dnZEdWNGRDNGdTWFFnWkc5bGN5QnViM1FnY21Wd2NtOWtkV05sSUhSb1pTQnpiM1Z5WTJWekp5QndhRzkwYjJkeVlYQm9jeTRnUVhCdmJHeHZJREV4SjNNZ2NHRnVaV3dnYVhNZ2FXNTBjbTlrZFdObFpDQnBiaUF4T1RZNU95QkJjRzlzYkc4Z01UUWdZVzVrSUVGd2IyeHNieUF4TlNCd1lXNWxiSE1nYVc0Z01UazNNUzRnVkdobElHOWljMlZ5ZG1GMGIzSjVJSE5sYm1SeklHRnVaQ0JrWlhSbFkzUnpJR3hwWjJoMElHOXVJRVZoY25Sb095QjBhR1VnVFc5dmJpQmhjbkpoZVhNZ1lYSmxJSEJoYzNOcGRtVXVJRlJvWlNCMGFISmxaU0J5YjNWdVpITWdZV3hzSUhWelpTQjBhR1VnYzJGdFpTQXpPRFFzTkRBd0lHdHRJSFJsWVdOb2FXNW5JR1Y0WVcxd2JHVXNJRzV2ZENCeVpXRnNJRzFsWVhOMWNtVnRaVzUwY3lCbWNtOXRJSFJvWlNCMGFISmxaU0JzWVc1a2FXNW5JSE5wZEdWekxpQlVhR1VnYkdGelpYSWdkSEpoZG1Wc0lHRnVhVzFoZEdsdmJpQnBjeUJ6Ykc5M1pXUXNJR0Z1WkNCa2FYTjBZVzVqWlhNc0lITnBlbVZ6SUdGdVpDQndiM05wZEdsdmJuTWdZWEpsSUhOamFHVnRZWFJwWXk0S0NpTWpJRlpwYzJsaWJHVWdhV3hzZFhOMGNtRjBhVzl1SUdScGMyTnNiM04xY21VS0NsUm9aU0JqZFhKeVpXNTBJR2RoYldVZ1pHbHpjR3hoZVhNZ0lrRkpMV2RsYm1WeVlYUmxaQ0JwYkd4MWMzUnlZWFJwYjI1eklNSzNJRU5vWVhSSFVGUXZRMjlrWlhnaUlHbHVJRVZ1WjJ4cGMyZ2dZVzVrSUNKSmJIVnpkSEpoWTJsdmJtVnpJR2RsYm1WeVlXUmhjeUJqYjI0Z1NVRWd3cmNnUTJoaGRFZFFWQzlEYjJSbGVDSWdhVzRnVTNCaGJtbHphQzRnVkdocGN5QmtaWE5qY21saVpYTWdVMVpISUdGdVpDQkRZVzUyWVhNZ2FXeHNkWE4wY21GMGFXOXVjeUJqY21WaGRHVmtJSFJvY205MVoyZ2dRVWt0WVhOemFYTjBaV1FnWTI5a1pTQjFibVJsY2lCMGFHVWdjSEp2YW1WamRDQnZkMjVsY2lkeklHUnBjbVZqZEdsdmJqc2dhWFFnWkc5bGN5QnViM1FnWkdWelkzSnBZbVVnY21WaGJDQk9RVk5CSUhCb2IzUnZaM0poY0doeklHOXlJR05zWVdsdElFNUJVMEVnWVhWMGFHOXljMmhwY0M0S0NsUm9aU0JrYVhOamJHOXpkWEpsSUdseklIWnBjMmxpYkdVZ2FXNXphV1JsSUhSb1pTQm5ZVzFsSUhOalpXNWxJSFJvY205MVoyaHZkWFFnZEdobElHbHVkSEp2WkhWamRHbHZiaXdnYjJKelpYSjJZWFJwYjI1ekxDQmthWE5qYjNabGNtbGxjeUJoYm1RZ1pXNWthVzVuTGlCSmRDQnlaVzFoYVc1eklIWnBjMmxpYkdVZ2QyaGxiaUIwYUdVZ1kyOXVkSEp2YkhNZ2IzSWdiR1Z6YzI5dUlHOTJaWEpzWVhseklHRnlaU0J6YUc5M2JpNEtDbFJvYVhNZ2JtOTBhV05sSUdSdlpYTWdibTkwSUdOc1lXbHRJSFJvWVhRZ1lTQm5aVzVsY21GMGFYWmxJRUZKSUhObGNuWnBZMlVnY25WdWN5QmtkWEpwYm1jZ2NHeGhlUzRnVkdobElITnZkWEpqWlNCamIyUmxJR0Z1WkNCemVXNTBhR1Z6YVhwbFpDQmhkV1JwYnlCcGJYQnNaVzFsYm5SaGRHbHZiaUJ5WlcxaGFXNGdaR2x6WTJ4dmMyVmtJR0Z6SUVGSkxXRnpjMmx6ZEdWa0lHbHVJSFJvYVhNZ1pHOWpkVzFsYm5RZ1lXNWtJR2x1SUhSb1pTQnpiM1Z5WTJVdGNHRmphMkZuWlNCdFpYUmhaR0YwWVM0Z1ZHaGxJRzV2ZEdsalpTQnlaV052Y21SeklIUm9aU0JwYkd4MWMzUnlZWFJwYjI0Z2IzSnBaMmx1T3lCcGRDQmtiMlZ6SUc1dmRDQmpaWEowYVdaNUlHTnZiWEJsZEdsMGFXOXVJR1ZzYVdkcFltbHNhWFI1TGdvPS4gVGhpcyBub3RpY2UgZG9lcyBub3QgY2VydGlmeSBjb21wZXRpdGlvbiBlbGlnaWJpbGl0eS48L3A+PC9tYWluPjwvYm9keT48L2h0bWw+" data-copy="creditsLink">Credits &amp; license ↗</a><a class="text-button" href="https://el-espejo-silencioso.splendidspoonbill3.chatgpt.site/downloads/Silent-Mirror-Source-MIT.zip" download data-copy="sourceLink">Source code ↓</a></footer></div>
+<dialog id="dialog"><button class="icon close" id="close" data-aria="close">×</button><div id="dialogContent"></div></dialog>
+<script>
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 The Silent Mirror contributors. See LICENSE.txt and CREDITS.md.
+// English source content. Translations are loaded separately.
+window.MirrorCopy = {
+  "en": {
+    "aiDisclosure": "AI-generated illustrations · ChatGPT/Codex",
+  "creditsLink": "Credits & license ↗",
+  "sourceLink": "Source code ↓",
+  "pageTitle": "The Silent Mirror · A message of light",
+  "brand": "moonlight.",
+    "headerNote": "LITTLE EXPLORERS / GREAT DISCOVERIES",
+    "eyebrow": "AN APOLLO ADVENTURE",
+    "hero1": "The silent",
+    "hero2": "mirror.",
+    "heroBody": "A little light leaves Earth. A quiet mirror sends it home. Will you help it find its way?",
+    "start": "Begin the adventure",
+    "homeNote": "No rush. Three discoveries waiting for you.",
+    "moonNote": "A secret on the Moon…",
+    "homeBottom": "Little mirrors.\nGreat discoveries.",
+    "location": "EARTH ↔ MOON / LUNAR OBSERVATORY",
+    "echoes": "RETURNED SIGNALS",
+    "send": "Send light",
+    "space": "SPACE",
+    "aimTip": "Arrow keys, buttons or touch the glowing panel",
+    "slowMotion": "Slowed animation · example timing",
+    "introEyebrow": "BEFORE WE SEND OUR LIGHT",
+    "introTitle": "The Moon has a little secret.",
+    "introBody": "Apollo astronauts left panels of special prisms on the Moon. They return light towards where it came from.",
+    "intro1": "Aim the telescope at the glowing panel.",
+    "intro2": "Send a pulse of light and watch it return.",
+    "intro3": "Discover what its journey can tell us.",
+    "begin": "Prepare the telescope",
+    "pauseTitle": "A quiet little pause.",
+    "pauseBody": "The Moon can wait a moment.",
+    "resume": "Continue observing",
+    "goHome": "Back to the beginning",
+    "discoveryEyebrow": "LIGHT RECEIVED · A NEW DISCOVERY",
+    "why": "Why does it matter?",
+    "exampleDistance": "Example distance, not a real measurement",
+    "calculation": "How do we calculate it?",
+    "formula": "Distance = light speed × round-trip time ÷ 2.",
+    "rounding": "The timing on the clock is rounded. This is a teaching example.",
+    "endEyebrow": "SOME THINGS STAY TO HELP US",
+    "endTitle": "Quiet. But not forgotten.",
+    "endBody": "The astronauts came home. The panels stayed on the Moon. Their special shape lets light find its way back to Earth.",
+    "endQuote": "A quiet mirror can still tell us a great deal.",
+    "endFact": "The reflector needs no battery: observatories on Earth send and detect the light.",
+    "replay": "Send another message of light",
+    "controlsNote": "↑ ↓ ← → to aim · Space to send · P to pause",
+    "scaleNote": "Illustrated model · distances and sizes are not to scale",
+    "footer": "A little adventure. A real scientific idea.",
+    "sources": "Inspired by Apollo science ↗",
+    "soundOn": "Turn sound on",
+    "soundOff": "Turn sound off",
+    "help": "How to play",
+    "pause": "Pause observation",
+    "close": "Close",
+    "directions": "Telescope direction controls",
+    "up": "Aim up",
+    "down": "Aim down",
+    "left": "Aim left",
+    "right": "Aim right",
+    "gameLabel": "The Silent Mirror, a lunar observation game",
+    "canvasLabel": "An illustrated observatory and the Moon. Aim at the highlighted reflector using keys or touch.",
+    "aligned": "The telescope is aligned!",
+    "closer": "Almost there… a little closer.",
+    "search": "Look for the glowing panel.",
+    "outbound": "EARTH → MOON",
+    "returning": "MOON → EARTH",
+    "miss": "The light missed the panel. Aim at the glowing diamond and try again.",
+    "received": "Your light is home!",
+    "firstTip": "Touch the glowing diamond or move the crosshair with the arrows.",
+    "round": "OBSERVATION",
+    "next": "Next observation",
+    "finish": "See the end of the story",
+    "helpTitle": "Let’s send a message of light.",
+    "helpBody": "Aim at the glowing diamond with arrow keys, WASD, the direction buttons, or by touching the scene. Press Send light or Space. If you miss, try again: there are no lives to lose. After each returned pulse, read your discovery and continue. P or Escape pauses your observation.",
+    "scienceNote": "This is a simplified illustration, not a real observatory. The visible beam represents a laser pulse. Real lunar laser ranging needs specialized equipment and detects very faint returns.",
+    "sourcesTitle": "Small panels. Real science.",
+    "sourcesBody": "Apollo 11, 14 and 15 left laser retroreflectors on the Moon. These arrays use fused-silica corner cubes to return light towards its source. The Moon panel is passive; the laser and detector are on Earth. Our three observations use the same example distance of 384,400 km. They are not real data from the three landing sites. The drawing of the sites is schematic, not a map. Original illustrations and synthesized sounds were created for this game. This is an independent educational project, not an official NASA game.",
+    "sourceLink1": "NASA / ILRS · Apollo reflector arrays ↗",
+    "sourceLink2": "NASA · The passive reflector experiment ↗",
+    "sourceLink3": "NIST · To the Moon and back ↗",
+    "missions": [
+      {
+        "name": "APOLLO 11 · 1969",
+        "title": "Find the first little mirror.",
+        "hint": "Guide the crosshair to the glowing diamond on the Moon.",
+        "lessonTitle": "A light that comes home.",
+        "what": "The panel holds special glass prisms called corner cubes. They return light towards where it came from.",
+        "lessonWhy": "The observatory can catch the returned light. A flat mirror would need a very particular angle; these prisms are made to send it back."
+      },
+      {
+        "name": "APOLLO 14 · 1971",
+        "title": "Let’s time the journey.",
+        "hint": "Aim at the new panel. Watch the clock as the light travels.",
+        "lessonTitle": "Time becomes a distance.",
+        "what": "In our example, light takes about 2.56 seconds to go to the Moon and return.",
+        "lessonWhy": "We know how fast light travels. Its round-trip time lets us calculate the distance. We divide by two because the pulse goes there and back."
+      },
+      {
+        "name": "APOLLO 15 · 1971",
+        "title": "A silent helper on the Moon.",
+        "hint": "Send one last pulse to the larger panel.",
+        "lessonTitle": "No battery. Just a clever shape.",
+        "what": "The Apollo 15 panel is larger than the earlier Apollo panels. Its prisms work without electricity.",
+        "lessonWhy": "The observatory sends and detects the light. The panel only reflects it. Hardware left on the Moon can keep helping us understand its motion."
+      }
+    ],
+    "historyEyebrow": "A TRUE STORY · BEFORE WE PLAY",
+    "historyContinue": "Continue the story",
+    "historyPlay": "Now, how do we play?",
+    "historyBack": "Back",
+    "historyPart": "PART",
+    "history": [
+      {
+        "year": "1969",
+        "title": "A small panel. A big idea.",
+        "body": "Apollo 11 astronauts landed on the Moon. Before coming home, they left a panel of special glass prisms on the ground. Scientists wanted to use it to measure how far away the Moon is.",
+        "fact": "This really happened. The panel is called a laser retroreflector."
+      },
+      {
+        "year": "1971",
+        "title": "Two more silent helpers.",
+        "body": "The Apollo 14 and Apollo 15 astronauts left more panels on the Moon. Their prisms return light towards the place it came from. The astronauts came home, but these tools stayed behind.",
+        "fact": "Apollo 15 carried a larger panel with more prisms."
+      },
+      {
+        "year": "EARTH ↔ MOON",
+        "title": "Light tells us the distance.",
+        "body": "An observatory on Earth sends a laser pulse towards a panel. A tiny bit of light comes back. Scientists time its trip to calculate the distance to the Moon and study how it moves.",
+        "fact": "The Moon panel needs no battery. The laser and detector are on Earth."
+      }
+    ]
+  }
+};
+
+</script><script>
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 The Silent Mirror contributors. See LICENSE.txt and CREDITS.md.
+// Spanish translation catalogue; game logic stays in game.js.
+window.MirrorCopy.es = {
+  "aiDisclosure": "Ilustraciones generadas con IA · ChatGPT/Codex",
+  "creditsLink": "Créditos y licencia ↗",
+  "sourceLink": "Código fuente ↓",
+  "pageTitle": "El Espejo Silencioso · Un mensaje de luz",
+  "brand": "moonlight.",
+  "headerNote": "PEQUEÑOS EXPLORADORES / GRANDES DESCUBRIMIENTOS",
+  "eyebrow": "UNA AVENTURA CON LAS MISIONES APOLO",
+  "hero1": "El espejo",
+  "hero2": "silencioso.",
+  "heroBody": "Una pequeña luz sale de la Tierra. Un espejo callado la devuelve a casa. ¿La ayudas a encontrar el camino?",
+  "start": "Comenzar aventura",
+  "homeNote": "Sin prisa. Tres descubrimientos te esperan.",
+  "moonNote": "Un secreto en la Luna…",
+  "homeBottom": "Pequeños espejos.\nGrandes descubrimientos.",
+  "location": "TIERRA ↔ LUNA / OBSERVATORIO LUNAR",
+  "echoes": "SEÑALES QUE REGRESARON",
+  "send": "Enviar luz",
+  "space": "ESPACIO",
+  "aimTip": "Usa las flechas, los botones o toca el panel brillante",
+  "slowMotion": "Animación ralentizada · tiempo de ejemplo",
+  "introEyebrow": "ANTES DE ENVIAR NUESTRA LUZ",
+  "introTitle": "La Luna guarda un pequeño secreto.",
+  "introBody": "Los astronautas Apolo dejaron paneles con prismas especiales en la Luna. Devuelven la luz hacia el lugar del que llegó.",
+  "intro1": "Apunta el telescopio al panel que brilla.",
+  "intro2": "Envía un pulso de luz y mira cómo regresa.",
+  "intro3": "Descubre qué nos cuenta su viaje.",
+  "begin": "Preparar el telescopio",
+  "pauseTitle": "Una pequeña pausa.",
+  "pauseBody": "La Luna puede esperar un ratito.",
+  "resume": "Seguir observando",
+  "goHome": "Volver al comienzo",
+  "discoveryEyebrow": "LUZ RECIBIDA · UN NUEVO DESCUBRIMIENTO",
+  "why": "¿Por qué es importante?",
+  "exampleDistance": "Distancia de ejemplo, no es una medición real",
+  "calculation": "¿Cómo lo calculamos?",
+  "formula": "Distancia = velocidad de la luz × tiempo de ida y vuelta ÷ 2.",
+  "rounding": "El tiempo del reloj está redondeado. Es un ejemplo para aprender.",
+  "endEyebrow": "ALGUNAS COSAS SE QUEDAN PARA AYUDARNOS",
+  "endTitle": "Callados. Pero no olvidados.",
+  "endBody": "Los astronautas volvieron a casa. Los paneles se quedaron en la Luna. Su forma especial permite que la luz encuentre el camino de vuelta a la Tierra.",
+  "endQuote": "Un espejo silencioso todavía puede contarnos mucho.",
+  "endFact": "El reflector no necesita batería: los observatorios en la Tierra envían y detectan la luz.",
+  "replay": "Enviar otro mensaje de luz",
+  "controlsNote": "↑ ↓ ← → para apuntar · Espacio para enviar · P para pausar",
+  "scaleNote": "Modelo ilustrado · tamaños y distancias no están a escala",
+  "footer": "Una pequeña aventura. Una idea científica real.",
+  "sources": "Inspirado en la ciencia Apolo ↗",
+  "soundOn": "Activar sonido",
+  "soundOff": "Desactivar sonido",
+  "help": "Cómo jugar",
+  "pause": "Pausar observación",
+  "close": "Cerrar",
+  "directions": "Controles de dirección del telescopio",
+  "up": "Apuntar arriba",
+  "down": "Apuntar abajo",
+  "left": "Apuntar a la izquierda",
+  "right": "Apuntar a la derecha",
+  "gameLabel": "El Espejo Silencioso, un juego de observación lunar",
+  "canvasLabel": "Un observatorio y la Luna dibujados. Apunta al reflector marcado con las teclas o tocando la escena.",
+  "aligned": "¡El telescopio está alineado!",
+  "closer": "Ya casi… un poquito más cerca.",
+  "search": "Busca el panel que brilla.",
+  "outbound": "TIERRA → LUNA",
+  "returning": "LUNA → TIERRA",
+  "miss": "La luz no encontró el panel. Apunta al rombo brillante e inténtalo otra vez.",
+  "received": "¡Tu luz volvió a casa!",
+  "firstTip": "Toca el rombo brillante o mueve la mira con las flechas.",
+  "round": "OBSERVACIÓN",
+  "next": "Siguiente observación",
+  "finish": "Ver el final de la historia",
+  "helpTitle": "Enviemos un mensaje de luz.",
+  "helpBody": "Apunta al rombo brillante con las flechas, WASD, los botones o tocando la escena. Pulsa Enviar luz o Espacio. Si fallas, inténtalo otra vez: no hay vidas que perder. Después de cada señal, lee tu descubrimiento y continúa. P o Escape pausa la observación.",
+  "scienceNote": "Es una ilustración simplificada, no un observatorio real. El rayo visible representa un pulso láser. La medición real necesita equipos especializados y detecta señales de regreso muy débiles.",
+  "sourcesTitle": "Pequeños paneles. Ciencia de verdad.",
+  "sourcesBody": "Apolo 11, 14 y 15 dejaron retrorreflectores láser en la Luna. Sus prismas de esquina están hechos de sílice fundida y devuelven la luz hacia su origen. El panel lunar es pasivo; el láser y el detector están en la Tierra. Las tres observaciones usan la misma distancia de ejemplo: 384 400 km. No son datos reales de los tres lugares de aterrizaje. Los lugares dibujados son esquemáticos, no un mapa. Las ilustraciones y sonidos sintetizados se crearon para este juego. Es un proyecto educativo independiente, no un juego oficial de la NASA.",
+  "sourceLink1": "NASA / ILRS · Los reflectores Apolo ↗",
+  "sourceLink2": "NASA · El experimento pasivo ↗",
+  "sourceLink3": "NIST · Un viaje de luz de ida y vuelta ↗",
+  "missions": [
+    {
+      "name": "APOLO 11 · 1969",
+      "title": "Encuentra el primer espejito.",
+      "hint": "Lleva la mira hasta el rombo brillante de la Luna.",
+      "lessonTitle": "Una luz que vuelve a casa.",
+      "what": "El panel tiene prismas de vidrio especiales, llamados prismas de esquina. Devuelven la luz hacia el lugar del que llegó.",
+      "lessonWhy": "El observatorio puede recibir esa luz. Un espejo plano necesitaría un ángulo muy concreto; estos prismas están hechos para devolverla."
+    },
+    {
+      "name": "APOLO 14 · 1971",
+      "title": "Midamos el tiempo del viaje.",
+      "hint": "Apunta al nuevo panel. Mira el reloj mientras viaja la luz.",
+      "lessonTitle": "El tiempo se convierte en distancia.",
+      "what": "En nuestro ejemplo, la luz tarda unos 2,56 segundos en ir a la Luna y volver.",
+      "lessonWhy": "Sabemos lo rápido que viaja la luz. El tiempo del recorrido permite calcular la distancia. Dividimos entre dos porque la luz va y regresa."
+    },
+    {
+      "name": "APOLO 15 · 1971",
+      "title": "Un ayudante silencioso en la Luna.",
+      "hint": "Envía un último pulso al panel más grande.",
+      "lessonTitle": "Sin batería. Con una forma ingeniosa.",
+      "what": "El panel de Apolo 15 es más grande que los paneles Apolo anteriores. Sus prismas funcionan sin electricidad.",
+      "lessonWhy": "El observatorio envía y detecta la luz. El panel solo la refleja. Un objeto que quedó en la Luna puede seguir ayudándonos a conocer su movimiento."
+    }
+  ],
+  "historyEyebrow": "UNA HISTORIA REAL · ANTES DE JUGAR",
+  "historyContinue": "Seguir la historia",
+  "historyPlay": "¿Y cómo se juega?",
+  "historyBack": "Atrás",
+  "historyPart": "PARTE",
+  "history": [
+    {
+      "year": "1969",
+      "title": "Un pequeño panel. Una gran idea.",
+      "body": "Los astronautas de Apolo 11 llegaron a la Luna. Antes de volver a casa, dejaron en el suelo un panel de prismas de vidrio especiales. Los científicos querían usarlo para medir a qué distancia está la Luna.",
+      "fact": "Esto pasó de verdad. El panel se llama retrorreflector láser."
+    },
+    {
+      "year": "1971",
+      "title": "Dos ayudantes silenciosos más.",
+      "body": "Los astronautas de Apolo 14 y Apolo 15 dejaron más paneles en la Luna. Sus prismas devuelven la luz hacia el lugar del que llegó. Los astronautas regresaron a casa, pero estas herramientas se quedaron allí.",
+      "fact": "Apolo 15 llevó un panel más grande, con más prismas."
+    },
+    {
+      "year": "TIERRA ↔ LUNA",
+      "title": "La luz nos cuenta la distancia.",
+      "body": "Un observatorio de la Tierra envía un pulso láser hacia un panel. Una pequeña parte de la luz vuelve. Los científicos miden cuánto tarda el viaje para calcular la distancia a la Luna y estudiar cómo se mueve.",
+      "fact": "El panel lunar no necesita batería. El láser y el detector están en la Tierra."
+    }
+  ]
+};
+
+</script><script>
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 The Silent Mirror contributors. See LICENSE.txt and CREDITS.md.
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const canvas = $('sky'), ctx = canvas.getContext('2d');
+  const COPY = window.MirrorCopy;
+  const HEIGHT = 760, LIGHT_SPEED = 299792.458, EXAMPLE_DISTANCE = 384400;
+  const ROUND_TRIP = 2 * EXAMPLE_DISTANCE / LIGHT_SPEED, FLIGHT_DURATION = 5.2, HIT_RADIUS = 29;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let width = 1440, language = 'es', mode = 'home', round = 0, echoes = 0, introPage = 0;
+  let aim = {x:0,y:0}, shot = null, previousMode = 'aim', modalType = null;
+  let frameTime = 0, previousFrame = 0, feedbackRemaining = 0, feedbackKey = '';
+  let soundEnabled = false, audioContext = null, pointerActive = false;
+  const keys = new Set();
+  try { if (localStorage.getItem('mirror-language') === 'en') language = 'en'; } catch {}
+  const copy = () => COPY[language];
+  const phrase = key => copy()[key] || key;
+  const random = seed => { const n = Math.sin(seed * 131.7 + 79.3) * 42931.37; return n - Math.floor(n); };
+
+  function geometry(home = mode === 'home' || mode === 'intro') {
+    const mobile = width < 720;
+    return {x:width * (mobile ? .60 : .75),y:HEIGHT * (home && mobile ? .76 : .49),r:Math.min(mobile ? width*.355 : width*.195,mobile ? 153 : 239)};
+  }
+  function targetPoint(index = round) {
+    const moon = geometry(false), offsets = [{x:-.17,y:.34},{x:.34,y:-.02},{x:-.27,y:-.29}];
+    return {x:moon.x+offsets[index].x*moon.r,y:moon.y+offsets[index].y*moon.r};
+  }
+  function telescopePoint() { return {x:width<720?88:155,y:HEIGHT-122}; }
+  function resize() {
+    const before = targetPoint(), oldWidth = width;
+    const rect = canvas.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    width = rect.width / rect.height * HEIGHT;
+    const ratio = Math.min(devicePixelRatio || 1,2);
+    canvas.width = Math.round(rect.width*ratio);canvas.height = Math.round(rect.height*ratio);
+    ctx.setTransform(canvas.width/width,0,0,canvas.height/HEIGHT,0,0);
+    const after = targetPoint();
+    if (mode==='aim' || mode==='flight' || mode==='paused' || mode==='help') aim={x:after.x+(aim.x-before.x)*width/oldWidth,y:after.y+(aim.y-before.y)};
+    if (shot && !shot.hit) shot.point.x *= width/oldWidth;
+  }
+  new ResizeObserver(resize).observe(canvas);
+  function ellipse(x,y,rx,ry,fill) { ctx.beginPath();ctx.ellipse(x,y,rx,ry,0,0,Math.PI*2);ctx.fillStyle=fill;ctx.fill(); }
+  function line(x,y,tx,ty,color,size=1.5) { ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(tx,ty);ctx.strokeStyle=color;ctx.lineWidth=size;ctx.lineCap='round';ctx.stroke(); }
+  function polygon(points,fill,stroke=null,size=1.5) { ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(...p):ctx.moveTo(...p));ctx.closePath();ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=size;ctx.stroke();} }
+  function sparkle(x,y,size,color) { polygon([[x,y-size],[x+size*.25,y-size*.2],[x+size,y],[x+size*.25,y+size*.2],[x,y+size],[x-size*.25,y+size*.2],[x-size,y],[x-size*.25,y-size*.2]],color); }
+
+  function drawSky() {
+    const gradient=ctx.createLinearGradient(0,0,width,HEIGHT);gradient.addColorStop(0,'#1b2b48');gradient.addColorStop(.55,'#253650');gradient.addColorStop(1,'#3c4260');ctx.fillStyle=gradient;ctx.fillRect(0,0,width,HEIGHT);
+    const halo=ctx.createRadialGradient(width*.7,HEIGHT*.37,15,width*.7,HEIGHT*.37,width*.6);halo.addColorStop(0,'#9db6cf14');halo.addColorStop(1,'#9db6cf00');ctx.fillStyle=halo;ctx.fillRect(0,0,width,HEIGHT);
+    for(let i=0;i<105;i++){const x=random(i+1)*width,y=26+random(i+99)*HEIGHT*.8,r=.5+random(i+42)*1.1;const brightness=reducedMotion?.6:.45+Math.sin(frameTime*.45+i)*.2;ellipse(x,y,r,r,`rgba(230,237,234,${brightness})`);if(i%24===0)sparkle(x,y,4,'#d8dece88');}
+    for(let i=0;i<480;i++){ctx.fillStyle=i%2?'#f5e9d908':'#020c1d0a';ctx.fillRect(random(i+261)*width,random(i+472)*HEIGHT,2,1);}
+  }
+  function drawMoon() {
+    const m=geometry();ctx.save();
+    const glow=ctx.createRadialGradient(m.x,m.y,m.r*.7,m.x,m.y,m.r*1.4);glow.addColorStop(0,'#f2e2b318');glow.addColorStop(1,'#f2e2b300');ctx.fillStyle=glow;ctx.fillRect(m.x-m.r*1.4,m.y-m.r*1.4,m.r*2.8,m.r*2.8);
+    ctx.beginPath();ctx.arc(m.x,m.y,m.r,0,Math.PI*2);ctx.clip();
+    const surface=ctx.createLinearGradient(m.x-m.r,m.y-m.r,m.x+m.r,m.y+m.r);surface.addColorStop(0,'#f3e6c7');surface.addColorStop(.52,'#d6c9ae');surface.addColorStop(1,'#9ba3ab');ctx.fillStyle=surface;ctx.fillRect(m.x-m.r,m.y-m.r,m.r*2,m.r*2);
+    const maria=[[-.30,-.35,.32,.22],[.28,-.16,.23,.30],[-.15,.28,.31,.21],[.45,.43,.28,.22]];
+    for(const [x,y,rx,ry] of maria)ellipse(m.x+x*m.r,m.y+y*m.r,rx*m.r,ry*m.r,'#9ba3a624');
+    for(let i=0;i<44;i++){const x=(random(i+17)-.5)*m.r*1.9,y=(random(i+90)-.5)*m.r*1.9,r=(.018+random(i+110)*.065)*m.r;if(Math.hypot(x,y)>m.r*.9)continue;ellipse(m.x+x+1,m.y+y+1,r,r*.68,'#b5b7ae70');ctx.beginPath();ctx.ellipse(m.x+x,m.y+y,r,r*.68,0,Math.PI*.15,Math.PI*1.1);ctx.strokeStyle='#f7ead366';ctx.lineWidth=1.8;ctx.stroke();ellipse(m.x+x,m.y+y,r*.64,r*.42,'#a8aeb348');}
+    for(let i=0;i<320;i++){const x=(random(i+240)-.5)*m.r*2,y=(random(i+510)-.5)*m.r*2;ellipse(m.x+x,m.y+y,.6,.5,'#716e6722');}
+    ctx.restore();ctx.beginPath();ctx.arc(m.x,m.y,m.r,0,Math.PI*2);ctx.strokeStyle='#ece1c560';ctx.lineWidth=1;ctx.stroke();
+  }
+  function drawPanel(point,index,highlight) {
+    const size=index===2?1.14:1;
+    ctx.save();ctx.translate(point.x,point.y);ctx.scale(size,size);
+    ellipse(0,18,25,7,'#59677939');
+    line(-14,8,-18,17,'#7c8793',3);line(13,8,17,17,'#7c8793',3);
+    polygon([[-24,-14],[16,-20],[26,7],[-16,13]],'#718293','#e3dfcb',1.5);
+    for(let y=0;y<3;y++)for(let x=0;x<4;x++){const px=-15+x*9+y*2,py=-9+y*7-x*1.3;polygon([[px,py-3],[px+4,py],[px+1,py+4],[px-3,py+1]],(x+y)%2?'#b0d9de':'#dfebe3','#78909c',.5);}
+    if(highlight){const pulse=reducedMotion?1:1+Math.sin(frameTime*2.5)*.09;ctx.strokeStyle='#b7e8e3a0';ctx.lineWidth=1.4;ctx.setLineDash([4,6]);ctx.beginPath();ctx.arc(0,0,36*pulse,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);sparkle(26,-28,7,'#f4d99e');}
+    ctx.restore();
+  }
+  function drawTelescope() {
+    const base=telescopePoint();
+    ctx.fillStyle='#172940';ctx.beginPath();ctx.moveTo(0,HEIGHT-101);ctx.bezierCurveTo(width*.27,HEIGHT-140,width*.55,HEIGHT-82,width,HEIGHT-115);ctx.lineTo(width,HEIGHT);ctx.lineTo(0,HEIGHT);ctx.fill();
+    ctx.fillStyle='#10223a';ctx.beginPath();ctx.moveTo(0,HEIGHT-52);ctx.bezierCurveTo(width*.25,HEIGHT-95,width*.75,HEIGHT-24,width,HEIGHT-53);ctx.lineTo(width,HEIGHT);ctx.lineTo(0,HEIGHT);ctx.fill();
+    MouseMission.draw(ctx,base.x+74,base.y+18,.75,false);ellipse(base.x,base.y+43,56,9,'#08152866');
+    line(base.x,base.y+1,base.x-26,base.y+42,'#71859b',5);line(base.x,base.y+1,base.x+25,base.y+42,'#71859b',5);line(base.x,base.y+5,base.x,base.y+43,'#4e657d',4);
+    const destination=mode==='home'||mode==='intro'?{x:width*.75,y:HEIGHT*.5}:aim;
+    ctx.save();ctx.translate(base.x,base.y);ctx.rotate(Math.atan2(destination.y-base.y,destination.x-base.x));
+    ctx.fillStyle='#8da8b8';ctx.strokeStyle='#c5d7d7';ctx.lineWidth=1.5;ctx.beginPath();ctx.roundRect(-20,-13,62,26,7);ctx.fill();ctx.stroke();
+    ctx.fillStyle='#d8e5dd';ctx.fillRect(32,-15,12,30);ellipse(44,0,3,13,'#84b8c5');line(-13,-7,27,-7,'#dce9e066',2);ctx.restore();
+    ellipse(base.x,base.y+4,8,8,'#b7c8ce');ellipse(base.x,base.y+4,3,3,'#6b849c');
+  }
+  function drawCrosshair() {
+    const ready=Math.hypot(aim.x-targetPoint().x,aim.y-targetPoint().y)<=HIT_RADIUS;
+    ctx.save();ctx.strokeStyle=ready?'#bcf0df':'#bacddca0';ctx.lineWidth=1.4;ctx.beginPath();ctx.arc(aim.x,aim.y,12,0,Math.PI*2);ctx.stroke();for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1]])line(aim.x+dx*16,aim.y+dy*16,aim.x+dx*23,aim.y+dy*23,ctx.strokeStyle,1.4);ctx.restore();
+    const origin=telescopePoint();ctx.save();ctx.setLineDash([3,10]);line(origin.x,origin.y,aim.x,aim.y,'#b4c7d527',1);ctx.restore();
+  }
+  function drawPulse() {
+    if(!shot)return;const origin=telescopePoint(),destination=shot.hit?targetPoint():shot.point;
+    const duration=shot.hit?FLIGHT_DURATION:2.2;const progress=Math.min(1,shot.elapsed/duration);
+    const returning=shot.hit&&progress>.5;const part=shot.hit?(returning?(progress-.5)*2:progress*2):progress;
+    const from=returning?destination:origin,to=returning?origin:destination;
+    const x=from.x+(to.x-from.x)*part,y=from.y+(to.y-from.y)*part;
+    ctx.save();ctx.shadowColor='#a9e6e4';ctx.shadowBlur=reducedMotion?0:12;
+    line(from.x,from.y,x,y,'#a3d9d7b0',2);
+    ellipse(x,y,5.4,5.4,'#eefdf1');sparkle(x,y,10,'#bfe8ddaa');ctx.restore();
+    if(shot.hit&&Math.abs(progress-.5)<.055)sparkle(destination.x,destination.y,17,'#fff1b8');
+  }
+  function draw() {
+    drawSky();drawMoon();
+    const home=mode==='home'||mode==='intro';
+    if(home){const m=geometry();drawPanel({x:m.x+m.r*.22,y:m.y+m.r*.55},0,false);}
+    else for(let i=0;i<3;i++)drawPanel(targetPoint(i),i,i===round&&(mode==='aim'||mode==='flight'));
+    drawTelescope();
+    if(mode==='aim'||mode==='paused'&&previousMode==='aim')drawCrosshair();
+    if(mode==='flight'||mode==='paused'&&previousMode==='flight'||mode==='help'&&previousMode==='flight')drawPulse();
+  }
+  function tone(frequency=550,duration=.18) {
+    if(!soundEnabled)return;
+    try{audioContext??=new(window.AudioContext||window.webkitAudioContext)();audioContext.resume();const oscillator=audioContext.createOscillator(),gain=audioContext.createGain();oscillator.frequency.setValueAtTime(frequency,audioContext.currentTime);oscillator.frequency.exponentialRampToValueAtTime(frequency*.72,audioContext.currentTime+duration);gain.gain.setValueAtTime(.045,audioContext.currentTime);gain.gain.exponentialRampToValueAtTime(.001,audioContext.currentTime+duration);oscillator.connect(gain);gain.connect(audioContext.destination);oscillator.start();oscillator.stop(audioContext.currentTime+duration);}catch{soundEnabled=false;render();}
+  }
+  function release() { keys.clear();pointerActive=false;document.querySelectorAll('[data-dir]').forEach(button=>button.classList.remove('pressed')); }
+  function feedback(key,duration=3.5) { feedbackKey=key;feedbackRemaining=duration;$('feedback').textContent=phrase(key);$('feedback').classList.add('show'); }
+  function updateAlignment() {
+    const distance=Math.hypot(aim.x-targetPoint().x,aim.y-targetPoint().y);
+    $('alignLabel').textContent=phrase(distance<=HIT_RADIUS?'aligned':distance<90?'closer':'search');
+    $('alignFill').style.width=Math.max(5,100-distance*.7)+'%';
+  }
+  function render() {
+    document.documentElement.lang=language;document.title=phrase('pageTitle');
+    document.querySelectorAll('[data-copy]').forEach(node=>node.textContent=phrase(node.dataset.copy));
+    document.querySelectorAll('[data-aria]').forEach(node=>node.setAttribute('aria-label',phrase(node.dataset.aria)));
+    $('language').value=language;$('sound').setAttribute('aria-pressed',String(soundEnabled));$('sound').setAttribute('aria-label',phrase(soundEnabled?'soundOff':'soundOn'));
+    const mission=copy().missions[round];$('echoCount').textContent=echoes+' / 3';$('missionKicker').textContent=phrase('round')+' 0'+(round+1)+' / 03 · '+mission.name;$('missionTitle').textContent=mission.title;$('missionText').textContent=mission.hint;
+    $('discoveryMission').textContent=mission.name;$('discoveryTitle').textContent=mission.lessonTitle;$('discoveryWhat').textContent=mission.what;$('discoveryWhy').textContent=mission.lessonWhy;$('nextText').textContent=phrase(round===2?'finish':'next');$('measurement').hidden=round!==1;
+    if(feedbackKey)$('feedback').textContent=phrase(feedbackKey);
+    $('flightLabel').textContent=phrase(shot&&shot.hit&&shot.elapsed>FLIGHT_DURATION/2?'returning':'outbound');
+    $('fire').disabled=mode!=='aim';updateAlignment();
+    renderIntro();
+    if(modalType)renderDialog();
+  }
+  // Historical pages are player-paced; the final page explains the controls.
+  function renderIntro() {
+    const pages=copy().history, story=pages[introPage], historical=introPage<pages.length;
+    $('introProgress').textContent=phrase('historyPart')+' '+(introPage+1)+' / '+(pages.length+1);
+    $('introYear').textContent=historical?story.year:'✧';
+    $('introEyebrow').textContent=phrase(historical?'historyEyebrow':'introEyebrow');
+    $('introTitle').textContent=historical?story.title:phrase('introTitle');
+    $('introBody').textContent=historical?story.body:phrase('introBody');
+    $('historyFact').textContent=historical?story.fact:'';
+    $('historyFact').hidden=!historical;$('introSteps').hidden=historical;
+    $('introBack').hidden=introPage===0;
+    $('introButton').textContent=phrase(historical?(introPage===pages.length-1?'historyPlay':'historyContinue'):'begin');
+  }
+  function advanceIntro() {
+    if(mode!=='intro'||modalType)return;
+    if(introPage<copy().history.length){introPage++;renderIntro();$('introTitle').focus({preventScroll:true});}
+    else startRound(0);
+  }
+  function backIntro() {
+    if(mode!=='intro'||modalType||introPage===0)return;
+    introPage--;renderIntro();$('introTitle').focus({preventScroll:true});
+  }
+  function setLanguage(value) { language=value==='en'?'en':'es';release();try{localStorage.setItem('mirror-language',language);}catch{}render(); }
+  function showHome() {
+    release();mode='home';round=0;echoes=0;introPage=0;shot=null;feedbackRemaining=0;feedbackKey='';$('feedback').classList.remove('show');
+    for(const id of ['intro','discovery','ending','pauseOverlay','hud','mission','bottomControls','flightInfo'])$(id).hidden=true;
+    for(const id of ['home','moonNote','homeBottom'])$(id).hidden=false;
+    $('game').classList.remove('aiming');render();$('start').focus({preventScroll:true});
+  }
+  function start() { showHome();mode='intro';$('home').hidden=true;$('moonNote').hidden=true;$('homeBottom').hidden=true;$('intro').hidden=false;renderIntro();$('introTitle').focus({preventScroll:true}); }
+  function startRound(index) {
+    round=index;mode='aim';release();shot=null;const target=targetPoint();aim={x:target.x-76,y:target.y+52};
+    for(const id of ['intro','discovery','ending','pauseOverlay','flightInfo'])$(id).hidden=true;
+    for(const id of ['hud','mission','bottomControls'])$(id).hidden=false;
+    $('game').classList.add('aiming');render();$('fire').focus({preventScroll:true});if(index===0)feedback('firstTip',4.5);
+  }
+  function fire() {
+    if(mode!=='aim')return;
+    const target=targetPoint();shot={hit:Math.hypot(aim.x-target.x,aim.y-target.y)<=HIT_RADIUS,elapsed:0,point:{...aim}};
+    release();mode='flight';$('timer').textContent=(0).toLocaleString(language==='es'?'es-ES':'en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+' s';$('game').classList.remove('aiming');$('flightInfo').hidden=false;feedbackRemaining=0;$('feedback').classList.remove('show');tone(680);render();
+  }
+  function receive() {
+    MouseMission.record(round);echoes++;mode='discovery';release();$('flightInfo').hidden=true;$('bottomControls').hidden=true;$('mission').hidden=true;$('discovery').hidden=false;render();tone(920,.3);$('next').focus({preventScroll:true});
+  }
+  function next() { if(mode!=='discovery')return;if(round<2){startRound(round+1);}else{mode='ending';shot=null;release();for(const id of ['discovery','hud','mission','bottomControls','flightInfo'])$(id).hidden=true;$('ending').hidden=false;render();$('replay').focus({preventScroll:true});} }
+  function pause() { if(mode!=='aim'&&mode!=='flight')return;previousMode=mode;mode='paused';release();$('pauseOverlay').hidden=false;render();$('resume').focus({preventScroll:true}); }
+  function resume() { if(mode!=='paused')return;mode=previousMode;$('pauseOverlay').hidden=true;render();$('pause').focus({preventScroll:true}); }
+  function renderDialog() {
+    const c=copy(),body=modalType==='help'?c.helpBody:c.sourcesBody;
+    $('dialogContent').replaceChildren();const heading=document.createElement('h2');heading.textContent=modalType==='help'?c.helpTitle:c.sourcesTitle;$('dialogContent').append(heading);
+    const paragraph=document.createElement('p');paragraph.textContent=body;$('dialogContent').append(paragraph);
+    const note=document.createElement('p');note.textContent=c.scienceNote;$('dialogContent').append(note);
+    if(modalType==='sources')for(const [key,url] of [['sourceLink1','https://ilrs.gsfc.nasa.gov/missions/satellite_missions/current_missions/ap11_reflector.html'],['sourceLink2','https://www.nasa.gov/wp-content/uploads/static/history/alsj/HamishALSEP.html'],['sourceLink3','https://www.nist.gov/history/moon-and-back-25-seconds']]){const row=document.createElement('p'),link=document.createElement('a');link.textContent=c[key];link.href=url;link.target='_blank';link.rel='noopener noreferrer';row.append(link);$('dialogContent').append(row);}
+  }
+  function showDialog(type) { if(mode==='aim'||mode==='flight'){previousMode=mode;mode='help';release();}modalType=type;renderDialog();$('dialog').showModal(); }
+  function update(dt) {
+    if(mode!=='paused'&&mode!=='help'&&feedbackRemaining>0){feedbackRemaining-=dt;if(feedbackRemaining<=0)$('feedback').classList.remove('show');}
+    if(mode==='aim'){
+      const x=(keys.has('right')?1:0)-(keys.has('left')?1:0),y=(keys.has('down')?1:0)-(keys.has('up')?1:0),length=Math.hypot(x,y)||1;
+      aim.x=Math.max(20,Math.min(width-20,aim.x+x/length*dt*125));aim.y=Math.max(200,Math.min(HEIGHT-135,aim.y+y/length*dt*125));updateAlignment();
+    }
+    if(mode==='flight'&&shot){
+      shot.elapsed+=dt;const duration=shot.hit?FLIGHT_DURATION:2.2;
+      $('flightLabel').textContent=phrase(shot.hit&&shot.elapsed>duration/2?'returning':'outbound');
+      const elapsed=shot.hit?Math.min(ROUND_TRIP,shot.elapsed/duration*ROUND_TRIP):Math.min(ROUND_TRIP/2,shot.elapsed/duration*ROUND_TRIP/2);
+      $('timer').textContent=elapsed.toLocaleString(language==='es'?'es-ES':'en-US',{minimumFractionDigits:2,maximumFractionDigits:2})+' s';
+      if(shot.elapsed>=duration){if(shot.hit)receive();else{mode='aim';shot=null;$('flightInfo').hidden=true;$('game').classList.add('aiming');render();feedback('miss',4.5);$('fire').focus({preventScroll:true});}}
+    }
+  }
+  function loop(timestamp) { const dt=Math.min(.05,Math.max(0,(timestamp-previousFrame)/1000))||0;previousFrame=timestamp;frameTime+=dt;update(dt);draw();requestAnimationFrame(loop); }
+  const keyMap={ArrowLeft:'left',ArrowRight:'right',ArrowUp:'up',ArrowDown:'down',a:'left',d:'right',w:'up',s:'down',A:'left',D:'right',W:'up',S:'down'};
+  document.addEventListener('keydown',event=>{
+    if($('dialog').open||event.target?.tagName==='SELECT')return;
+    if(event.key==='Escape'||event.key==='p'||event.key==='P'){if(mode==='paused')resume();else pause();event.preventDefault();return;}
+    if(mode==='aim'&&keyMap[event.key]){keys.add(keyMap[event.key]);event.preventDefault();}
+    if(mode==='aim'&&event.code==='Space'&&!event.repeat){event.preventDefault();fire();}
+  });
+  document.addEventListener('keyup',event=>{if(keyMap[event.key])keys.delete(keyMap[event.key]);});
+  document.querySelectorAll('[data-dir]').forEach(button=>{button.addEventListener('pointerdown',event=>{if(mode!=='aim')return;event.preventDefault();button.setPointerCapture(event.pointerId);keys.add(button.dataset.dir);button.classList.add('pressed');});for(const name of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(name,()=>{keys.delete(button.dataset.dir);button.classList.remove('pressed');});});
+  function pointAt(event) { const rect=canvas.getBoundingClientRect();aim={x:Math.max(20,Math.min(width-20,(event.clientX-rect.left)/rect.width*width)),y:Math.max(200,Math.min(HEIGHT-135,(event.clientY-rect.top)/rect.height*HEIGHT))};updateAlignment(); }
+  canvas.addEventListener('pointerdown',event=>{if(mode!=='aim')return;event.preventDefault();pointerActive=true;canvas.setPointerCapture(event.pointerId);pointAt(event);});canvas.addEventListener('pointermove',event=>{if(pointerActive&&mode==='aim')pointAt(event);});for(const name of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(name,()=>pointerActive=false);
+  $('start').addEventListener('click',start);$('begin').addEventListener('click',advanceIntro);$('introBack').addEventListener('click',backIntro);$('fire').addEventListener('click',fire);$('next').addEventListener('click',next);$('pause').addEventListener('click',pause);$('resume').addEventListener('click',resume);$('goHome').addEventListener('click',showHome);$('replay').addEventListener('click',start);
+  $('language').addEventListener('change',event=>setLanguage(event.target.value));$('sound').addEventListener('click',()=>{soundEnabled=!soundEnabled;render();if(soundEnabled)tone();});$('help').addEventListener('click',()=>showDialog('help'));$('sources').addEventListener('click',()=>showDialog('sources'));$('close').addEventListener('click',()=>$('dialog').close());
+  $('dialog').addEventListener('close',()=>{modalType=null;if(mode==='help'){mode=previousMode;render();$('help').focus({preventScroll:true});}});
+  window.addEventListener('blur',()=>{release();pause();});document.addEventListener('visibilitychange',()=>{if(document.hidden){release();pause();}});
+  resize();render();requestAnimationFrame(loop);
+})();
+
+</script>
+</body></html>

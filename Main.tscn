@@ -1,0 +1,207 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_main"]
+[ext_resource type="Script" path="res://MouseCharacter.gd" id="2_character"]
+[ext_resource type="Script" path="res://Frame.gd" id="3_frame"]
+
+[node name="Main" type="Control" unique_id=945017042]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_main")
+characters_per_second = null
+starting_trust = null
+starting_energy = null
+enable_save = null
+enable_sound = null
+
+[node name="Background" type="TextureRect" parent="." unique_id=1475915578]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Atmosphere" type="ColorRect" parent="." unique_id=2013182650]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Bubbles" type="CPUParticles2D" parent="." unique_id=1089791848]
+emitting = false
+
+[node name="Stage" type="SubViewportContainer" parent="." unique_id=678191590]
+z_index = 1
+layout_mode = 0
+mouse_filter = 2
+stretch = true
+
+[node name="View" type="SubViewport" parent="Stage" unique_id=772035665]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+msaa_3d = 2
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="World" type="Node3D" parent="Stage/View" unique_id=1084596097]
+
+[node name="Character" type="Node3D" parent="Stage/View/World" unique_id=2123845044]
+script = ExtResource("2_character")
+
+[node name="Camera" type="Camera3D" parent="Stage/View/World" unique_id=507830297]
+current = true
+fov = 34.0
+far = 30.0
+
+[node name="Interface" type="Control" parent="." unique_id=1050432372]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="VBoxContainer" parent="Interface" unique_id=1536205227]
+layout_mode = 0
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Interface/Title" unique_id=957224577]
+layout_mode = 2
+text = "game_title"
+
+[node name="Subtitle" type="Label" parent="Interface/Title" unique_id=1377572426]
+layout_mode = 2
+text = "game_subtitle"
+
+[node name="Indicators" type="VBoxContainer" parent="Interface" unique_id=90201574]
+layout_mode = 0
+mouse_filter = 2
+
+[node name="TrustLabel" type="Label" parent="Interface/Indicators" unique_id=1003589650]
+layout_mode = 2
+text = "trust_label"
+
+[node name="Trust" type="ProgressBar" parent="Interface/Indicators" unique_id=2092271230]
+layout_mode = 2
+show_percentage = false
+
+[node name="EnergyLabel" type="Label" parent="Interface/Indicators" unique_id=111147087]
+layout_mode = 2
+text = "energy_label"
+
+[node name="Energy" type="ProgressBar" parent="Interface/Indicators" unique_id=1015981244]
+layout_mode = 2
+show_percentage = false
+
+[node name="Commands" type="VBoxContainer" parent="Interface" unique_id=911477413]
+layout_mode = 0
+mouse_filter = 2
+
+[node name="Section" type="Label" parent="Interface/Commands" unique_id=1847944423]
+layout_mode = 2
+text = "command_heading"
+
+[node name="Converse" type="Button" parent="Interface/Commands" unique_id=1849217422]
+layout_mode = 2
+text = "command_talk"
+
+[node name="Pet" type="Button" parent="Interface/Commands" unique_id=1375429209]
+layout_mode = 2
+text = "command_pet"
+
+[node name="Feed" type="Button" parent="Interface/Commands" unique_id=830142908]
+layout_mode = 2
+text = "command_feed"
+
+[node name="Observe" type="Button" parent="Interface/Commands" unique_id=646521512]
+layout_mode = 2
+text = "command_observe"
+
+[node name="Stories" type="Button" parent="Interface/Commands" unique_id=553558788]
+layout_mode = 2
+text = "command_stories"
+
+[node name="Specimen" type="Label" parent="Interface" unique_id=98013776]
+layout_mode = 0
+text = "mood_shy"
+
+[node name="Sound" type="Button" parent="Interface" unique_id=1872505158]
+layout_mode = 0
+text = "sound_on"
+
+[node name="Dialogue" type="PanelContainer" parent="Interface" unique_id=347024620]
+layout_mode = 0
+
+[node name="Margin" type="MarginContainer" parent="Interface/Dialogue" unique_id=1790407822]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Interface/Dialogue/Margin" unique_id=468919383]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Interface/Dialogue/Margin/Content" unique_id=2100281956]
+layout_mode = 2
+
+[node name="Speaker" type="Label" parent="Interface/Dialogue/Margin/Content/Header" unique_id=2070597815]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "speaker_lumien"
+
+[node name="Continue" type="Button" parent="Interface/Dialogue/Margin/Content/Header" unique_id=1153469972]
+layout_mode = 2
+text = "complete_button"
+
+[node name="Text" type="RichTextLabel" parent="Interface/Dialogue/Margin/Content" unique_id=1192703875]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Hint" type="Label" parent="Interface/Dialogue/Margin/Content" unique_id=875420484]
+layout_mode = 2
+text = "initial_hint"
+
+[node name="Utility" type="HBoxContainer" parent="Interface" unique_id=536299632]
+layout_mode = 0
+mouse_filter = 2
+
+[node name="Background" type="Button" parent="Interface/Utility" unique_id=615907358]
+layout_mode = 2
+text = "background_button"
+
+[node name="Settings" type="Button" parent="Interface/Utility" unique_id=1855430202]
+layout_mode = 2
+text = "settings_button"
+
+[node name="Save" type="Button" parent="Interface/Utility" unique_id=1017228307]
+layout_mode = 2
+text = "save_button"
+
+[node name="Ambience" type="Label" parent="Interface" unique_id=173405534]
+layout_mode = 0
+text = "location_label"
+
+[node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1925274964]
+
+[node name="Frame" type="Control" parent="." unique_id=680907223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_frame")

@@ -1,0 +1,797 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head><meta name="ai-disclosure" content="OpenAI ChatGPT/Codex assisted code, procedural artwork, animation, synthesized sound, educational text and translations. See legal/AI_USE.md.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101c26">
+<meta name="description" content="Launch from Earth and join Voyager 1 on an illustrated journey through the solar system. Dodge, discover and collect memories." data-i18n-content="Launch from Earth and join Voyager 1 on an illustrated journey through the solar system. Dodge, discover and collect memories.">
+<title data-i18n="Voyager 1 · A little grand adventure">Voyager 1 · A little grand adventure</title>
+<link rel="icon" href="data:image/svg+xml;base64,PCEtLSBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogTUlUIC0tPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNiIgZmlsbD0iIzE0MjYzMCIvPjxnIHN0cm9rZT0iI2I4ZTRiOSIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIj48ZWxsaXBzZSBjeD0iMzIiIGN5PSIzMiIgcng9IjI3IiByeT0iMTAiIHRyYW5zZm9ybT0icm90YXRlKC0zNSAzMiAzMikiLz48Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIxMyIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iMTciIHI9IjQiIGZpbGw9IiNlNmM5ODgiLz48L2c+PC9zdmc+Cg==" type="image/svg+xml"><style>
+/* SPDX-License-Identifier: MIT */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root{--bg:#101c26;--panel:#172630;--border:#2b3d46;--muted:#90a5ad;--text:#edf2e9;--mint:#b8e4b9;--yellow:#e6c988;--ink:#15272b;--radius:16px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,canvas:focus-visible{outline:2px solid var(--mint);outline-offset:5px}button{color:inherit}button:disabled{opacity:.4;cursor:default}svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.svg-defs{position:absolute;width:0;height:0;overflow:hidden}.app-shell{max-width:1536px;margin:0 auto;padding:0 48px}.header{height:108px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);gap:24px}.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--text);font:600 31px 'Space Grotesk',sans-serif;letter-spacing:-1.5px}.brand-mark{width:43px;height:43px;color:var(--mint)}.brand-mark svg{width:43px;height:43px;stroke-width:1.1}.brand-one{color:var(--mint);font-size:23px;vertical-align:top;padding-left:4px}.brand small{font:500 8px 'DM Sans',sans-serif;display:block;letter-spacing:2.2px;margin-top:1px}.header nav{display:flex;align-items:center;gap:32px}.header nav button{background:none;border:0;font-size:13px;color:#b3c0c2;display:flex;align-items:center;gap:9px;padding:12px 0}.header nav button:hover,.text-link:hover{color:var(--mint)}.header nav svg{width:17px}.count{font-size:10px;border:1px solid #43554f;border-radius:5px;color:var(--mint);padding:2px 5px}.live-indicator{font-size:9px;letter-spacing:1.5px;color:var(--muted);display:flex;align-items:center;gap:9px}i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--mint)}.page-heading{display:flex;justify-content:space-between;align-items:center;padding:35px 0 25px;gap:12px}.eyebrow{font-size:9px;letter-spacing:1.7px;font-weight:600;color:var(--muted);margin:0}.page-heading .eyebrow{margin-bottom:10px;color:var(--mint);letter-spacing:2px}h1{font:500 27px 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:0}h1 em{font-style:normal;font-weight:400;color:#b4c4c5}.edition{color:var(--muted);font-size:9px;letter-spacing:1.5px;display:flex;align-items:center;gap:18px}.edition svg{width:25px;height:25px;color:var(--yellow);stroke-width:1}.dashboard{display:grid;grid-template-columns:minmax(0,1fr) 286px;gap:22px}.game-panel{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;background:var(--panel)}.telemetry{display:flex;align-items:center;justify-content:space-between;padding:20px 25px;height:91px;gap:20px}.metric-label{display:flex;gap:7px;align-items:center;color:var(--muted);font-size:8px;letter-spacing:1.5px;margin-bottom:7px}.telemetry strong{font:500 23px 'Space Grotesk',sans-serif;letter-spacing:-.7px;font-variant-numeric:tabular-nums}.telemetry strong small{color:var(--muted);font:400 12px 'DM Sans',sans-serif;letter-spacing:0}.telemetry .flight-time strong{font-size:19px;color:#c2cfca;letter-spacing:1px}.health svg{width:19px;height:19px;fill:var(--mint);stroke:var(--mint)}.health #hearts{display:flex;gap:6px}.health svg.lost{fill:none;stroke:#52646a}.viewport{position:relative;isolation:isolate;overflow:hidden;min-height:510px;flex:1;background:#14232d}.viewport>canvas{display:block;width:100%;height:100%;position:absolute;inset:0;touch-action:none}.scene-label{position:absolute;top:22px;left:24px;display:flex;align-items:center;gap:8px;font-size:8px;letter-spacing:1.5px;color:#bacac5;pointer-events:none;z-index:2}.tiny-dot{width:5px;height:5px;border-radius:50%;background:#d9c896}.game-actions{position:absolute;right:18px;top:15px;display:flex;gap:7px;z-index:4}.icon-btn{width:32px;height:32px;display:grid;place-items:center;position:relative;border:1px solid #ffffff1a;border-radius:9px;background:#152732aa;color:#b0c4c4}.icon-btn:hover{background:#365048}.icon-btn svg{width:14px;height:14px}.mute-slash{height:20px;width:1px;background:#edc19d;position:absolute;transform:rotate(-45deg)}.welcome{position:relative;margin:105px 0 88px 44px;z-index:3;width:65%;pointer-events:none}.welcome button{pointer-events:auto}.pill{display:inline-block;font-size:8px;letter-spacing:1.8px;color:var(--yellow);margin-bottom:15px}.welcome h2{font:500 clamp(26px,2.8vw,42px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-1.6px;margin:0 0 16px}.welcome h2 em{font-style:normal;color:var(--mint)}.welcome p{font-size:12px;line-height:1.9;color:#b7c7c9;margin:0 0 25px}.primary{border:0;border-radius:9px;color:#1b3431;background:var(--mint);padding:14px 20px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:28px;transition:transform .2s,background .2s;box-shadow:0 5px 20px #00101425}.primary:hover{background:#cef1cd;transform:translateY(-2px)}.primary svg{width:16px;height:16px}.text-link{display:block;background:none;border:0;font-size:10px;color:#bacac7;padding:14px 0}.text-link span{padding-left:10px}.resume-btn{font-size:10px;border:0;background:#142a30db;color:var(--mint);padding:10px 12px;border-radius:6px}.canvas-footer{position:absolute;bottom:18px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;pointer-events:none;font-size:9px;color:#b0c2c3}.canvas-footer span:first-child{display:flex;align-items:center;gap:7px}.canvas-footer span:last-child{font-size:8px;color:#8da2a7;letter-spacing:.3px}.control-bar{height:52px;background:#192a33;display:flex;align-items:center;justify-content:space-between;padding:0 22px;font-size:9px;color:#9fb3b6;gap:12px}.control-bar>div{display:flex;align-items:center;gap:10px}.control-bar b{font-weight:500;font-size:9px}.key-cluster{display:flex;gap:3px}kbd{display:inline-flex;justify-content:center;align-items:center;width:18px;height:19px;border:1px solid #4b5e63;border-bottom-width:2px;border-radius:4px;font:10px 'DM Sans',sans-serif;color:#c3cfcd}.control-bar>span:last-child{display:flex;gap:7px;align-items:center}.touch-instruction{color:#788e97;font-size:8px}.sidebar{display:flex;flex-direction:column;gap:15px}.mission-card,.next-card{border:1px solid var(--border);border-radius:var(--radius);background:var(--panel);padding:20px}.card-heading{display:flex;align-items:center;justify-content:space-between;gap:5px}.card-heading .eyebrow{font-size:8px;letter-spacing:1.3px}.mini-status{display:flex;align-items:center;gap:4px;color:var(--mint);font-size:7px;letter-spacing:.5px}.mini-status i{width:3px;height:3px}.probe-avatar{height:115px;position:relative;background:radial-gradient(ellipse at center,#354b4433,transparent 70%)}.probe-avatar canvas{width:185px;height:116px;position:absolute;top:0;left:17px}.orbit-scribble{position:absolute;right:-1px;top:32px;transform:rotate(12deg);font-family:Georgia,serif;font-size:11px;font-style:italic;color:var(--yellow)}.mission-card h2{font:500 23px 'Space Grotesk',sans-serif;letter-spacing:-.6px;margin:5px 0 6px}.mission-card p{font-size:11px;color:#a7b9be;line-height:1.7;margin:0}.card-divider{height:1px;background:var(--border);margin:18px 0 14px}.side-row{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:10px}.side-row svg{width:14px;height:14px;color:var(--yellow)}.speed{font:500 20px 'Space Grotesk',sans-serif;display:block;letter-spacing:-.7px;margin:6px 0}.speed small{font:10px 'DM Sans',sans-serif;color:var(--muted)}.subnote{font-size:8px;color:#7e969e}.next-card{padding:19px}.step-label{font:9px 'Space Grotesk',sans-serif;color:#899ea3}.destination{display:flex;gap:12px;align-items:center;margin:20px 0}.destination-icon{width:32px;height:32px;font-size:30px;color:var(--yellow);display:flex;align-items:center;justify-content:center}.destination h3{font-size:12px;font-weight:500;margin:0 0 6px}.destination p{font-size:8px;color:var(--muted);margin:0}.progress-track{height:3px;border-radius:3px;background:#3a4b52;overflow:hidden}.progress-track span{display:block;height:100%;width:0;background:var(--mint);transition:width .3s}.progress-caption{display:flex;justify-content:space-between;font-size:8px;color:var(--muted);margin-top:9px}.progress-caption b{color:var(--mint);font-weight:400}.shield-card{padding:5px 4px;display:flex;align-items:flex-start;gap:12px}.shield-emblem{border:1px solid #55706b;border-radius:11px;padding:8px;color:var(--mint);display:block}.shield-emblem svg{width:20px;height:20px}.shield-card h3{font-size:11px;font-weight:500;margin:1px 0 7px}.shield-card p{font-size:10px;line-height:1.65;color:#93a9af;margin:0}.shield-card div>span{display:block;font-size:8px;color:var(--mint);margin-top:8px}.album-card{display:flex;align-items:center;gap:11px;background:#1c2b32;border:1px dashed #43544f;border-radius:11px;padding:13px;text-align:left;margin-top:auto}.album-card:hover{border-color:var(--mint)}.album-card b{font-size:10px;font-weight:500;display:block}.album-card small{font-size:8px;color:var(--muted);display:block;margin-top:5px}.album-card>svg{margin-left:auto;width:14px}.mini-photo{width:29px;height:32px;border:2px solid #d2d4b8;border-bottom-width:6px;transform:rotate(-9deg);display:grid;place-items:center;color:var(--yellow);background:#435951}.journey{border:1px solid var(--border);border-radius:var(--radius);padding:23px 27px;margin-top:24px;background:#15242d}.journey-header{display:flex;align-items:center;justify-content:space-between}.journey-header h2{font:400 16px 'Space Grotesk',sans-serif;margin:0;letter-spacing:-.4px}.journey-header h2 span{color:var(--yellow);margin-left:6px}.journey-header button{border:0;background:none;color:#a9c3ba;font-size:10px}.journey-header button span{margin-left:10px}.route-line{display:flex;position:relative;justify-content:space-between;margin:22px 0 18px}.route-line:before{content:'';position:absolute;top:19px;left:3%;right:7%;border-top:1px dashed #4a5e60}.route-stop{position:relative;z-index:1;background:none;border:0;padding:0;text-align:left;width:16%;color:var(--muted)}.route-stop:first-child{width:14%}.route-dot{width:38px;height:38px;background:#182c32;border:1px solid #354b50;border-radius:50%;display:grid;place-items:center;font-size:19px;color:#7a989a;position:relative}.route-stop.active .route-dot{border-color:var(--mint);color:var(--mint);box-shadow:0 0 0 4px #b8e4b90b}.route-stop.seen .route-dot{color:var(--yellow);border-color:#b69d64}.route-stop:hover .route-dot{background:#345048}.route-stop b{font-size:10px;font-weight:500;display:block;margin-top:9px;color:#becdc8;white-space:nowrap}.route-stop small{font-size:8px;display:block;margin-top:5px}.route-stop.last{width:15%}.journey-note{display:flex;justify-content:space-between;font-size:8px;color:#7e959d}.journey-note span:first-child{display:flex;gap:7px;align-items:center}.journey-note i{width:4px;height:4px}footer{display:flex;justify-content:space-between;font-size:9px;color:#70878e;padding:24px 0 28px}.footer-star{color:var(--yellow);font-size:17px;padding-left:10px}.center-overlay{position:absolute;z-index:7;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;background:#101e2bea;backdrop-filter:blur(7px)}.center-overlay h2{font:500 33px/1.2 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:3px 0 10px}.center-overlay p{color:#a8bbbd;font-size:12px;line-height:1.8;max-width:390px;margin:5px 0 25px}.shield-hud{position:absolute;top:64px;left:24px;background:#24453ceb;border:1px solid #a8d9bd;color:#d7f8db;border-radius:8px;display:flex;align-items:center;gap:7px;font-size:10px;padding:7px 10px;z-index:4}.shield-hud svg{width:15px;height:15px}.shield-hud b{margin-left:12px;font-variant-numeric:tabular-nums}.discovery{position:absolute;bottom:55px;left:24px;right:24px;margin:auto;max-width:540px;background:#f0eddb;color:#203c3d;border-radius:12px;display:flex;gap:13px;align-items:flex-start;z-index:5;padding:16px 36px 16px 16px;box-shadow:0 8px 32px #0004;animation:appear .3s ease-out;pointer-events:auto}.discovery-icon{width:33px;height:33px;flex-shrink:0;border:1px solid #a9b9a4;border-radius:50%;display:grid;place-items:center;margin-top:6px}.discovery-icon svg{width:16px}.discovery small{display:block;font-size:7px;letter-spacing:1.6px;color:#5c7971;margin-bottom:5px}.discovery b{font:600 17px 'Space Grotesk',sans-serif}.discovery p{font-size:11px;line-height:1.6;color:#4f6764;margin:6px 0 0}.discovery button{position:absolute;top:9px;right:12px;background:none;border:0;font-size:20px;color:#4a6b60}.launch-caption{position:absolute;top:70px;left:20px;right:20px;text-align:center;font-size:13px;letter-spacing:1px;color:#f2e7b7;text-shadow:0 2px 10px #000;pointer-events:none}dialog{background:#192a33;color:var(--text);border:1px solid #456057;border-radius:20px;padding:26px 30px;width:min(780px,calc(100% - 30px));max-height:85vh;box-shadow:0 20px 100px #0008}dialog::backdrop{background:#08151bd6;backdrop-filter:blur(5px)}.dialog-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}.dialog-close{border:1px solid var(--border);border-radius:50%;background:transparent;width:30px;height:30px;font-size:23px;color:#b4c8c5}dialog h2{font:500 30px 'Space Grotesk',sans-serif;letter-spacing:-1px;margin:8px 0 14px}dialog p{font-size:12px;color:#b1c5c6;line-height:1.9}.dialog-lede{font-size:14px!important}.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.explain-card{padding:17px;border:1px solid #354a4f;border-radius:12px}.explain-card span{color:var(--yellow);font-size:20px}.explain-card h3{font-size:13px;margin:10px 0 5px}.explain-card p{font-size:11px;margin:0}.science-note{border-left:2px solid var(--mint);padding:3px 0 3px 16px;margin:20px 0}.science-note p{font-size:10px;margin:0 0 7px}.science-note a,dialog .sources a{color:var(--mint)}.route-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:11px}.route-table th{text-align:left;color:var(--muted);font-size:8px;letter-spacing:1px;font-weight:400;padding:10px 8px;border-bottom:1px solid var(--border)}.route-table td{padding:14px 8px;border-bottom:1px solid var(--border);font-variant-numeric:tabular-nums}.route-table td:first-child{color:var(--mint)}.album-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:22px 0}.photo{background:#ede9d7;padding:10px 10px 15px;color:#263d3e;border-radius:3px;transform:rotate(-1deg)}.photo:nth-child(2n){transform:rotate(1deg)}.photo canvas{width:100%;aspect-ratio:1.6;background:#152832}.photo h3{font:600 16px 'Space Grotesk',sans-serif;margin:10px 4px 5px}.photo p{color:#5b706a;font-size:10px;margin:4px;line-height:1.6}.photo small{display:block;font-size:8px;color:#778c81;margin:8px 4px 0}.photo.locked{background:#20343c;border:1px dashed #46605e;transform:none;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#7f999c}.photo.locked span{font-size:30px;opacity:.7}.photo.locked p{color:#8da7a5}.photo-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:0 4px}.photo-actions button{border:0;background:none;color:#326457;font-size:9px;padding:8px 0 0}.sources{font-size:9px!important}.empty-note{color:var(--muted);font-size:11px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}@keyframes appear{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1450px){.viewport{min-height:570px}.welcome{margin-top:130px}.welcome h2{font-size:43px}.mission-card{padding:22px}.probe-avatar{height:132px}.probe-avatar canvas{width:210px;height:132px;left:13px}.mission-card p{font-size:12px}.sidebar{gap:18px}.next-card{padding:22px}.shield-card{padding:8px 5px}.shield-card p{font-size:11px}.dashboard{grid-template-columns:minmax(0,1fr) 302px}}
+@media(max-width:1150px){.app-shell{padding:0 28px}.dashboard{grid-template-columns:minmax(0,1fr) 255px;gap:16px}.live-indicator{display:none}.header nav{gap:26px}.edition{display:none}.welcome{margin-left:29px;width:70%}.welcome h2{font-size:32px}.touch-instruction{display:none}.scene-label{font-size:7px}.telemetry{padding:18px}.mission-card{padding:17px}.probe-avatar canvas{left:2px}.route-stop b{font-size:9px}.sidebar .eyebrow{font-size:7px}}
+@media(max-width:850px){.app-shell{padding:0 20px}.header{height:88px}.brand{font-size:27px}.brand-mark,.brand-mark svg{width:36px;height:36px}.header nav{gap:20px}.header nav button{font-size:11px}.header nav button:nth-child(2){display:none}.page-heading{padding:28px 0 22px}h1{font-size:23px}.dashboard{grid-template-columns:minmax(0,1fr)}.viewport{min-height:520px}.welcome{margin-left:35px;margin-top:115px}.welcome h2{font-size:38px}.sidebar{display:grid;grid-template-columns:1fr 1fr;gap:15px}.mission-card{display:none}.next-card{grid-row:span 2}.shield-card{padding:4px}.album-card{padding:10px;margin-top:0}.journey{padding:20px}.route-stop b{white-space:normal;line-height:1.4}.route-line{gap:8px}.journey-note{font-size:7px}.touch-instruction{display:block}}
+@media(max-width:520px){.app-shell{padding:0 12px}.header{height:78px;gap:10px}.brand{font-size:26px;gap:8px}.brand small{font-size:6px;letter-spacing:1.6px}.brand-mark,.brand-mark svg{width:32px;height:32px}.header nav{gap:12px}.header nav button:first-child{font-size:10px}.header nav button:last-child{font-size:0;gap:6px}.header nav svg{width:21px;height:21px}.page-heading .eyebrow{font-size:7px;letter-spacing:1.5px}h1{font-size:21px;line-height:1.4;letter-spacing:-.6px}h1 em{display:block;font-size:18px}.page-heading{padding:23px 5px 20px}.telemetry{height:77px;padding:15px 13px;gap:10px}.metric-label{font-size:6px;letter-spacing:1px}.telemetry strong{font-size:19px}.telemetry strong small{font-size:9px}.telemetry .flight-time strong{font-size:15px}.health svg{width:14px;height:14px}.health #hearts{gap:3px}.viewport{min-height:510px}.scene-label{left:15px;top:22px;font-size:6px;letter-spacing:1px}.game-actions{right:10px;top:12px;gap:5px}.icon-btn{width:28px;height:28px}.welcome{margin:100px 20px 130px;width:calc(100% - 40px)}.welcome h2{font-size:32px;letter-spacing:-1.2px}.welcome p{font-size:11px}.welcome .pill{font-size:7px}.welcome .primary{padding:13px 17px;font-size:11px;gap:20px}.welcome .text-link{font-size:9px}.canvas-footer{left:15px;right:15px;font-size:8px}.canvas-footer span:last-child{font-size:6px;max-width:125px;text-align:right}.control-bar{padding:0 12px;height:48px;font-size:8px;gap:8px}.control-bar .touch-instruction{display:none}.control-bar .key-cluster{gap:2px}kbd{width:16px;height:17px;font-size:9px}.control-bar>div{gap:6px}.sidebar{gap:12px}.next-card{padding:15px}.card-heading .eyebrow{font-size:6px}.step-label{font-size:8px}.destination{gap:8px;margin:20px 0 16px}.destination-icon{font-size:25px;width:23px}.destination h3{font-size:11px;line-height:1.4}.destination p{font-size:7px;line-height:1.5}.progress-caption{font-size:7px}.progress-caption span{max-width:110px}.shield-emblem{padding:5px;border-radius:8px}.shield-emblem svg{width:16px;height:16px}.shield-card{gap:8px}.shield-card h3{font-size:10px;line-height:1.4}.shield-card p{font-size:8px}.shield-card div>span{font-size:7px}.album-card{gap:8px;padding:10px}.mini-photo{width:21px;height:25px}.album-card b{font-size:8px}.album-card small{font-size:7px;line-height:1.4}.album-card>svg{width:12px;min-width:12px}.journey{padding:18px 14px;margin-top:18px}.journey-header{gap:7px}.journey-header h2{font-size:13px;max-width:160px;line-height:1.5}.journey-header button{font-size:8px;padding:0}.journey-header button span{margin-left:3px}.route-line{margin-top:20px;gap:8px;overflow:visible}.route-stop,.route-stop:first-child,.route-stop.last{width:18%}.route-dot{width:29px;height:29px;font-size:15px}.route-line:before{top:14px;right:9%}.route-stop b{font-size:8px;line-height:1.5}.route-stop small{font-size:6px;line-height:1.5}.journey-note{gap:10px;line-height:1.8;font-size:6px}.journey-note>span{width:50%}.journey-note span:last-child{text-align:right}footer{font-size:7px;gap:15px;line-height:1.7;padding:22px 3px}footer>span{max-width:48%}.footer-star{display:none}.center-overlay h2{font-size:27px}.discovery{left:10px;right:10px;padding:13px 28px 13px 12px;gap:9px}.discovery b{font-size:15px}.discovery p{font-size:10px}.discovery-icon{width:27px;height:27px}.shield-hud{left:15px;font-size:9px}.launch-caption{font-size:11px}dialog{padding:20px;max-height:90vh}dialog h2{font-size:26px}.mission-grid{grid-template-columns:1fr;gap:8px}.explain-card{padding:12px}.explain-card h3{display:inline-block;margin:0 0 6px 9px}.explain-card p{font-size:10px}.route-table{font-size:9px}.route-table th{font-size:6px;letter-spacing:.5px;padding:9px 5px}.route-table td{padding:12px 5px}.album-grid{gap:12px}.photo{padding:7px 7px 12px}.photo h3{font-size:13px}.photo p{font-size:9px}.photo small{font-size:7px}.photo-actions{display:block}.photo-actions button{font-size:8px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* One light-day pilot distinction. */
+.pilot-goal{display:flex;align-items:center;gap:19px;margin-top:18px;padding:23px 27px;border:1px solid #4d5147;border-radius:var(--radius);background:linear-gradient(110deg,#292f30,#182a32 70%)}.goal-icon{width:48px;height:48px;flex-shrink:0;display:grid;place-items:center;border:1px solid #8f825c;border-radius:50%;color:var(--yellow);background:#e6c9880a}.goal-icon svg{width:27px;height:27px;stroke-width:1.2}.goal-copy{flex:1}.goal-copy .eyebrow{color:var(--yellow);font-size:8px}.goal-copy h2{font:400 16px 'Space Grotesk',sans-serif;margin:7px 0 5px;letter-spacing:-.3px}.goal-copy>p:last-child{font-size:9px;color:var(--muted);margin:0;line-height:1.6}.goal-progress{width:190px}.goal-progress .progress-caption{margin:0 0 9px;font-size:9px}.goal-progress .progress-caption b{color:var(--yellow)}.goal-progress .progress-track span{background:var(--yellow)}.pilot-goal>button{border:1px solid #756b50;border-radius:8px;background:transparent;padding:12px 14px;font-size:10px;color:var(--yellow);white-space:nowrap}.pilot-goal>button span{margin-left:10px}.pilot-goal.earned{border-color:#b59f65}.pilot-goal.earned .goal-icon{box-shadow:0 0 25px #e6c9881f}.pilot-goal>button:enabled:hover{background:#e6c98815}.award-content{text-align:center;padding:2px 10px 12px}.award-medallion{width:142px;height:142px;display:grid;place-items:center;margin:13px auto 28px;border:1px solid #e4cf8d;border-radius:50%;color:#ecd697;background:radial-gradient(circle,#ddc47d20,transparent 65%);box-shadow:0 0 0 7px #e6c98809,0 0 0 9px #bdaa5f55,0 0 70px #d8c07912;position:relative}.award-medallion:before,.award-medallion:after{content:'✦';position:absolute;font-size:22px;color:#f2deb0;top:28px;left:-22px}.award-medallion:after{left:auto;right:-18px;top:81px;font-size:15px}.award-medallion svg{width:77px;height:77px;stroke-width:.9}.award-content .eyebrow{color:var(--yellow);letter-spacing:3px}.award-content h2{font-size:43px;color:#f2e0aa;letter-spacing:-1.6px;margin:12px 0}.award-content .award-message{font-size:13px;max-width:450px;margin:0 auto;line-height:1.8}.award-distance{margin:24px auto 20px;padding:16px;border-top:1px solid #5e5f4a;border-bottom:1px solid #5e5f4a;max-width:400px}.award-distance strong{font:500 28px 'Space Grotesk',sans-serif;color:#f1e4bc;display:block}.award-distance small{font-size:9px;color:#b3c6bf;display:block;margin-top:7px;letter-spacing:.7px}.award-content .award-keepsake{font-size:10px;margin:16px 0 22px;color:var(--muted)}.award-content .primary{margin:3px auto 0}.award-content .text-link{margin:auto}.award-footer{font-size:8px!important;color:#8caaa5!important}.award-content .award-note{font-size:10px;color:#adbfba;max-width:450px;margin:16px auto}.pilot-goal .progress-track{height:4px}
+@media(max-width:1150px){.pilot-goal{gap:15px;padding:20px}.goal-progress{width:155px}.goal-copy h2{font-size:14px}.pilot-goal>button{font-size:9px;padding:10px}}
+@media(max-width:850px){.pilot-goal{flex-wrap:wrap}.goal-copy{min-width:calc(100% - 75px)}.goal-progress{width:auto;flex:1;padding-left:63px}.pilot-goal>button{font-size:10px}}
+@media(max-width:520px){.pilot-goal{padding:19px 14px;gap:13px}.goal-icon{width:39px;height:39px}.goal-icon svg{width:23px;height:23px}.goal-copy{min-width:calc(100% - 55px)}.goal-copy .eyebrow{font-size:7px}.goal-copy h2{font-size:13px}.goal-copy>p:last-child{font-size:8px}.goal-progress{padding-left:0;min-width:125px}.goal-progress .progress-caption{font-size:8px}.pilot-goal>button{font-size:8px;padding:10px}.pilot-goal>button span{margin-left:5px}.award-content{padding:0 0 10px}.award-medallion{width:110px;height:110px;margin:15px auto 28px}.award-medallion svg{width:61px;height:61px}.award-content h2{font-size:33px}.award-content .award-message{font-size:11px}.award-distance strong{font-size:22px}.award-distance small{font-size:8px;line-height:1.6}.award-content .eyebrow{font-size:8px;letter-spacing:2px}.award-content .award-note{font-size:9px}}
+/* Show only the playable frame, without surrounding information panels. */
+.game-only{min-height:100svh;display:grid;place-items:center}
+.game-only .app-shell{width:100%;max-width:1280px;padding:24px}
+.game-only .header,.game-only .page-heading,.game-only .sidebar,.game-only .journey,.game-only .pilot-goal,.game-only footer{display:none}
+.game-only .dashboard{display:block}
+.game-only .viewport{min-height:clamp(510px,calc(100svh - 193px),760px)}
+@media(max-width:520px){.game-only .app-shell{padding:12px}.game-only .viewport{min-height:clamp(510px,calc(100svh - 151px),760px)}}
+/* Language settings remain inside the playable frame and its dialogs. */
+.language-control{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 8px;border:1px solid #ffffff24;border-radius:9px;background:#152732e6;color:#d3e2d8}
+.language-control>svg{width:13px;height:13px;flex-shrink:0;stroke-width:1.3}
+.language-control select{font:10px 'DM Sans',sans-serif;color:inherit;background:#152732;border:0;max-width:80px;cursor:pointer;padding:4px 0;outline-offset:4px}
+.language-control option{color:#edf2e9;background:#152732}
+.dialog-tools{display:flex;align-items:center;gap:12px}
+.scene-label{max-width:calc(100% - 220px)}
+#sectorLabel{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:520px){.language-control{height:28px;padding:0 6px;gap:4px}.language-control select{font-size:9px;max-width:66px}.language-control>svg{width:11px;height:11px}.scene-label{max-width:calc(100% - 180px)}.dialog-tools{gap:8px}.dialog-heading>.eyebrow{max-width:calc(100% - 152px);line-height:1.6}}
+
+.game-actions{z-index:8}
+/* The real mission leads the introduction; controls remain available on demand. */
+.mission-history h2{margin-bottom:5px}.mission-history>canvas{display:block;width:100%;height:auto;aspect-ratio:4.25;margin:3px 0 8px}.history-stop{display:flex;align-items:flex-start;gap:17px;margin:18px 0}.history-year{font:500 11px 'Space Grotesk',sans-serif;letter-spacing:.3px;color:#d8c690;min-width:76px;margin-top:3px}.history-stop h3{font:500 15px 'Space Grotesk',sans-serif;color:#c8e1c5;margin:0 0 6px}.history-stop p{font-size:12px;line-height:1.85;margin:0;color:#b6c9c4}.history-footnote{font-size:10px!important;color:#91aaa1!important;border-left:2px solid #7eaa8a;padding-left:12px}.history-player{padding:15px 17px;border:1px solid #425d4d;border-radius:12px;background:#b8e4b908;margin:19px 0}.history-player>b{font:500 15px 'Space Grotesk',sans-serif;color:#c2dfba}.history-player p{font-size:11px;line-height:1.8;margin:7px 0 0}.mission-instructions{border-top:1px solid #3d514a;border-bottom:1px solid #3d514a;padding:13px 0;margin:21px 0}.mission-instructions>summary{font-size:11px;cursor:pointer;color:#b3cba9;line-height:1.6}.mission-instructions>summary:hover{color:#d6edc9}.mission-instructions[open]>summary{margin-bottom:13px}.mission-instructions .science-note{margin-bottom:8px}
+@media(max-width:520px){.mission-history h2{font-size:25px}.history-stop{gap:11px;margin:15px 0}.history-year{font-size:9px;min-width:60px}.history-stop h3{font-size:13px}.history-stop p{font-size:11px;line-height:1.85}.history-footnote{font-size:9px!important}.history-player{padding:12px 14px}.history-player>b{font-size:14px}.history-player p{font-size:10px}.mission-instructions>summary{font-size:10px}}
+
+/* Disclosure stays inside the existing game frame and dialogs. */
+.ai-art-label{color:inherit;font-size:10px;line-height:1.5;letter-spacing:0;text-decoration:underline;text-underline-offset:3px;pointer-events:auto;max-width:52%;text-align:right}.project-extras{border-block:1px solid #8b9e8066;padding:12px 0;margin:18px 0}.project-extras summary{cursor:pointer;font-size:12px;line-height:1.6}.project-extras p{font-size:12px;line-height:1.8}.project-extras a{color:inherit;text-decoration:underline}.scene-footer,.canvas-footer{gap:14px}@media(max-width:450px){.ai-art-label{font-size:9px}.project-extras p{font-size:11px}}
+
+</style>
+<script>
+/* Shared, dependency-free mouse companion and educational mission passport. */
+(() => {
+  'use strict';
+  const config = {"title": ["Voyager 1", "Voyager 1"], "intro": ["¡Un guía diminuto para un viaje enorme! Registra tres destinos distintos y reúne tus medallas de navegación.", "A tiny guide for an enormous journey! Record three different destinations and collect your navigation medals."], "questions": [{"label": ["Ruta de gigantes", "Route of giants"], "prompt": ["¿Qué planeta visitó Voyager 1 antes de Saturno?", "Which planet did Voyager 1 visit before Saturn?"], "answers": [["Júpiter", "Jupiter"], ["Neptuno", "Neptune"], ["Marte", "Mars"]], "correct": 0, "explanation": ["Voyager 1 sobrevoló Júpiter en 1979 y Saturno en 1980.", "Voyager 1 flew past Jupiter in 1979 and Saturn in 1980."], "hint": ["Es el planeta más grande del sistema solar.", "It is the largest planet in the solar system."]}, {"label": ["Impulso gravitatorio", "Gravity assist"], "prompt": ["¿Qué permite una asistencia gravitatoria?", "What can a gravity assist do?"], "answers": [["Viajar instantáneamente", "Travel instantly"], ["Cambiar la trayectoria y velocidad con un sobrevuelo", "Change trajectory and speed through a flyby"], ["Eliminar la gravedad", "Remove gravity"]], "correct": 1, "explanation": ["Un sobrevuelo aprovecha el movimiento y la gravedad del planeta para modificar el viaje de la nave.", "A flyby uses the planet’s motion and gravity to alter the spacecraft’s journey."], "hint": ["La nave intercambia energía con un planeta en movimiento.", "The spacecraft exchanges energy with a moving planet."]}, {"label": ["Mensaje entre estrellas", "Message among stars"], "prompt": ["¿Qué lleva el Disco de Oro?", "What does the Golden Record carry?"], "answers": [["Combustible", "Fuel"], ["Un mapa de tesoros", "A treasure map"], ["Sonidos e imágenes de la Tierra", "Sounds and images from Earth"]], "correct": 2, "explanation": ["El Disco de Oro es una selección de sonidos e imágenes sobre la vida y la cultura de la Tierra.", "The Golden Record is a selection of sounds and images about life and culture on Earth."], "hint": ["Es un mensaje, no un motor.", "It is a message, not an engine."]}], "id": "voyager_one"};
+  const key = 'mouse_passport_v1_' + config.id;
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (_) {}
+  const events = new Set(Array.isArray(saved.events) ? saved.events.filter(x => typeof x === 'string') : []);
+  const medals = new Set(Array.isArray(saved.medals) ? saved.medals.filter(x => Number.isInteger(x) && x >= 0 && x < 3) : []);
+  let panel, feedback = '', selected = -1;
+  const es = () => document.documentElement.lang.toLowerCase().startsWith('es');
+  const t = pair => pair[es() ? 0 : 1];
+  function persist() { try { localStorage.setItem(key, JSON.stringify({events:[...events],medals:[...medals]})); } catch (_) {} }
+  function draw(c, x, y, scale = 1, moving = false) {
+    if (!c || scale <= 0) return;
+    c.save(); c.translate(x, y); c.scale(scale, scale);
+    const bounce = moving && !matchMedia('(prefers-reduced-motion: reduce)').matches ? Math.sin(performance.now() / 95) * 3 : 0;
+    c.translate(0, bounce); c.lineCap = 'round'; c.lineJoin = 'round';
+    c.strokeStyle = '#49344f'; c.lineWidth = 3;
+    c.beginPath(); c.moveTo(20, 15); c.bezierCurveTo(57, 31, 55, -12, 37, -2); c.stroke();
+    const oval = (x,y,rx,ry,color) => { c.beginPath(); c.ellipse(x,y,rx,ry,0,0,Math.PI*2); c.fillStyle=color; c.fill(); c.stroke(); };
+    oval(-20,-32,18,21,'#6ce1df'); oval(20,-32,18,21,'#6ce1df');
+    c.lineWidth=1; oval(-20,-32,11,14,'#c2a6e5'); oval(20,-32,11,14,'#c2a6e5');
+    c.lineWidth=3; oval(0,4,26,29,'#69dbdf'); oval(-13,28,10,5,'#87ece4'); oval(13,28,10,5,'#87ece4');
+    oval(0,-14,28,23,'#8cece5');
+    c.strokeStyle='#f49434'; c.lineWidth=5;
+    oval(-14,-17,13,14,'#ffe9b64d'); oval(14,-17,13,14,'#ffe9b64d');
+    c.beginPath(); c.moveTo(-1,-18); c.lineTo(1,-18); c.stroke();
+    c.strokeStyle='#49344f'; c.lineWidth=3;
+    for(const side of [-1,1]) { c.beginPath(); c.moveTo(side*14-2,-20); c.lineTo(side*14+2,-14); c.stroke(); }
+    c.strokeStyle='#ffffff'; c.lineWidth=2;
+    for(const side of [-1,1]) { c.beginPath(); c.moveTo(side*14-5,-25); c.lineTo(side*14,-28); c.stroke(); }
+    c.fillStyle='#60405e'; c.beginPath(); c.arc(0,-5,3,0,Math.PI*2); c.fill(); c.restore();
+  }
+  function render() {
+    if (!panel) return;
+    panel.replaceChildren();
+    const header=document.createElement('div'); header.className='mouse-passport-header';
+    const portrait=document.createElement('canvas'); portrait.width=120;portrait.height=110;portrait.setAttribute('aria-hidden','true'); draw(portrait.getContext('2d'),55,65,.9);
+    header.append(portrait);
+    const title=document.createElement('h2'); title.textContent=t(config.title)+' · '+medals.size+'/3 ★';header.append(title);panel.append(header);
+    const intro=document.createElement('p');intro.textContent=t(config.intro);panel.append(intro);
+    const hint=document.createElement('p');hint.textContent=t(['El ratón es tu guía imaginario; las misiones espaciales reales no llevaban este personaje. Cada acción distinta desbloquea un reto. Sin penalización por equivocarte.','The mouse is your imaginary guide; the real missions did not carry this character. Each distinct action unlocks a challenge. Mistakes carry no penalty.']);panel.append(hint);
+    const list=document.createElement('div');list.className='mouse-challenges';panel.append(list);
+    config.questions.forEach((q,i)=>{
+      const button=document.createElement('button');button.type='button';button.disabled=events.size<=i;
+      button.textContent=(medals.has(i)?'★ ':events.size<=i?'🔒 ':'☆ ')+t(q.label);
+      button.addEventListener('click',()=>{selected=i;feedback='';render();panel.querySelector('.mouse-question')?.focus();});list.append(button);
+    });
+    if(selected>=0 && events.size>selected){
+      const q=config.questions[selected],box=document.createElement('div');box.className='mouse-question';box.tabIndex=-1;
+      const text=document.createElement('h3');text.textContent=t(q.prompt);box.append(text);
+      q.answers.forEach((a,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t(a);b.disabled=medals.has(selected);b.addEventListener('click',()=>{
+        if(i===q.correct){medals.add(selected);persist();feedback=t(['¡Medalla conseguida! ','Medal earned! '])+t(q.explanation);}
+        else feedback=t(['Prueba otra vez. Pista: ','Try again. Hint: '])+t(q.hint);
+        render();
+      });box.append(b);});
+      const result=document.createElement('p');result.setAttribute('role','status');result.textContent=feedback || (medals.has(selected)?t(q.explanation):'');box.append(result);panel.append(box);
+    }
+    if(medals.size===3){const done=document.createElement('p');done.className='mouse-complete';done.textContent=t(['¡Pasaporte completo! Has ganado tus tres medallas de exploración.','Passport complete! You earned all three exploration medals.']);panel.append(done);}
+  }
+  function record(id) {
+    id=String(id);if(events.has(id))return;events.add(id);persist();render();
+    const notice=document.getElementById('mouse-notice');if(!notice)return;
+    notice.textContent=t(['¡Descubrimiento registrado! Abajo te espera un reto del ratón.','Discovery recorded! A mouse challenge awaits below.']);
+    clearTimeout(record.timeout);record.timeout=setTimeout(()=>{notice.textContent='';},4500);
+  }
+  window.MouseMission={draw,record};
+  document.addEventListener('DOMContentLoaded',()=>{
+    const style=document.createElement('style');style.textContent=`
+      #mouse-passport{box-sizing:border-box;width:min(100%,1100px);margin:24px auto;padding:22px;border:3px solid #49344f;border-radius:28px 12px 28px 12px;background:#fff5db;color:#49344f;font:16px/1.5 system-ui;box-shadow:7px 7px 0 #efaa56}
+      .mouse-passport-header{display:flex;align-items:center;gap:12px}.mouse-passport-header canvas{width:90px;height:83px;flex:none}.mouse-passport-header h2{font-size:clamp(18px,3vw,26px);margin:0}
+      #mouse-passport p{max-width:85ch}#mouse-passport button{font:inherit;cursor:pointer;border:2px solid #49344f;border-radius:16px;padding:12px 16px;margin:5px;background:#b5eeea;color:#37283b;min-height:44px}
+      #mouse-passport button:disabled{opacity:.6;cursor:default}#mouse-passport button:focus-visible{outline:3px solid #e66c27;outline-offset:3px}.mouse-question{margin-top:20px;border-top:2px dashed #c58d63;padding-top:10px}.mouse-question h3{font-size:18px}.mouse-complete{font-weight:bold;color:#345d51}
+      #mouse-notice{position:fixed;left:50%;top:12px;transform:translateX(-50%);z-index:9999;pointer-events:none;background:#49344f;color:#fff5db;border-radius:16px;font:14px/1.4 system-ui;text-align:center;max-width:85vw}#mouse-notice:not(:empty){padding:12px 20px}
+      @media(max-width:500px){#mouse-passport{padding:14px}.mouse-question button{display:block;width:100%;margin:8px 0}}
+    `;document.head.append(style);
+    panel=document.createElement('section');panel.id='mouse-passport';panel.setAttribute('aria-label','Mission passport');
+    // Keep gameplay unobstructed; challenges live below the original game.
+    document.body.append(panel);const notice=document.createElement('div');notice.id='mouse-notice';notice.setAttribute('role','status');document.body.append(notice);
+    new MutationObserver(()=>{feedback='';render();}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});render();
+  });
+})();
+
+</script></head>
+<body class="game-only">
+<svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.8 6.7L22 12l-7.2 2.8L12 22l-2.8-7.2L2 12l7.2-3.3Z"/></symbol>
+<symbol id="i-orbit" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="11" ry="4.5" transform="rotate(-36 12 12)"/><circle cx="12" cy="12" r="5"/><circle cx="20" cy="6" r="1.5"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h5l2-3h4l2 3h5v13H3Z"/><circle cx="12" cy="13" r="4"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S2 14 2 7a5 5 0 0 1 10-1 5 5 0 0 1 10 1c0 7-10 13-10 13Z"/></symbol>
+<symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3Zm13-2c3 3 3 7 0 10m3-13c5 5 5 11 0 16"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="3"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 3h10v6a5 5 0 0 1-10 0ZM7 5H3v3a4 4 0 0 0 5 4m9-7h4v3a4 4 0 0 1-5 4M12 14v5m-5 2h10m-8-2h6"/><path d="m12 5 .8 1.7 1.9.3-1.4 1.3.4 1.9-1.7-.9-1.7.9.4-1.9L9.3 7l1.9-.3Z"/></symbol>
+</defs></svg>
+
+<div class="app-shell"><main><div class="dashboard">
+<section class="game-panel" aria-label="Voyager 1 game" data-i18n-aria-label="Voyager 1 game">
+<div class="telemetry"><div><span class="metric-label"><i class="signal"></i><span data-i18n="SIMULATED PROGRESS">SIMULATED PROGRESS</span></span><strong><span id="distance">0</span> <small>km</small></strong></div><div class="flight-time"><span data-i18n="FLIGHT TIME" class="metric-label">FLIGHT TIME</span><strong id="flightTime">00:00</strong></div><div class="health"><span data-i18n="INTEGRITY" class="metric-label">INTEGRITY</span><div id="hearts" aria-label="3 hits remaining"></div></div></div>
+<div class="viewport" id="viewport">
+<canvas id="space" aria-label="Game area. Move the probe with the arrow keys, WASD or by dragging on the screen." data-i18n-aria-label="Game area. Move the probe with the arrow keys, WASD or by dragging on the screen." tabindex="0"></canvas>
+<div class="scene-label"><span class="tiny-dot"></span><span id="sectorLabel">EARTH · WHERE IT ALL BEGINS</span></div>
+<div class="game-actions"><label class="language-control"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><select id="languageSelect" data-language-select aria-label="Language" data-i18n-aria-label="Language"><option value="es" data-i18n="Spanish">Spanish</option><option value="en" data-i18n="English">English</option></select></label><button id="soundBtn" class="icon-btn" aria-label="Enable sound" title="Enable sound"><svg><use href="#i-sound"/></svg><span class="mute-slash"></span></button><button id="pauseBtn" class="icon-btn" aria-label="Pause game" title="Pause game"><svg><use href="#i-pause"/></svg></button></div>
+<div class="shield-hud" id="shieldHud" hidden><svg><use href="#i-shield"/></svg><span data-i18n="Shield active">Shield active</span><b id="shieldTime">10 s</b></div>
+<div class="welcome" id="welcome"><span data-i18n="AN EXTRAORDINARY MISSION" class="pill">AN EXTRAORDINARY MISSION</span><h2><span data-i18n="Small probe.">Small probe.</span><br><em><span data-i18n="Great discoveries.">Great discoveries.</span></em></h2><p><span data-i18n="Leave Earth behind. Follow your curiosity.">Leave Earth behind. Follow your curiosity.</span><br><span data-i18n="The universe has so much to tell you.">The universe has so much to tell you.</span></p><button id="startBtn" class="primary" ><span data-i18n="Begin the journey">Begin the journey</span> <svg><use href="#i-arrow"/></svg></button><button class="text-link" data-dialog="mission"><span data-i18n="Meet your mission">Meet your mission</span></button><div id="resumeWrap" hidden><button id="resumeBtn" class="resume-btn" ><span data-i18n="Continue my saved flight →">Continue my saved flight →</span></button></div></div>
+<div class="center-overlay" id="pauseOverlay" hidden><span data-i18n="A BREAK AMONG THE STARS" class="pill">A BREAK AMONG THE STARS</span><h2 data-i18n="The universe can wait.">The universe can wait.</h2><p data-i18n="Your journey is paused.">Your journey is paused.</p><button id="continueBtn" class="primary" ><span data-i18n="Continue the journey">Continue the journey</span> <svg><use href="#i-arrow"/></svg></button><button id="restartPause" class="text-link" ><span data-i18n="Return to Earth">Return to Earth</span></button></div>
+<div class="center-overlay" id="gameOver" hidden><span data-i18n="END OF TRANSMISSION" class="pill">END OF TRANSMISSION</span><h2><span data-i18n="Every great journey">Every great journey</span><br><span data-i18n="deserves another try.">deserves another try.</span></h2><p id="finalStats"></p><button id="retryBtn" class="primary" ><span data-i18n="Launch again">Launch again</span> <svg><use href="#i-arrow"/></svg></button><button class="text-link" data-dialog="album"><span data-i18n="View my memories">View my memories</span></button></div>
+<div id="discovery" class="discovery" hidden role="status"><div class="discovery-icon"><svg><use href="#i-camera"/></svg></div><div><small id="discoveryKicker"></small><b id="discoveryTitle"></b><p id="discoveryText"></p></div><button id="closeDiscovery" aria-label="Close discovery" data-i18n-aria-label="Close discovery">×</button></div>
+<div class="launch-caption" id="launchCaption" hidden role="status"></div>
+<div class="canvas-footer"><span id="flightStatus"><i></i> Ready to explore</span><a class="ai-art-label" href="https://voyager-1-viaje-estelar-h7m4.splendidspoonbill3.chatgpt.site/legal/#ai" target="_blank" rel="noopener" data-i18n="AI-generated art · drawn in code">AI-generated art · drawn in code</a><span id="canvasTip" class="sr-only">A journey inspired by a true story</span></div>
+</div>
+<div class="control-bar"><div><span class="key-cluster"><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd></span><span data-i18n="or WASD to move">or WASD to move</span></div><span data-i18n="On mobile, drag the probe" class="touch-instruction">On mobile, drag the probe</span><span><kbd>P</kbd> <span data-i18n="Pause">Pause</span></span></div>
+</section></div></main></div>
+<dialog id="infoDialog"><div class="dialog-heading"><span class="eyebrow" id="dialogEyebrow"></span><div class="dialog-tools"><label class="language-control"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><select id="dialogLanguageSelect" data-language-select aria-label="Language" data-i18n-aria-label="Language"><option value="es" data-i18n="Spanish">Spanish</option><option value="en" data-i18n="English">English</option></select></label><button id="closeDialog" class="dialog-close" aria-label="Close window" data-i18n-aria-label="Close window">×</button></div></div><div id="dialogContent"></div></dialog>
+<div class="sr-only" aria-live="polite" id="announcement"></div>
+<script>
+// SPDX-License-Identifier: MIT
+'use strict';
+// Spanish localization data. Game logic and source messages are written in English.
+globalThis.VoyagerLocales = { es: {
+  "Earth": "Tierra",
+  "This is where it all begins. Voyager 1 launched on September 5, 1977, aboard a Titan IIIE-Centaur rocket.": "Aquí empieza todo. Voyager 1 despegó el 5 de septiembre de 1977 a bordo de un cohete Titan IIIE-Centaur.",
+  "Asteroid belt": "Cinturón de asteroides",
+  "Millions of rocky bodies orbit between Mars and Jupiter. In reality, they are very far apart; the game brings them closer for the challenge.": "Entre Marte y Júpiter hay millones de cuerpos rocosos. En realidad están muy separados: el juego los acerca para crear el desafío.",
+  "Jupiter system": "Sistema de Júpiter",
+  "Jupiter": "Júpiter",
+  "The giant of our solar system! Voyager 1 observed its clouds, discovered a faint ring and saw active volcanoes on its moon Io.": "¡El gigante del sistema solar! Voyager 1 observó sus nubes, descubrió un anillo tenue y vio volcanes activos en su luna Ío.",
+  "Saturn system": "Sistema de Saturno",
+  "Saturn": "Saturno",
+  "Its rings are made mostly of ice. The encounter with Saturn and Titan sent Voyager 1 on a path toward the stars.": "Sus anillos están hechos sobre todo de hielo. El encuentro con Saturno y Titán encaminó a Voyager 1 hacia las estrellas.",
+  "Heliopause": "Heliopausa",
+  "A traveling rock": "Una roca viajera",
+  "An asteroid is a rocky or metallic body orbiting the Sun. A meteor is the flash it creates when it enters an atmosphere.": "Un asteroide es un cuerpo de roca o metal que orbita el Sol. Un meteoro es el destello que produce al entrar en una atmósfera.",
+  "Traces of other missions": "Huellas de otras misiones",
+  "Space debris consists of rocket or satellite parts that are no longer used. It is mainly a problem near Earth.": "La basura espacial son piezas de cohetes o satélites que ya no se usan. Es un problema sobre todo cerca de la Tierra.",
+  "A comet on your path": "Un cometa en el camino",
+  "Comets contain ice, dust and rock. Near the Sun, heat can create a bright tail.": "Los cometas mezclan hielo, polvo y roca. Cuando se acercan al Sol, el calor puede formar una cola brillante.",
+  "A tiny world of ice": "Un pequeño mundo de hielo",
+  "Icy bodies exist far from the Sun. Their ice can preserve material from the earliest days of the solar system.": "Lejos del Sol hay cuerpos helados. Sus hielos pueden conservar materiales de los primeros días del sistema solar.",
+  "Clouds among the stars": "Nubes entre las estrellas",
+  "A nebula is a huge cloud of gas and dust. Some are places where stars are born. This one is far away; we are not flying through it.": "Una nebulosa es una gran nube de gas y polvo. Algunas son lugares donde nacen estrellas. Esta se ve a lo lejos; no la estamos atravesando.",
+  "An island of stars": "Una isla de estrellas",
+  "A galaxy contains stars, gas and dust held together by gravity. These galaxies are distant scenery, outside Voyager's route.": "Una galaxia reúne estrellas, gas y polvo unidos por la gravedad. Estas galaxias son parte del paisaje lejano, fuera de la ruta de Voyager.",
+  "Other suns, other worlds": "Otros soles, otros mundos",
+  "A planetary system has planets orbiting a star. The systems in the background are distant illustrations, not real Voyager visits.": "Un sistema planetario tiene planetas que orbitan una estrella. Los que ves al fondo son ilustraciones lejanas, no visitas reales de Voyager.",
+  "Shield on the radar!": "¡Escudo en el radar!",
+  "Voyager 1 · A little grand adventure": "Voyager 1 · Un pequeño gran viaje",
+  "Launch from Earth and join Voyager 1 on an illustrated journey through the solar system. Dodge, discover and collect memories.": "Despega de la Tierra y acompaña a Voyager 1 en un viaje ilustrado por el sistema solar. Esquiva, descubre y guarda recuerdos.",
+  "Voyager 1 game": "Juego de Voyager 1",
+  "JOURNEY PROGRESS": "AVANCE DEL VIAJE",
+  "FLIGHT TIME": "TIEMPO DE VUELO",
+  "INTEGRITY": "INTEGRIDAD",
+  "Game area. Move the probe with the arrow keys, WASD or by dragging on the screen.": "Espacio de juego. Mueve la sonda con las flechas, WASD o arrastrando en la pantalla.",
+  "Language": "Idioma",
+  "Spanish": "Español",
+  "English": "Inglés",
+  "Shield active": "Escudo activo",
+  "AN EXTRAORDINARY MISSION": "UNA MISIÓN EXTRAORDINARIA",
+  "Small probe.": "Pequeña sonda.",
+  "Great discoveries.": "Grandes descubrimientos.",
+  "Leave Earth behind. Follow your curiosity.": "Deja atrás la Tierra. Sigue la curiosidad.",
+  "The universe has so much to tell you.": "El universo tiene mucho que contarte.",
+  "Begin the journey": "Comenzar el viaje",
+  "Meet your mission": "Conoce tu misión",
+  "Continue my saved flight →": "Continuar mi vuelo guardado →",
+  "A BREAK AMONG THE STARS": "UN RESPIRO ENTRE ESTRELLAS",
+  "The universe can wait.": "El universo puede esperar.",
+  "Your journey is paused.": "Tu viaje está en pausa.",
+  "Continue the journey": "Continuar el viaje",
+  "Return to Earth": "Volver a la Tierra",
+  "END OF TRANSMISSION": "FIN DE LA TRANSMISIÓN",
+  "Every great journey": "Todo gran viaje",
+  "deserves another try.": "merece otro intento.",
+  "Launch again": "Volver a despegar",
+  "View my memories": "Ver mis recuerdos",
+  "Close discovery": "Cerrar descubrimiento",
+  "Close window": "Cerrar ventana",
+  "or WASD to move": "o WASD para moverte",
+  "On mobile, drag the probe": "En móvil, arrastra la sonda",
+  "Pause": "Pausa",
+  "Enable sound": "Activar sonido",
+  "Mute sound": "Silenciar sonido",
+  "Pause game": "Pausar juego",
+  "Continue game": "Continuar juego",
+  "1 hit remaining": "1 impacto disponible",
+  "{count} hits remaining": "{count} impactos disponibles",
+  "{value} million": "{value} millones",
+  "{value} billion": "{value} mil millones",
+  "MOVING AWAY": "ALEJÁNDONOS",
+  "ENCOUNTER": "ENCUENTRO",
+  "IN THE DISTANCE": "A LO LEJOS",
+  "APPROACHING": "ACERCÁNDONOS",
+  "JOURNEY SCENERY": "PAISAJE DEL VIAJE",
+  "EARTH · WHERE IT ALL BEGINS": "TIERRA · EL COMIENZO DE TODO",
+  "EARTH · LAUNCH SEQUENCE": "TIERRA · SECUENCIA DE LANZAMIENTO",
+  "LEAVING EARTH · RELEASING VOYAGER 1": "SALIENDO DE LA TIERRA · LIBERANDO A VOYAGER 1",
+  "INTERSTELLAR SPACE · THE ADVENTURE CONTINUES": "ESPACIO INTERESTELAR · LA AVENTURA CONTINÚA",
+  "Liftoff! Earth is getting smaller and smaller…": "¡Despegamos! La Tierra se vuelve cada vez más pequeña…",
+  "September 5, 1977 · Cape Canaveral": "5 de septiembre de 1977 · Cabo Cañaveral",
+  "Ready to explore": "Lista para explorar",
+  "Signal lost": "Señal perdida",
+  "Titan IIIE-Centaur · liftoff": "Titan IIIE-Centaur · despegue",
+  "Releasing Voyager 1": "Liberando a Voyager 1",
+  "Exploring the universe": "Explorando el universo",
+  "A journey inspired by a true story": "Un viaje inspirado en una historia real",
+  "Three hits. Endless curiosity.": "Tres impactos. Infinitas ganas de descubrir.",
+  "You traveled {distance} km in {time}. Your memories are safe in the album. Return to Earth and begin a new mission.": "Recorriste {distance} km en {time}. Tus recuerdos siguen a salvo en el álbum. Vuelve a la Tierra y comienza una nueva misión.",
+  "SOMETHING NEW ON THE WAY": "ALGO NUEVO EN EL CAMINO",
+  "MEMORY SAVED · ILLUSTRATED IMAGE": "RECUERDO GUARDADO · IMAGEN ILUSTRADA",
+  "MEMORY SAVED · ARTIST'S IMPRESSION": "RECUERDO GUARDADO · RECREACIÓN ARTÍSTICA",
+  "Back among the stars": "De vuelta entre estrellas",
+  "Your flight continues where you left off. You have a few seconds to find your bearings.": "Tu vuelo continúa donde lo dejaste. Tienes unos segundos para orientarte.",
+  "TRANSMISSION RESTORED": "TRANSMISIÓN RESTABLECIDA",
+  "Three hits. Mission over. You can launch again.": "Tres impactos. Fin de la misión. Puedes volver a despegar.",
+  "Shield depleted": "Escudo agotado",
+  "The shield absorbed the impact. Your probe is still intact.": "La protección absorbió el impacto. Tu sonda sigue intacta.",
+  "PROTECTION USED": "PROTECCIÓN UTILIZADA",
+  "Careful, explorer": "Con cuidado, exploradora",
+  "You can still go farther": "Todavía puedes llegar más lejos",
+  "You have been hit. Two hits remain. Stay away from obstacles.": "Has recibido un impacto. Te quedan dos. Mantente lejos de los obstáculos.",
+  "One hit remains. Find the next green shield and protect your mission.": "Te queda un impacto. Busca el próximo escudo verde y protege la misión.",
+  "IMPACT DETECTED": "IMPACTO DETECTADO",
+  "You set the course now": "Ahora tú marcas el rumbo",
+  "Move the probe with arrows, WASD or by dragging. Avoid obstacles and protect your three hits.": "Mueve la sonda con las flechas, WASD o arrastrando. Esquiva los obstáculos y conserva tus tres impactos.",
+  "VOYAGER 1 · PROBE RELEASED": "VOYAGER 1 · SONDA LIBERADA",
+  "A little energy embrace": "Un abrazo de energía",
+  "Shield active: you have 10 seconds of protection. One impact will break it.": "Escudo activo: tienes 10 segundos de protección. Un impacto lo romperá.",
+  "SHIELD COLLECTED": "ESCUDO RECOGIDO",
+  "Best pilot award! You have traveled beyond one light-day.": "¡Premio al mejor piloto! Has superado un día luz de viaje.",
+  "INTERSTELLAR DISTINCTION": "DISTINCIÓN INTERESTELAR",
+  "The best pilot!": "¡El mejor piloto!",
+  "1 light-day of adventure": "1 día luz de aventura",
+  "{distance} km traveled in a single flight": "{distance} km superados en un mismo vuelo",
+  "Your award is saved in this browser, even if you start over.": "Tu premio está guardado en este navegador, incluso si vuelves a empezar.",
+  "Keep this memory": "Guardar este recuerdo",
+  "Continue my journey": "Continuar mi viaje",
+  "Exploration continues. There is always one more star.": "La exploración continúa. Siempre queda una estrella más.",
+  "A small probe.": "Una pequeña sonda.",
+  "A huge curiosity.": "Una curiosidad enorme.",
+  "It is 1977. Your mission is to accompany Voyager 1 from Earth into interstellar space. Discover worlds as they approach and recede in the background, dodge obstacles and collect a memory at every stop. Travel beyond one light-day to earn the best pilot award.": "Es 1977. Tu misión es acompañar a Voyager 1 desde la Tierra hasta el espacio interestelar. Descubre mundos que se acercan y se alejan en el fondo, esquiva obstáculos y guarda un recuerdo de cada etapa. Si superas un día luz de avance, recibirás el premio al mejor piloto.",
+  "First, the launch": "Primero, el despegue",
+  "A Titan IIIE-Centaur leaves Earth. At the end of the launch sequence, it releases Voyager 1 and your flight begins.": "Un Titan IIIE-Centaur sale de la Tierra. Al terminar la secuencia de lanzamiento, libera a Voyager 1 y empieza tu vuelo.",
+  "Three hits, one mission": "Tres impactos, una misión",
+  "Move with the arrow keys, WASD or by dragging. After the third hit, start over from Earth. More obstacles arrive as you advance, and they move faster.": "Mueve la sonda con flechas, WASD o arrastrando. Al tercer impacto vuelves a empezar desde la Tierra. Cada vez llegan más obstáculos y más rápidos.",
+  "Catch a shield": "Atrapa un escudo",
+  "One appears every 100 million kilometers traveled. You must collect it. It lasts 10 seconds or until it absorbs one impact.": "Aparece uno cada 100 millones de km de avance. Debes recogerlo. Dura 10 segundos o hasta absorber un impacto.",
+  "Collect discoveries": "Colecciona descubrimientos",
+  "At each destination, an illustrated image is saved automatically. Short messages explain what you are seeing.": "Al llegar a cada destino, se guarda una imagen ilustrada automáticamente. Los mensajes breves te cuentan qué estás viendo.",
+  "A game inspired by science.": "Un juego inspirado en la ciencia.",
+  "The counter measures game progress from an initial position of 1 AU, about 149.6 million kilometers from the Sun. Milestones use distances from the Sun, not the cumulative length of the real trajectory. The game simplifies the route into outward travel.": "El contador mide el avance del juego desde una posición inicial de 1 UA, unos 149,6 millones de kilómetros del Sol. Los hitos usan distancias al Sol, no kilómetros acumulados de la trayectoria real. El juego simplifica el recorrido como una ruta hacia afuera.",
+  "Abundant obstacles are a game adaptation. Nebulae, galaxies and other systems appear as distant scenery; Voyager 1 has not visited them. Its real cameras were switched off in 1990, so the heliopause memory is an artist's impression.": "Los obstáculos abundantes son una licencia de juego. Nebulosas, galaxias y otros sistemas aparecen como paisajes lejanos. Voyager 1 no los ha visitado. Las cámaras reales se apagaron en 1990: el recuerdo de la heliopausa es una recreación artística.",
+  "Sources:": "Fuentes:",
+  "NASA · Cameras and mission": "NASA · Cámaras y misión",
+  "JPL Horizons · Distances": "JPL Horizons · Distancias",
+  "Ready for liftoff!": "Estoy listo, ¡a despegar!",
+  "Back to my journey": "Volver a mi viaje",
+  "The path of Voyager 1": "El camino de Voyager 1",
+  "Four discoveries, in the same order as the real mission. Each landscape appears in the distance, grows as you approach and shrinks as you leave it behind. The flight counter preserves your chosen distance scale.": "Cuatro descubrimientos, en el mismo orden que la misión real. Cada paisaje aparece a lo lejos, crece al acercarte y se hace pequeño cuando lo dejas atrás. El contador de vuelo conserva la escala elegida.",
+  "DESTINATION": "DESTINO",
+  "DISTANCE FROM THE SUN": "DISTANCIA AL SOL",
+  "HISTORICAL DATE": "FECHA REAL",
+  "Each active flight second adds exactly {speed} km. Approximate arrival times are: asteroid belt {belt}, Jupiter {jupiter}, Saturn {saturn}, heliopause {heliopause}. The best pilot award requires {distance} km traveled, approximately {awardTime} of active flight. You can pause and continue your saved flight in this browser.": "Cada segundo de vuelo activo suma exactamente {speed} km. Los tiempos aproximados de llegada son: cinturón {belt}, Júpiter {jupiter}, Saturno {saturn}, heliopausa {heliopause}. El premio al mejor piloto requiere {distance} km de avance, aproximadamente {awardTime} de vuelo activo. Puedes pausar y continuar tu vuelo guardado en este navegador.",
+  "Progress is a radial simplification, not a reconstruction of the real trajectory. Crossing the heliopause does not mean leaving the Milky Way or all of the Sun's gravitational influence.": "El avance es una simplificación radial, no una reconstrucción de la trayectoria real. Cruzar la heliopausa no significa abandonar la Vía Láctea ni toda la influencia gravitatoria del Sol.",
+  "NASA · Timeline": "NASA · Cronología",
+  "NASA · Asteroid belt": "NASA · Cinturón de asteroides",
+  "Small memories.": "Pequeños recuerdos.",
+  "An immense journey.": "Un viaje inmenso.",
+  "Your collection is saved in this browser, even if the mission ends. Every image is a game illustration. Jupiter and Saturn evoke real observations; the asteroid belt and heliopause are artistic recreations.": "Tu colección permanece guardada en este navegador, incluso si la misión termina. Todas las imágenes son dibujos del juego. Las de Júpiter y Saturno evocan observaciones reales; el cinturón y la heliopausa son recreaciones.",
+  "Illustrated memory of {destination}": "Recuerdo ilustrado de {destination}",
+  "Illustrated image": "Imagen ilustrada",
+  "Artist's impression": "Recreación artística",
+  "Save image ↓": "Guardar imagen ↓",
+  "A memory waiting to be discovered": "Un recuerdo por descubrir",
+  "{distance} km from the Sun": "{distance} km del Sol",
+  "Keep exploring. There are still stories among the stars.": "Sigue explorando. Todavía hay historias entre las estrellas.",
+  "Your first image awaits when the probe separates from its rocket.": "Tu primera imagen te espera al liberar la sonda de su cohete.",
+  "BEFORE GOING FARTHER": "ANTES DE IR MÁS ALLÁ",
+  "HISTORICAL ROUTE · 1977–2012": "RUTA HISTÓRICA · 1977–2012",
+  "MISSION ALBUM": "ÁLBUM DE LA MISIÓN",
+  "ONE LIGHT-DAY · BEST PILOT AWARD": "UN DÍA LUZ · PREMIO AL MEJOR PILOTO",
+  "The real story of Voyager 1.": "La historia real de Voyager 1.",
+  "A launch from Earth": "Un despegue desde la Tierra",
+  "On September 5, 1977, NASA launched Voyager 1 from Florida aboard a Titan IIIE-Centaur rocket. Its mission was to study Jupiter and Saturn up close.": "El 5 de septiembre de 1977, la NASA lanzó Voyager 1 desde Florida en un cohete Titan IIIE-Centaur. Su misión era estudiar de cerca Júpiter y Saturno.",
+  "Encounters with two giants": "Encuentros con dos gigantes",
+  "After crossing the asteroid belt, it flew past Jupiter in 1979 and Saturn in 1980. Its images revealed new details of their moons and rings.": "Tras cruzar el cinturón de asteroides, pasó por Júpiter en 1979 y Saturno en 1980. Sus imágenes revelaron nuevos detalles de sus lunas y anillos.",
+  "Into interstellar space": "Hacia el espacio interestelar",
+  "On August 25, 2012, Voyager 1 crossed the heliopause, the edge of the bubble of particles flowing from the Sun. It was the first spacecraft to enter interstellar space.": "El 25 de agosto de 2012, Voyager 1 cruzó la heliopausa, el límite de la burbuja de partículas que salen del Sol. Fue la primera nave en llegar al espacio interestelar.",
+  "Interstellar space is the region between stars. Voyager 1 is still within our galaxy, the Milky Way.": "El espacio interestelar es la región entre las estrellas. Voyager 1 sigue dentro de nuestra galaxia, la Vía Láctea.",
+  "Your turn to explore": "Ahora te toca explorar",
+  "You guide an illustrated Voyager 1 through the real milestones of its mission. Obstacles, shields and accelerated travel are game adaptations.": "En el juego acompañas a una Voyager 1 dibujada por las etapas reales de su misión. Los obstáculos, los escudos y la velocidad acelerada son parte de la aventura.",
+  "How to play and the game scale": "Cómo jugar y la escala del juego",
+  "Source code, licenses and references ↗": "Código fuente, licencias y referencias ↗",
+  "The simulation advances {speed} km per active second. This is accelerated game progress, faster than light, not a physical spacecraft speed. Voyager 1 actually travels at about 17 km/s relative to the Sun. Launch and separation are compressed into an animation.": "La simulación avanza {speed} km por segundo activo. Es progreso acelerado del juego, más rápido que la luz, no una velocidad física de la sonda. Voyager 1 viaja realmente a unos 17 km/s respecto al Sol. El lanzamiento y la separación se resumen en una animación.",
+  "From a tiny blue planet to one light-day of simulated progress. You earned the best pilot award in this game!": "Desde un pequeño planeta azul hasta un día luz de progreso simulado. ¡Ganaste el premio al mejor piloto de este juego!",
+  "One light-day is 25,902,068,371.2 km: the distance light travels in 24 hours. This award counts simulated progress since launch. It is not a real-time position or a NASA pilot award.": "Un día luz equivale a 25.902.068.371,2 km: la distancia que recorre la luz en 24 horas. Este premio cuenta el progreso simulado desde el lanzamiento. No indica la posición real de la sonda ni es un premio de NASA.",
+  "Separation sequence · compressed for the game": "Secuencia de separación · resumida para el juego",
+  "Simulation, not a live mission: travel is accelerated; obstacles and shields are fictional. All pictures are illustrations. The real cameras were switched off in 1990.": "Simulación, no misión en directo: el viaje está acelerado; los obstáculos y escudos son ficticios. Todas las imágenes son ilustraciones. Las cámaras reales se apagaron en 1990.",
+  "A fictional game shield: collect the green object for 10 seconds of protection or one impact. Real Voyager 1 has no such shield.": "Un escudo ficticio del juego: recoge el objeto verde para protegerte durante 10 segundos o un impacto. La Voyager 1 real no tiene este escudo.",
+  "The heliopause separates the solar-wind region from interstellar plasma. Voyager 1 crossed it on August 25, 2012. The glowing arc is an illustration, not a visible wall.": "La heliopausa separa la región del viento solar del plasma interestelar. Voyager 1 la cruzó el 25 de agosto de 2012. El arco luminoso es una ilustración, no una pared visible.",
+  "In 1969, Apollo 11 landed the first humans to walk on the Moon. Six Apollo landings from 1969 to 1972 left tools, instruments, three lunar rovers and six descent stages. The crews brought about 382 kg of lunar samples back to Earth.": "En 1969, Apolo 11 llevó a los primeros humanos a caminar sobre la Luna. Seis alunizajes de Apolo entre 1969 y 1972 dejaron herramientas, instrumentos, tres vehículos lunares y seis etapas de descenso. Las tripulaciones trajeron unos 382 kg de muestras lunares a la Tierra.",
+  "The hardware types and missions are real. Milo, Aurora Base, nearby search sites, burial and rarity are fictional. Parts may still be attached to larger vehicles; these are digital records, not objects to remove from real historic sites.": "Los tipos de equipos y las misiones son reales. Milo, la base Aurora, los lugares cercanos de búsqueda, el enterramiento y la rareza son ficticios. Algunas piezas siguen unidas a vehículos mayores; son registros digitales, no objetos que deban retirarse de sitios históricos reales.",
+  "On the Moon there is no wind-driven sandstorm: its pursuing cloud is invented. Mars has real dust storms, but the two-minute deadline and a cloud that chases a robot are game rules, not Martian weather physics.": "En la Luna no hay tormentas de arena impulsadas por viento: la nube que persigue al robot es inventada. Marte sí tiene tormentas de polvo, pero el límite de dos minutos y una nube que persigue al robot son reglas del juego, no la física del clima marciano.",
+  "Landing year: {year}": "Año de llegada: {year}",
+  "An illustrated museum record. The year is the mission landing year; the picture does not show a verified present-day condition or discovery site.": "Registro ilustrado del museo. El año corresponde a la llegada de la misión; el dibujo no muestra un estado actual ni un lugar de hallazgo verificados.",
+  "Simulation: an invented dust cloud is chasing you!": "Simulación: ¡una nube de polvo inventada te persigue!",
+  "Time is up. Return before the dust storm!": "Se acabó el tiempo. ¡Regresa antes de la tormenta de polvo!",
+  "InSight landed in 2018 and placed this Wind and Thermal Shield over its seismometer on February 2, 2019. It reduced wind and temperature disturbances so SEIS could measure tiny ground vibrations.": "InSight llegó en 2018 y colocó este escudo contra el viento y los cambios térmicos sobre su sismómetro el 2 de febrero de 2019. Protegía a SEIS de perturbaciones para medir vibraciones diminutas del suelo.",
+  "Viking 1 began the first long-lasting successful surface mission on Mars on July 20, 1976. The Soviet Mars 3 had soft-landed in 1971 but stopped transmitting seconds later.": "Viking 1 inició la primera misión exitosa de larga duración en la superficie de Marte el 20 de julio de 1976. La sonda soviética Mars 3 había aterrizado suavemente en 1971, pero dejó de transmitir segundos después.",
+  "Extras · AI use and scientific accuracy": "Extras · Uso de IA y precisión científica",
+  "Created with OpenAI ChatGPT/Codex assistance for code, procedural drawings, animation, interface design, educational wording, translations and documentation. The project creator supplied the concept, mechanics and revisions. These illustrations are drawn by AI-assisted code; they are not NASA photographs.": "Creado con ayuda de OpenAI ChatGPT/Codex para el código, los dibujos por código, las animaciones, el diseño de la interfaz, los textos educativos, las traducciones y la documentación. La persona creadora aportó la idea, las mecánicas y las revisiones. Las ilustraciones se dibujan mediante código asistido por IA; no son fotografías de NASA.",
+  "Sound effects are synthesized by game code written with AI assistance. NASA/JPL supply the historical references and numerical source data; AI is not a scientific source.": "Los efectos de sonido se sintetizan con código escrito con ayuda de IA. NASA/JPL aportan las referencias históricas y los datos numéricos de origen; la IA no es una fuente científica.",
+  "For Space Apps: include this disclosure in the project submission AI/tools field and final report too. The in-game notice does not submit it for you.": "Para Space Apps: incluye esta declaración también en el campo de IA/herramientas de la entrega y en el informe final. El aviso dentro del juego no realiza la entrega por ti.",
+  "Full AI disclosure and report text": "Declaración completa de IA y texto para el informe",
+  "Scientific review and simulation limits": "Revisión científica y límites de la simulación",
+  "AI-generated art · drawn in code": "Arte generado con IA · dibujado por código",
+  "SIMULATED PROGRESS": "PROGRESO SIMULADO",
+  "NASA dates the belt crossing from December 10, 1977 to September 8, 1978. The game uses Horizons distance samples on those dates. These are broader crossing markers, not fixed edges of the main belt. Flyby samples use the reported encounter times in UTC; the heliopause sample uses midnight on August 25, 2012. These are approximate model distances, not exact event measurements.": "NASA fecha el cruce del cinturón entre el 10 de diciembre de 1977 y el 8 de septiembre de 1978. El juego usa muestras de distancia de Horizons de esas fechas. Son marcas amplias de paso, no bordes fijos del cinturón principal. Los sobrevuelos usan las horas publicadas en UTC; la heliopausa usa la medianoche del 25 de agosto de 2012. Son distancias aproximadas de un modelo, no mediciones exactas de cada evento."
+} };
+
+</script><script>
+// SPDX-License-Identifier: MIT
+'use strict';
+(() => {
+  const preferenceKey = 'voyager1-language';
+  const supportedLanguages = new Set(['en', 'es']);
+  let language = 'es';
+  try {
+    const preference = localStorage.getItem(preferenceKey);
+    if (supportedLanguages.has(preference)) language = preference;
+  } catch { /* Language switching also works without browser storage. */ }
+
+  function translate(message, values = {}) {
+    const dictionary = globalThis.VoyagerLocales?.[language] || {};
+    const template = dictionary[message] ?? message;
+    return template.replace(/\{(\w+)\}/g, (match, key) =>
+      Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : match);
+  }
+
+  function applyTranslations(root = document) {
+    root.querySelectorAll('[data-i18n]').forEach(element => {
+      element.textContent = translate(element.getAttribute('data-i18n'));
+    });
+    for (const attribute of ['aria-label', 'title', 'content']) {
+      root.querySelectorAll(`[data-i18n-${attribute}]`).forEach(element => {
+        element.setAttribute(attribute, translate(element.getAttribute(`data-i18n-${attribute}`)));
+      });
+    }
+    document.documentElement.lang = language;
+    document.querySelectorAll('[data-language-select]').forEach(select => {
+      select.value = language;
+    });
+  }
+
+  function setLanguage(nextLanguage) {
+    if (!supportedLanguages.has(nextLanguage)) return false;
+    language = nextLanguage;
+    try { localStorage.setItem(preferenceKey, language); } catch { /* Optional persistence. */ }
+    applyTranslations();
+    document.dispatchEvent(new CustomEvent('voyager:languagechange', { detail: { language } }));
+    return true;
+  }
+
+  globalThis.VoyagerI18n = {
+    t: translate,
+    applyTranslations,
+    setLanguage,
+    get language() { return language; },
+    get locale() { return language === 'es' ? 'es-ES' : 'en-US'; }
+  };
+  applyTranslations();
+})();
+
+</script><script>
+// SPDX-License-Identifier: MIT
+// AI-assisted code, procedural artwork, sound and text; see legal/AI_USE.md.
+'use strict';
+(() => {
+const $ = id => document.getElementById(id);
+const {t} = globalThis.VoyagerI18n;
+const numberLocale = () => globalThis.VoyagerI18n.locale;
+const AU = 149597870.7, SPEED = 1438888.89, SHIELD_EVERY = 100000000;
+const LIGHT_DAY = 299792.458 * 86400;
+// Heliocentric samples reconstructed with NASA/JPL Horizons (-31, Sun center, TIME_TYPE=UT).
+// Flyby timestamps are UTC; heliopause sample is midnight UTC on the crossing date, not an exact crossing instant.
+// These are distances to the Sun, NOT cumulative spacecraft trajectory lengths.
+const DESTINATIONS = [
+ {id:'earth',name:'Earth',short:'Earth',km:AU,date:'1977-09-05',symbol:'◉',fact:'This is where it all begins. Voyager 1 launched on September 5, 1977, aboard a Titan IIIE-Centaur rocket.',kind:'photo'},
+ {id:'belt',name:'Asteroid belt',short:'Asteroid belt',km:253661578,date:'1977–1978',symbol:'✧',fact:'Millions of rocky bodies orbit between Mars and Jupiter. In reality, they are very far apart; the game brings them closer for the challenge.',kind:'illustration'},
+ {id:'jupiter',name:'Jupiter system',short:'Jupiter',km:791511959,date:'1979-03-05',symbol:'◍',fact:'The giant of our solar system! Voyager 1 observed its clouds, discovered a faint ring and saw active volcanoes on its moon Io.',kind:'photo'},
+ {id:'saturn',name:'Saturn system',short:'Saturn',km:1423635240,date:'1980-11-12',symbol:'♄',fact:'Its rings are made mostly of ice. The encounter with Saturn and Titan sent Voyager 1 on a path toward the stars.',kind:'photo'},
+ {id:'heliopause',name:'Heliopause',short:'Heliopause',km:18191475304,date:'2012-08-25',symbol:'◎',fact:'The heliopause separates the solar-wind region from interstellar plasma. Voyager 1 crossed it on August 25, 2012. The glowing arc is an illustration, not a visible wall.',kind:'illustration'}
+];
+const FACTS = {
+ rock:{title:'A traveling rock',text:'An asteroid is a rocky or metallic body orbiting the Sun. A meteor is the flash it creates when it enters an atmosphere.'},
+ junk:{title:'Traces of other missions',text:'Space debris consists of rocket or satellite parts that are no longer used. It is mainly a problem near Earth.'},
+ comet:{title:'A comet on your path',text:'Comets contain ice, dust and rock. Near the Sun, heat can create a bright tail.'},
+ ice:{title:'A tiny world of ice',text:'Icy bodies exist far from the Sun. Their ice can preserve material from the earliest days of the solar system.'},
+ nebula:{title:'Clouds among the stars',text:'A nebula is a huge cloud of gas and dust. Some are places where stars are born. This one is far away; we are not flying through it.'},
+ galaxy:{title:'An island of stars',text:'A galaxy contains stars, gas and dust held together by gravity. These galaxies are distant scenery, outside Voyager\'s route.'},
+ system:{title:'Other suns, other worlds',text:'A planetary system has planets orbiting a star. The systems in the background are distant illustrations, not real Voyager visits.'},
+ shield:{title:'Shield on the radar!',text:'A fictional game shield: collect the green object for 10 seconds of protection or one impact. Real Voyager 1 has no such shield.'}
+};
+
+const fmt = n => Math.floor(n).toLocaleString(numberLocale());
+const compact = n => n >= 1e9 ? t('{value} billion',{value:(n/1e9).toLocaleString(numberLocale(),{maximumFractionDigits:2})}) : t('{value} million',{value:(n/1e6).toLocaleString(numberLocale(),{maximumFractionDigits:1})});
+function dateLabel(destination){return destination.date.includes('–')?destination.date:new Intl.DateTimeFormat(numberLocale(),{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(destination.date+'T12:00:00Z'));}
+
+const time = n => {n=Math.floor(n);return n>=3600?`${Math.floor(n/3600)}:${String(Math.floor(n%3600/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`:`${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`;};
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const rnd=(a,b)=>a+Math.random()*(b-a);
+const canvas=$('space'), ctx=canvas.getContext('2d');
+let W=900,H=520,dpr=1,last=0,ambient=0,spawnIn=1.6,saveIn=0,uiIn=0,discoveryLeft=0,flash=0;
+let state='menu',phase='launch',phaseTime=0,travel=0,elapsed=0,hp=3,shield=0,invulnerable=0,shieldIndex=1;
+let player={x:170,y:260},keys=new Set(),pointer=null,objects=[],particles=[],passed=new Set(['earth']),seen=new Set(),noticeQueue=[];
+let currentDiscovery=null,storedRun=null,modalPaused=false,audio=null,sound=false,album={},awards={},runAwarded=false,activeDialog=null,dialogHighlight=null;
+const STORAGE='voyager1-illustrated-v1';
+function readSave(){try{const value=JSON.parse(localStorage.getItem(STORAGE)||'{}');return value&&typeof value==='object'?value:{};}catch{return {};}}
+function writeSave(run){try{localStorage.setItem(STORAGE,JSON.stringify({album,awards,run}));}catch{/* Game remains playable when browser storage is unavailable. */}}
+const saved=readSave();album=saved.album&&typeof saved.album==='object'?saved.album:{};
+if(saved.awards?.bestPilot?.distance>=LIGHT_DAY)awards.bestPilot=saved.awards.bestPilot;
+if(saved.run&&saved.run.v===1&&Number.isFinite(saved.run.travel)&&saved.run.travel>=0&&[1,2,3].includes(saved.run.hp)&&saved.run.phase==='cruise')storedRun=saved.run;
+function saveRun(){if(phase!=='cruise'&&state!=='menu'&&state!=='over')return;writeSave(state==='over'||state==='menu'?storedRun:{v:1,phase:'cruise',travel,elapsed,hp,shield,shieldIndex,bestPilotAwarded:runAwarded,passed:[...passed],seen:[...seen],player:{x:player.x/W,y:player.y/H}});}
+function clearRun(){storedRun=null;writeSave(null);}
+function resize(){const rect=$('viewport').getBoundingClientRect(),oldW=W,oldH=H;W=rect.width||900;H=rect.height||520;dpr=Math.min(window.devicePixelRatio||1,2);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);player.x=clamp(player.x/oldW*W,35,W-35);player.y=clamp(player.y/oldH*H,65,H-45);for(const o of objects){o.x=o.x/oldW*W;o.y=o.y/oldH*H;}ctx.setTransform(dpr,0,0,dpr,0,0);}
+new ResizeObserver(resize).observe($('viewport'));resize();
+function path(c,points,fill,stroke='#162e35',width=2){c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=width;c.stroke();}}
+function ellipse(c,x,y,rx,ry,fill,stroke=null,width=1.5){c.beginPath();c.ellipse(x,y,Math.max(.1,rx),Math.max(.1,ry),0,0,Math.PI*2);if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=width;c.stroke();}}
+function line(c,x,y,x2,y2,color,width=1.5){c.beginPath();c.moveTo(x,y);c.lineTo(x2,y2);c.strokeStyle=color;c.lineWidth=width;c.stroke();}
+function star(c,x,y,r=3,color='#d2d9bb'){c.save();c.translate(x,y);c.fillStyle=color;c.beginPath();for(let i=0;i<8;i++){const a=i*Math.PI/4,rad=i%2?r*.24:r;c.lineTo(Math.cos(a)*rad,Math.sin(a)*rad);}c.closePath();c.fill();c.restore();}
+function planet(c,x,y,r,type='earth',rotation=-.2){c.save();c.translate(x,y);c.rotate(rotation);const ink='#193640';
+ if(type==='saturn'){c.save();c.rotate(-.25);ellipse(c,0,0,r*1.85,r*.48,null,'#a9b8aa',r*.23);ellipse(c,0,0,r*1.68,r*.38,null,'#d6c18d',r*.07);c.restore();}
+ c.save();c.beginPath();c.arc(0,0,r,0,Math.PI*2);c.clip();
+ if(type==='earth'){
+ c.fillStyle='#80afaf';c.fillRect(-r,-r,r*2,r*2);
+ path(c,[[-r,-r*.3],[-r*.6,-r*.8],[-r*.2,-r*.6],[-r*.05,-r*.25],[-r*.3,r*.05],[-r*.08,r*.27],[-r*.28,r*.55],[-r*.15,r*.95],[-r*.45,r*.75],[-r*.6,r*.2],[-r*.9,r*.1]],'#c3d6a6',null);
+ path(c,[[r*.25,-r],[r*.9,-r*.6],[r*1.1,-r*.1],[r*.7,r*.2],[r*.45,r*.08],[r*.3,r*.45],[r*.05,r*.15],[r*.1,-r*.3]],'#c3d6a6',null);
+ c.strokeStyle='#e7e8cf';c.lineWidth=r*.065;c.lineCap='round';for(const [xx,yy] of [[-.5,-.45],[.4,-.5],[-.15,.5],[.65,.4]]){c.beginPath();c.ellipse(xx*r,yy*r,r*.2,r*.04,0,0,Math.PI);c.stroke();}
+ }else if(type==='jupiter'){
+ c.fillStyle='#d0b397';c.fillRect(-r,-r,r*2,r*2);const colors=['#b38b74','#efcf9c','#b9977c','#d3aa87','#f0d9af','#ad806a'];
+ for(let i=0;i<9;i++){c.fillStyle=colors[i%colors.length];c.beginPath();const yy=-r+i*r*.25;c.moveTo(-r,yy);c.bezierCurveTo(-r*.4,yy+r*.15,r*.4,yy-r*.12,r,yy+r*.05);c.lineTo(r,yy+r*.15);c.bezierCurveTo(r*.2,yy+r*.02,-r*.5,yy+r*.3,-r,yy+r*.19);c.fill();}ellipse(c,r*.37,r*.35,r*.24,r*.12,'#b87e69');ellipse(c,r*.38,r*.33,r*.13,r*.06,'#cc997a');
+ }else{c.fillStyle='#d4c28f';c.fillRect(-r,-r,r*2,r*2);for(let i=0;i<7;i++){c.fillStyle=i%2?'#c0ad81':'#dfce9f';c.fillRect(-r,-r+i*r*.32,r*2,r*.13);}}
+ // Soft shadow and hand-drawn outer rim.
+ c.fillStyle='#102a3430';c.beginPath();c.ellipse(r*.75,0,r*.8,r*1.2,0,0,Math.PI*2);c.fill();c.restore();ellipse(c,0,0,r,r,null,ink,2.2);
+ if(type==='saturn'){c.save();c.rotate(-.25);c.beginPath();c.ellipse(0,0,r*1.85,r*.48,0,0,Math.PI);c.strokeStyle='#b2b4a1';c.lineWidth=r*.23;c.stroke();c.beginPath();c.ellipse(0,0,r*1.7,r*.38,0,0,Math.PI);c.strokeStyle='#f0d6a0';c.lineWidth=r*.055;c.stroke();c.restore();}
+ // Tiny friendly face, kept subtle.
+ if(r>45){ellipse(c,-r*.16,r*.03,r*.025,r*.04,ink);ellipse(c,r*.1,r*.03,r*.025,r*.04,ink);c.beginPath();c.arc(-r*.03,r*.08,r*.09,.15,Math.PI-.15);c.strokeStyle=ink;c.lineWidth=1.8;c.stroke();}
+ c.restore();}
+function probe(c,x,y,scale=1,tilt=0){MouseMission.draw(c,x+43*scale,y-38*scale,.48*scale,false);c.save();c.translate(x,y);c.scale(scale,scale);c.rotate(tilt);c.lineCap='round';c.lineJoin='round';
+ // Voyager uses radioisotope power: long instrument booms, no solar panels.
+ line(c,-4,9,-64,45,'#b9c8bd',3);line(c,-7,13,-62,47,'#1c3840',1);
+ for(let i=0;i<3;i++){path(c,[[-55-i*6,39+i*3],[-63-i*6,43+i*3],[-58-i*6,53+i*3],[-50-i*6,49+i*3]],'#7f9493','#17313a',1.4);}
+ line(c,12,13,68,31,'#c6cdbb',3);line(c,11,16,65,34,'#415a60',1);path(c,[[62,24],[77,27],[77,39],[63,37]],'#8fa9a3','#18343e',1.5);ellipse(c,71,31,4,4,'#2b4d56');
+ line(c,0,14,13,66,'#b7c6b3',2);line(c,14,65,10,78,'#adbdad',1.5);line(c,-11,-9,-26,-74,'#aebeb5',1.4);ellipse(c,-27,-77,2.1,2.1,'#c3cebf');
+ path(c,[[-16,4],[9,0],[24,15],[5,30],[-18,20]],'#cbb67d','#18343e',2);path(c,[[5,30],[24,15],[24,24],[6,39]],'#8b855f','#18343e',1.8);path(c,[[-18,20],[5,30],[6,39],[-17,29]],'#b7a16e','#18343e',1.8);
+ ellipse(c,-4,20,8,7,'#e2c46f','#735f3f',1);ellipse(c,-4,20,5.6,4.8,null,'#9f8548',.7);ellipse(c,-4,20,2.4,2,null,'#9f8548',.6);
+ // High-gain antenna, aimed back toward home.
+ line(c,-2,9,-10,-16,'#d9ddca',5);c.save();c.rotate(-.35);ellipse(c,-12,-22,43,29,'#e4e5d1','#193640',2);ellipse(c,-12,-25,37,23,'#ccd5c2','#a6b8ac',1);c.beginPath();c.ellipse(-12,-27,29,16,0,Math.PI,2*Math.PI);c.strokeStyle='#edf0da';c.lineWidth=2;c.stroke();line(c,-46,-24,-12,-51,'#8daca3',1.6);line(c,22,-24,-12,-51,'#8daca3',1.6);line(c,-12,-5,-12,-51,'#8daca3',1.6);ellipse(c,-12,-51,4,3,'#e9ddb4','#314d50',1);c.restore();
+ c.restore();}
+function rock(c,x,y,r,seed,kind='rock',angle=0){c.save();c.translate(x,y);c.rotate(angle);const verts=[];for(let j=0;j<9;j++){const a=j*Math.PI*2/9,rr=r*(.82+.16*Math.sin(j*seed+seed));verts.push([Math.cos(a)*rr,Math.sin(a)*rr]);}path(c,verts,kind==='ice'?'#a1ced0':kind==='comet'?'#bed3c8':'#a08d7b','#243c44',1.8);if(kind==='ice'){line(c,-r*.55,-r*.2,r*.1,-r*.55,'#e0f4e6',1.8);line(c,r*.1,-r*.55,r*.55,r*.05,'#e0f4e6',1.5);path(c,[[-r*.25,r*.2],[r*.1,-r*.2],[r*.4,r*.4]],'#8ebbbf',null);}else{ellipse(c,-r*.25,-r*.2,r*.17,r*.13,'#796f66','#756e62',1);ellipse(c,r*.3,r*.25,r*.22,r*.16,'#887a6b');line(c,-r*.45,r*.32,-r*.22,r*.46,'#c3ad90',1.5);}c.restore();}
+const stars=Array.from({length:120},(_,i)=>({x:((Math.sin(i*127.1)*43758.5453)%1+1)%1,y:((Math.sin(i*311.7)*16377.123)%1+1)%1,r:i%11===0?2.7:i%3===0?1.2:.65,layer:1+i%3}));
+function nebula(c,x,y,s,t){c.save();c.translate(x,y);c.rotate(-.45+t*.015);c.globalAlpha=.16;for(let i=0;i<6;i++){const g=c.createRadialGradient((i-3)*s*.18,Math.sin(i)*s*.1,0,(i-3)*s*.18,0,s*.8);g.addColorStop(0,i%2?'#668e82':'#9b7895');g.addColorStop(1,'#243b4400');c.fillStyle=g;c.beginPath();c.ellipse((i-3)*s*.18,Math.sin(i)*s*.1,s*.95,s*.42,0,0,Math.PI*2);c.fill();}c.restore();}
+function galaxy(c,x,y,s,t){c.save();c.translate(x,y);c.rotate(-.5);c.scale(1,.42);c.globalAlpha=.32;for(let j=0;j<3;j++){c.beginPath();for(let k=0;k<90;k++){let a=k*.08+j*Math.PI*2/3+t*.003,r=k/90*s;const xx=Math.cos(a)*r,yy=Math.sin(a)*r;k?c.lineTo(xx,yy):c.moveTo(xx,yy);}c.strokeStyle=j%2?'#b4acaf':'#96b9b0';c.lineWidth=5;c.stroke();}const g=c.createRadialGradient(0,0,0,0,0,s*.5);g.addColorStop(0,'#f0dfbacc');g.addColorStop(1,'#d0e0c100');c.fillStyle=g;c.fillRect(-s,-s,s*2,s*2);c.restore();}
+// Scenic encounters follow distance, so pausing or resuming never skips their animation.
+const smooth = p => p*p*(3-2*p);
+function encounterScene(d,solar,w,h){
+ const i=DESTINATIONS.indexOf(d);
+ if(d.id==='earth'){
+  const p=clamp((solar-AU)/(AU*.9),0,1);
+  return p>=1?null:{id:d.id,name:d.name,stage:'departure',progress:p,size:1-.9*smooth(p),x:w*(.15-.12*p),y:h*(.8+.05*p),opacity:1-smooth(p)};
+ }
+ const approachStart=d.id==='jupiter'?613564707:DESTINATIONS[i-1].km;
+ const exit=d.id==='belt'?613564707:d.km;
+ const departureSpan=d.id==='belt'?.9*AU:d.id==='jupiter'?3e8:d.id==='saturn'?6e8:1.8e9;
+ if(solar<approachStart||solar>=exit+departureSpan)return null;
+ let stage,progress,size,x,y,opacity;
+ if(solar<d.km){
+  stage='approach';progress=clamp((solar-approachStart)/(d.km-approachStart),0,1);
+  const p=smooth(progress);size=.16+.84*p;x=w*(.88-.18*p);y=h*(.56+.06*p);opacity=.65+.35*p;
+ }else if(solar<=exit){
+  stage='encounter';progress=exit===d.km?0:(solar-d.km)/(exit-d.km);
+  size=1+.12*progress;x=w*(.7-.12*progress);y=h*.62;opacity=1;
+ }else{
+  stage='departure';progress=clamp((solar-exit)/departureSpan,0,1);
+  const p=smooth(progress),startX=d.id==='belt'?.58:.7,startSize=d.id==='belt'?1.12:1;
+  size=startSize*(1-.9*p);x=w*(startX-(startX-.08)*p);y=h*(.62-.1*p);opacity=1-p;
+ }
+ return {id:d.id,name:d.name,stage,progress,size,x,y,opacity};
+}
+function journeyScenery(solar,w,h){return DESTINATIONS.map(d=>encounterScene(d,solar,w,h)).filter(Boolean);}
+function mainScenery(scenes){return scenes.reduce((best,s)=>!best||s.size*s.opacity>best.size*best.opacity?s:best,null);}
+function sceneryRadius(s,w,h){return s.id==='belt'?Math.min(w*.36,h*.48)*.42*s.size:s.id==='heliopause'?Math.min(w*.35,h*.7)*s.size:s.id==='jupiter'?Math.min(w*.21,h*.30,155)*s.size:s.id==='saturn'?Math.min(w*.17,h*.26,126)*s.size:Math.min(w*.15,h*.22)*s.size;}
+function drawEncounter(c,s,w,h,t){
+ c.save();c.globalAlpha=s.opacity;
+ if(s.id==='belt'){
+  c.translate(s.x,s.y);c.rotate(-.22);
+  const rx=Math.min(w*.36,h*.48)*s.size,ry=rx*.34;
+  c.save();c.setLineDash([3,9]);ellipse(c,0,0,rx,ry,null,'#d5cbaa38',1.4);ellipse(c,0,0,rx*.76,ry*.76,null,'#d5cbaa24',1);c.restore();
+  for(let i=0;i<96;i++){
+   const a=i*2.399963+t*.012,ring=.74+(i%7)*.065;
+   const x=Math.cos(a)*rx*ring,y=Math.sin(a)*ry*ring+(Math.sin(i*12.7))*ry*.12;
+   const r=(1+(i%6)*.65)*(.3+s.size*1.75);
+   if(r>3)rock(c,x,y,r,i+2,'rock',a);else ellipse(c,x,y,r,r*.8,i%2?'#b9ae93':'#91a59c');
+  }
+ }else if(s.id==='heliopause'){
+  c.translate(s.x,s.y);c.scale(s.size,s.size);
+  const r=Math.min(w*.35,h*.7),glow=c.createRadialGradient(0,0,r*.15,0,0,r*1.1);
+  glow.addColorStop(0,'#a9d6bb00');glow.addColorStop(.65,'#a9d6bb18');glow.addColorStop(1,'#a9d6bb00');c.fillStyle=glow;c.fillRect(-r*1.2,-r*1.2,r*2.4,r*2.4);
+  for(let i=0;i<7;i++){
+   c.beginPath();c.ellipse(0,0,r*(.37+i*.025),r*(.88+i*.025),-.12,0,Math.PI*2);
+   c.strokeStyle=i%2?'#b8c3e577':'#b4e1bf88';c.lineWidth=i%2?2:4;c.stroke();
+  }
+  for(let i=0;i<18;i++)star(c,Math.cos(i*2.4)*r*.4,Math.sin(i*2.4)*r*.95,1.5,'#daf0d3');
+ }else{
+  const r=sceneryRadius(s,w,h);
+  if(s.id!=='earth'){
+   c.save();c.setLineDash([2,7]);ellipse(c,s.x,s.y,r*(s.id==='saturn'?2.3:1.65),r*.35,null,'#b2c9b829',1);c.restore();
+   const moons=s.id==='jupiter'?4:2;
+   for(let j=0;j<moons;j++){
+    const a=.7+j*1.9+t*.018*(j%2?1:-1),rx=r*(s.id==='saturn'?2.1:1.5);
+    ellipse(c,s.x+Math.cos(a)*rx,s.y+Math.sin(a)*r*.35,Math.max(1.5,r*(.038+j*.008)),Math.max(1.5,r*(.038+j*.008)),j%2?'#d8ceac':'#a8bab2','#34525a',.8);
+   }
+  }
+  planet(c,s.x,s.y,r,s.id,s.id==='jupiter'?.08:-.15);
+ }
+ c.restore();
+}
+function drawSceneryLabel(c,s,w,h){
+ if(!s||s.opacity<.22)return;
+ const x=clamp(s.x,92,w-92),y=clamp(s.y+sceneryRadius(s,w,h)+24,100,h-70);
+ const stage=s.stage==='departure'?'MOVING AWAY':s.stage==='encounter'?'ENCOUNTER':s.progress<.25?'IN THE DISTANCE':'APPROACHING';
+ c.save();c.globalAlpha=Math.min(1,s.opacity+.2);c.fillStyle='#132831d9';c.fillRect(x-87,y-13,174,38);c.textAlign='center';c.textBaseline='middle';c.fillStyle='#e5e8d1';c.font='10px sans-serif';c.fillText(t(s.name),x,y);c.fillStyle='#9ab6ad';c.font='7px sans-serif';c.fillText(t(stage)+' · '+t('JOURNEY SCENERY'),x,y+14);c.restore();
+}
+
+function background(c,w,h,t,mode='flight',id=null){const g=c.createLinearGradient(0,0,w,h);const sector=Math.floor(travel/350000000);g.addColorStop(0,sector%3===1?'#192a35':sector%3===2?'#202a35':'#12232e');g.addColorStop(1,'#182f36');c.fillStyle=g;c.fillRect(0,0,w,h);
+ nebula(c,w*.64,h*.3,w*.4,t);if(sector%3===1||travel>1e9)galaxy(c,w*.8,h*.2,w*.13,t);
+ if(sector%4===2){ellipse(c,w*.86,h*.2,Math.min(w*.07,55),Math.min(w*.026,19),null,'#8caa9a22',1);star(c,w*.86,h*.2,3,'#eee8c1');ellipse(c,w*.9,h*.21,1.8,1.8,'#9abeb1');}
+ for(const s of stars){const motion=mode==='still'?0:t*(state==='playing'&&phase==='cruise'?8:1.8)*s.layer;let x=(s.x*w-motion%(w+10)+w+10)%(w+10);c.globalAlpha=.3+(Math.sin(t*.6+s.y*20)+1)*.18;if(s.r>2)star(c,x,s.y*h,s.r,'#e1dfb8');else ellipse(c,x,s.y*h,s.r*.65,s.r*.65,'#c5d7ce');}c.globalAlpha=1;
+ if(id==='earth'||mode==='menu'){const r=Math.min(w*.2,170);planet(c,w*.15,h*.96,r,'earth',-.22);c.save();c.setLineDash([3,9]);ellipse(c,w*.15,h*.96,r*1.23,r*.43,null,'#c0d9c542',1);c.restore();}
+ if(mode==='menu'){
+  const r=Math.min(w*.07,58);planet(c,w*.87,h*.24,r,'saturn',.12);probe(c,w*.77,h*.62,Math.min(w/850,.95),-.2);star(c,w*.7,h*.33,7,'#e6d39a');
+  c.save();c.setLineDash([3,8]);c.beginPath();c.moveTo(w*.27,h*.95);c.bezierCurveTo(w*.65,h*.93,w*.45,h*.5,w*.78,h*.52);c.strokeStyle='#9cbba64a';c.lineWidth=1.2;c.stroke();c.restore();
+  // A small moon that makes the hand-drawn scene feel inhabited.
+  ellipse(c,w*.92,h*.7,Math.min(w*.03,18),Math.min(w*.03,18),'#adc0b7','#264049');ellipse(c,w*.92-4,h*.7-4,3,2.5,'#7b9590');
+ }
+ if(mode==='flight'&&phase==='cruise'){
+  const scenes=journeyScenery(AU+travel,w,h);
+  for(const scene of [...scenes].sort((a,b)=>a.size-b.size))drawEncounter(c,scene,w,h,t);
+  drawSceneryLabel(c,mainScenery(scenes),w,h);
+ }
+ // Delicate paper grain, deterministic and cheap.
+ c.globalAlpha=.025;c.fillStyle='#eef5de';for(let i=0;i<75;i++)c.fillRect((i*173.7)%w,(i*67.9)%h,1,1);c.globalAlpha=1;
+}
+function drawRocket(c,x,y,s,split=0){c.save();c.translate(x,y);c.scale(s,s);c.rotate(.12);if(split<.9){c.save();c.translate(0,split*110);path(c,[[-18,30],[-24,70],[-9,58],[9,58],[24,70],[18,30]],'#7f9f9d','#203c45',2);path(c,[[-17,-25],[17,-25],[17,55],[-17,55]],'#dbdfc9','#203c45',2);c.fillStyle='#91aca9';c.fillRect(-17,5,34,8);c.fillStyle='#d2b578';c.fillRect(-17,36,34,9);if(split===0){const f=18+Math.sin(ambient*40)*8;path(c,[[-11,58],[0,100+f],[11,58]],'#e9c888',null);path(c,[[-6,58],[0,91],[6,58]],'#f5edb9',null);}c.restore();}
+ if(split>0){c.save();c.translate(-split*45,-20-split*35);c.rotate(-split*.7);path(c,[[-19,-28],[0,-62],[0,10],[-19,10]],'#ccd5c3','#203c45',1.5);c.restore();c.save();c.translate(split*45,-20-split*35);c.rotate(split*.7);path(c,[[0,-62],[19,-28],[19,10],[0,10]],'#dce1cf','#203c45',1.5);c.restore();probe(c,0,-35-split*20,.42+split*.08,-.2);}else{path(c,[[-17,-25],[-13,-65],[0,-88],[13,-65],[17,-25]],'#e5e8d7','#203c45',2);line(c,-13,-43,13,-43,'#829f9d',2);ellipse(c,0,-28,4,4,'#a8bbad');}
+ c.restore();}
+function drawScene(){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,W,H);background(ctx,W,H,ambient,state==='menu'?'menu':'flight');
+ if(state!=='menu'&&phase==='launch'){
+  const p=clamp(phaseTime/6.5,0,1),r=Math.max(W*.55,230);planet(ctx,W*.5,H*1.1+p*H*.95,r,'earth',.1);drawRocket(ctx,W*.5,H*.72-p*H*.4,Math.min(W/600,.86));
+  for(let i=0;i<8;i++){const x=W*.5+Math.sin(i*4)*25,y=H*.78-p*H*.4+i*19;ellipse(ctx,x,y,10+i*4,6+i*3,'#dfd4b21c');}
+ }else if(state!=='menu'&&phase==='separate')drawRocket(ctx,W*.5,H*.4,Math.min(W/600,.86),clamp(phaseTime/2.5,0,1));
+ else if(state!=='menu'){
+  for(const o of objects){if(o.type==='shield'){ctx.save();ctx.translate(o.x,o.y);ctx.rotate(Math.sin(ambient*2)*.1);ellipse(ctx,0,0,24,24,'#b7efc219');path(ctx,[[0,-17],[13,-11],[12,4],[0,17],[-12,4],[-13,-11]],'#b7e5c2','#304e4f',2);path(ctx,[[-5,-1],[-1,4],[7,-6]],null,'#3e7963',2.4);star(ctx,24,-20,4,'#dce9b5');ctx.restore();}
+   else if(o.type==='junk'){ctx.save();ctx.translate(o.x,o.y);ctx.rotate(o.angle);path(ctx,[[-o.r,-o.r*.65],[o.r*.2,-o.r*.65],[o.r*.2,o.r*.7],[-o.r,o.r*.7]],'#8baca7','#243e45',2);for(let i=0;i<3;i++)line(ctx,-o.r+i*o.r*.4,-o.r*.65,-o.r+i*o.r*.4,o.r*.7,'#547b7d',1);path(ctx,[[o.r*.2,-o.r*.35],[o.r,-o.r*.35],[o.r,o.r*.35],[o.r*.2,o.r*.35]],'#bda575','#243e45',2);line(ctx,o.r*.6,-o.r*.35,o.r*.9,-o.r,'#b7cabb',2);ctx.restore();}
+   else {if(o.type==='comet'){const g=ctx.createLinearGradient(o.x,o.y,o.x+100,o.y-35);g.addColorStop(0,'#d3e9d17a');g.addColorStop(1,'#d3e9d100');path(ctx,[[o.x,o.y-12],[o.x+130,o.y-50],[o.x+85,o.y+15],[o.x,o.y+12]],g,null);}rock(ctx,o.x,o.y,o.r,o.seed,o.type,o.angle);}}
+  for(const p of particles){ctx.globalAlpha=p.life/p.max;ellipse(ctx,p.x,p.y,p.r,p.r,p.color);}ctx.globalAlpha=1;
+  if(shield>0){ellipse(ctx,player.x,player.y,42,42,'#b8e4b90b','#b6e6be',1.5);ctx.save();ctx.setLineDash([3,9]);ellipse(ctx,player.x,player.y,46,46,null,'#b6e6be66',1);ctx.restore();}
+  if(invulnerable<=0||Math.floor(invulnerable*9)%2===0)probe(ctx,player.x,player.y,W<500?.45:.55,keys.has('ArrowUp')||keys.has('w')?-.17:keys.has('ArrowDown')||keys.has('s')?.12:-.04);
+ }
+ if(flash>0){ctx.fillStyle=`rgba(240,235,211,${flash*.6})`;ctx.fillRect(0,0,W,H);}
+}
+function makePhoto(id,target){const c=target.getContext('2d'),w=target.width,h=target.height;c.clearRect(0,0,w,h);c.fillStyle='#162b34';c.fillRect(0,0,w,h);for(let i=0;i<36;i++){const x=((i*137.5)%w),y=((i*61.3)%h);if(i%6===0)star(c,x,y,2,'#d8d9b6');else ellipse(c,x,y,.6,.6,'#b4cec1');}
+ if(id==='earth')planet(c,w*.5,h*.5,h*.34,'earth');
+ if(id==='jupiter'){planet(c,w*.55,h*.52,h*.4,'jupiter');ellipse(c,w*.17,h*.7,h*.055,h*.055,'#cfbf8e','#4f6660',1);}
+ if(id==='saturn')planet(c,w*.5,h*.5,h*.3,'saturn');
+ if(id==='belt')for(let i=0;i<9;i++)rock(c,w*.12+(i%4)*w*.25,h*.25+Math.floor(i/4)*h*.3,12+(i%3)*8,i+2,'rock',i);
+ if(id==='heliopause'){nebula(c,w*.6,h*.5,w*.4,0);for(let i=0;i<4;i++){c.beginPath();c.moveTo(w*(.45+i*.04),-20);c.bezierCurveTo(w*(.8+i*.03),h*.3,w*(.25+i*.04),h*.7,w*(.58+i*.04),h+20);c.strokeStyle=`rgba(178,220,188,${.3-i*.05})`;c.lineWidth=7-i;c.stroke();}probe(c,w*.27,h*.55,.45,-.15);}
+ c.save();c.fillStyle='#10232fee';c.fillRect(0,h-43,w,43);c.font='11px sans-serif';c.textAlign='left';c.fillStyle='#f0f2dc';c.fillText(t('AI-generated art · drawn in code'),10,h-28);c.restore();
+ c.font='9px sans-serif';c.fillStyle='#d9e4c7';c.fillText('VOYAGER 1  /  '+dateLabel(DESTINATIONS.find(d=>d.id===id)).toLocaleUpperCase(numberLocale()),10,h-12);
+}
+function updateHearts(){
+ $('hearts').innerHTML=Array.from({length:3},(_,i)=>`<svg class="${i<hp?'':'lost'}"><use href="#i-heart"/></svg>`).join('');
+ $('hearts').setAttribute('aria-label',t(hp===1?'1 hit remaining':'{count} hits remaining',{count:hp}));
+}
+function updateUI(){
+ const scene=state!=='menu'&&phase==='cruise'?mainScenery(journeyScenery(AU+travel,W,H)):null;
+ const stage=scene?.stage==='departure'?'MOVING AWAY':scene?.stage==='encounter'?'ENCOUNTER':scene?.progress<.25?'IN THE DISTANCE':'APPROACHING';
+ $('sectorLabel').textContent=state==='menu'?t('EARTH · WHERE IT ALL BEGINS'):phase==='launch'?t('EARTH · LAUNCH SEQUENCE'):phase==='separate'?t('LEAVING EARTH · RELEASING VOYAGER 1'):scene?t(scene.name).toLocaleUpperCase(numberLocale())+' · '+t(stage):t('INTERSTELLAR SPACE · THE ADVENTURE CONTINUES');
+ $('distance').textContent=fmt(travel);$('flightTime').textContent=time(elapsed);
+ $('shieldHud').hidden=shield<=0;$('shieldTime').textContent=Math.ceil(shield)+' s';
+ $('launchCaption').hidden=state==='menu'||phase==='cruise';
+ if(phase==='launch')$('launchCaption').textContent=t(phaseTime>2.5?'Liftoff! Earth is getting smaller and smaller…':'September 5, 1977 · Cape Canaveral');
+ else if(phase==='separate')$('launchCaption').textContent=t('Separation sequence · compressed for the game');
+ const status=state==='menu'?'Ready to explore':state==='over'?'Signal lost':phase==='launch'?'Titan IIIE-Centaur · liftoff':phase==='separate'?'Releasing Voyager 1':'Exploring the universe';
+ $('flightStatus').innerHTML=`<i${state==='over'?' style="background:#d49d8b"':''}></i> ${t(status)}`;
+ $('canvasTip').textContent=t(state==='menu'?'A journey inspired by a true story':'Three hits. Endless curiosity.');
+ if(state==='over')$('finalStats').textContent=t('You traveled {distance} km in {time}. Your memories are safe in the album. Return to Earth and begin a new mission.',{distance:fmt(travel),time:time(elapsed)});
+ const soundLabel=t(sound?'Mute sound':'Enable sound'),pauseLabel=t(state==='paused'?'Continue game':'Pause game');
+ $('soundBtn').setAttribute('aria-label',soundLabel);$('soundBtn').title=soundLabel;
+ $('pauseBtn').setAttribute('aria-label',pauseLabel);$('pauseBtn').title=pauseLabel;
+}
+function notify(title,text,kicker='SOMETHING NEW ON THE WAY',id=null){noticeQueue.push({title,text,kicker,id});if(!currentDiscovery)showNotice();}
+function renderNotice(){
+ if(!currentDiscovery)return;
+ const n=currentDiscovery;
+ $('discoveryTitle').textContent=t(n.title);$('discoveryText').textContent=t(n.text);$('discoveryKicker').textContent=t(n.kicker);
+ $('announcement').textContent=t(n.title)+'. '+t(n.text);
+}
+function showNotice(){const n=noticeQueue.shift();if(!n){currentDiscovery=null;$('discovery').hidden=true;return;}currentDiscovery=n;$('discovery').hidden=false;discoveryLeft=9;renderNotice();}
+function fact(type){if(!seen.has(type)&&FACTS[type]){seen.add(type);const f=FACTS[type];notify(f.title,f.text);}}
+function capture(d){MouseMission.record(d.id);passed.add(d.id);if(!album[d.id]){album[d.id]={date:new Date().toISOString(),travel:Math.round(travel)};writeSave(null);}flash=1;beep(700,.1);notify(d.name,d.fact,d.kind==='photo'?'MEMORY SAVED · ILLUSTRATED IMAGE':'MEMORY SAVED · ARTIST\'S IMPRESSION',d.id);updateUI();saveRun();}
+
+function beep(freq=480,duration=.1,kind='sine'){if(!sound||!audio)return;try{const o=audio.createOscillator(),g=audio.createGain();o.type=kind;o.frequency.setValueAtTime(freq,audio.currentTime);g.gain.setValueAtTime(.045,audio.currentTime);g.gain.exponentialRampToValueAtTime(.001,audio.currentTime+duration);o.connect(g);g.connect(audio.destination);o.start();o.stop(audio.currentTime+duration);}catch{}}
+function toggleSound(){sound=!sound;if(sound){try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();audio.resume();}catch{sound=false;}}$('soundBtn').querySelector('.mute-slash').hidden=sound;updateUI();beep();}
+function start(resume=false){
+ keys.clear();pointer=null;objects=[];particles=[];noticeQueue=[];currentDiscovery=null;$('discovery').hidden=true;$('welcome').hidden=true;$('gameOver').hidden=true;$('pauseOverlay').hidden=true;$('pauseBtn').disabled=false;state='playing';spawnIn=2.5;flash=0;saveIn=0;runAwarded=false;
+ if(resume&&storedRun){const r=storedRun;runAwarded=Boolean(r.bestPilotAwarded);phase='cruise';phaseTime=0;travel=r.travel;elapsed=Number.isFinite(r.elapsed)?r.elapsed:travel/SPEED;hp=r.hp;shield=Math.max(0,Math.min(10,r.shield||0));shieldIndex=Math.max(Math.floor(travel/SHIELD_EVERY)+1,r.shieldIndex||1);passed=new Set(DESTINATIONS.filter(d=>d.km<=AU+travel).map(d=>d.id));seen=new Set(Array.isArray(r.seen)?r.seen:[]);player={x:clamp((r.player?.x||.2)*W,35,W-35),y:clamp((r.player?.y||.5)*H,65,H-45)};invulnerable=2.5;notify('Back among the stars','Your flight continues where you left off. You have a few seconds to find your bearings.','TRANSMISSION RESTORED');}
+ else{clearRun();phase='launch';phaseTime=0;travel=0;elapsed=0;hp=3;shield=0;shieldIndex=1;invulnerable=0;passed=new Set(['earth']);seen=new Set();player={x:W*.2,y:H*.5};beep(160,.7,'triangle');}
+ updateHearts();updateUI();canvas.focus({preventScroll:true});
+}
+function pause(auto=false){if(state!=='playing')return;state='paused';keys.clear();pointer=null;$('pauseOverlay').hidden=false;updateUI();saveRun();if(!auto)$('continueBtn').focus({preventScroll:true});}
+function resume(){if(state!=='paused')return;state='playing';$('pauseOverlay').hidden=true;updateUI();canvas.focus({preventScroll:true});}
+function gameOver(){state='over';shield=0;clearRun();$('pauseBtn').disabled=true;$('gameOver').hidden=false;$('announcement').textContent=t('Three hits. Mission over. You can launch again.');$('retryBtn').focus({preventScroll:true});updateUI();beep(120,.6,'triangle');}
+
+function burst(x,y,color='#d8bc8d'){for(let i=0;i<14;i++){const max=rnd(.3,.8);particles.push({x,y,vx:rnd(-90,90),vy:rnd(-90,90),r:rnd(1.5,3.5),life:max,max,color});}}
+function collide(o){if(invulnerable>0)return;if(shield>0){shield=0;invulnerable=.8;burst(o.x,o.y,'#bae9c4');notify('Shield depleted','The shield absorbed the impact. Your probe is still intact.','PROTECTION USED');beep(260,.2);return;}hp--;invulnerable=2;burst(player.x,player.y);updateHearts();beep(170,.15,'triangle');if(hp<=0)gameOver();else notify(hp===2?'Careful, explorer':'You can still go farther',hp===2?'You have been hit. Two hits remain. Stay away from obstacles.':'One hit remains. Find the next green shield and protect your mission.','IMPACT DETECTED');}
+function spawnObstacle(){const difficulty=Math.log1p(travel/2e8);let pool=travel<1.7e8?['rock','rock','junk']:travel<8e8?['rock','rock','rock','comet']:['rock','rock','ice','comet'];const type=pool[Math.floor(rnd(0,pool.length))],r=rnd(12,24)+Math.min(difficulty,5);objects.push({type,x:W+50,y:rnd(76,H-55),r,seed:rnd(2,10),angle:rnd(-3,3),spin:rnd(-.55,.55),vx:(85+Math.min(difficulty*30,190)+rnd(0,35))*(W<500?.75:1),vy:rnd(-12,12)});fact(type);}
+function spawnShield(){objects.push({type:'shield',x:W+32,y:rnd(90,H-80),r:22,vx:W<500?62:90,vy:0,angle:0,spin:0});fact('shield');}
+function update(dt){
+ if(state!=='playing')return;
+ if(discoveryLeft>0){discoveryLeft-=dt;if(discoveryLeft<=0)showNotice();}
+ flash=Math.max(0,flash-dt*2);invulnerable=Math.max(0,invulnerable-dt);shield=Math.max(0,shield-dt);
+ if(phase==='launch'){phaseTime+=dt;if(phaseTime>=6.5){phase='separate';phaseTime=0;}return;}
+ if(phase==='separate'){phaseTime+=dt;if(phaseTime>=3){phase='cruise';phaseTime=0;player={x:W*.22,y:H*.5};capture(DESTINATIONS[0]);notify('You set the course now','Move the probe with arrows, WASD or by dragging. Avoid obstacles and protect your three hits.','VOYAGER 1 · PROBE RELEASED');}return;}
+ travel+=SPEED*dt;elapsed+=dt;
+ const dist=AU+travel;for(const d of DESTINATIONS)if(dist>=d.km&&!passed.has(d.id))capture(d);
+ if(travel>=LIGHT_DAY&&!runAwarded){unlockBestPilot();return;}
+ if(travel>=shieldIndex*SHIELD_EVERY){spawnShield();shieldIndex++;}
+ if(elapsed>45)fact('nebula');if(elapsed>155)fact('galaxy');if(elapsed>280)fact('system');
+ let dx=(keys.has('ArrowRight')||keys.has('d')?1:0)-(keys.has('ArrowLeft')||keys.has('a')?1:0),dy=(keys.has('ArrowDown')||keys.has('s')?1:0)-(keys.has('ArrowUp')||keys.has('w')?1:0);const mag=Math.hypot(dx,dy);if(mag){player.x+=dx/mag*270*dt;player.y+=dy/mag*270*dt;}
+ if(pointer){const dx=pointer.x-player.x,dy=pointer.y-player.y,dist=Math.hypot(dx,dy),max=450*dt;if(dist>0){player.x+=dx/dist*Math.min(dist,max);player.y+=dy/dist*Math.min(dist,max);}}
+ player.x=clamp(player.x,35,W-35);player.y=clamp(player.y,68,H-48);
+ spawnIn-=dt;if(spawnIn<=0){spawnObstacle();spawnIn=Math.max(.4,1.65/(1+Math.log1p(travel/2e8)*.3))+rnd(0,.25);}
+ for(const o of objects){o.oldX=o.x;o.oldY=o.y;o.x-=o.vx*dt;o.y+=o.vy*dt;o.angle+=o.spin*dt;const radius=o.r+(W<500?12:16);if(Math.hypot(o.x-player.x,o.y-player.y)<radius){if(o.type==='shield'){shield=10;burst(o.x,o.y,'#b7e8c0');o.remove=true;beep(880,.16);notify('A little energy embrace','Shield active: you have 10 seconds of protection. One impact will break it.','SHIELD COLLECTED');}else if(invulnerable<=0){o.remove=true;collide(o);if(state==='over')break;}}}
+ objects=objects.filter(o=>!o.remove&&o.x>-160&&o.y>-80&&o.y<H+80);for(const p of particles){p.x+=p.vx*dt;p.y+=p.vy*dt;p.life-=dt;}particles=particles.filter(p=>p.life>0);
+ saveIn+=dt;if(saveIn>=4){saveIn=0;saveRun();}
+}
+function loop(now){const dt=last?Math.min((now-last)/1000,.05):0;last=now;if(state!=='paused'&&!$('infoDialog').open){ambient+=dt;update(dt);}drawScene();uiIn+=dt;if(uiIn>.12){uiIn=0;updateUI();}requestAnimationFrame(loop);}
+function unlockBestPilot(){
+ runAwarded=true;
+ if(!awards.bestPilot)awards.bestPilot={date:new Date().toISOString(),distance:travel};
+ saveRun();updateUI();flash=.7;beep(880,.3);
+ $('announcement').textContent=t('Best pilot award! You have traveled beyond one light-day.');
+ openDialog('award');
+}
+function awardHTML(){return `<div class="award-content">
+ <div class="award-medallion"><svg aria-hidden="true"><use href="#i-trophy"/></svg></div>
+ <p class="eyebrow">${t('INTERSTELLAR DISTINCTION')}</p><h2>${t('The best pilot!')}</h2>
+ <p class="award-message">${t('From a tiny blue planet to one light-day of simulated progress. You earned the best pilot award in this game!')}</p>
+ <div class="award-distance"><strong>${t('1 light-day of adventure')}</strong><small>${t('{distance} km traveled in a single flight',{distance:fmt(LIGHT_DAY)})}</small></div>
+ <p class="award-note">${t('One light-day is 25,902,068,371.2 km: the distance light travels in 24 hours. This award counts simulated progress since launch. It is not a real-time position or a NASA pilot award.')}</p>
+ <p class="award-keepsake">${t('Your award is saved in this browser, even if you start over.')}</p>
+ <button class="primary" id="awardContinue">${t(state==='menu'||state==='over'?'Keep this memory':'Continue my journey')} <svg><use href="#i-arrow"/></svg></button>
+ <p class="award-footer">${t('Exploration continues. There is always one more star.')}</p></div>`;}
+function missionHistoryHTML(){return `<div class="mission-history">
+ <h2>${t('The real story of Voyager 1.')}</h2>
+ <canvas id="missionHistoryCanvas" width="680" height="160" aria-hidden="true"></canvas>
+ <section class="history-stop"><span class="history-year">1977</span><div><h3>${t('A launch from Earth')}</h3><p>${t('On September 5, 1977, NASA launched Voyager 1 from Florida aboard a Titan IIIE-Centaur rocket. Its mission was to study Jupiter and Saturn up close.')}</p></div></section>
+ <section class="history-stop"><span class="history-year">1979–1980</span><div><h3>${t('Encounters with two giants')}</h3><p>${t('After crossing the asteroid belt, it flew past Jupiter in 1979 and Saturn in 1980. Its images revealed new details of their moons and rings.')}</p></div></section>
+ <section class="history-stop"><span class="history-year">2012</span><div><h3>${t('Into interstellar space')}</h3><p>${t('On August 25, 2012, Voyager 1 crossed the heliopause, the edge of the bubble of particles flowing from the Sun. It was the first spacecraft to enter interstellar space.')}</p></div></section>
+ <p class="history-footnote">${t('Interstellar space is the region between stars. Voyager 1 is still within our galaxy, the Milky Way.')}</p>
+ <p class="history-footnote">${t("Simulation, not a live mission: travel is accelerated; obstacles and shields are fictional. All pictures are illustrations. The real cameras were switched off in 1990.")}</p>
+ <div class="history-player"><b>${t('Your turn to explore')}</b><p>${t('You guide an illustrated Voyager 1 through the real milestones of its mission. Obstacles, shields and accelerated travel are game adaptations.')}</p></div>
+ </div>`;}
+function drawMissionHistory(){
+ const c=$('missionHistoryCanvas').getContext('2d');c.clearRect(0,0,680,160);
+ c.save();c.setLineDash([3,8]);c.beginPath();c.moveTo(78,66);c.bezierCurveTo(220,45,400,85,587,65);c.strokeStyle='#7fa69466';c.lineWidth=1.1;c.stroke();c.restore();
+ planet(c,78,65,24,'earth');planet(c,238,65,27,'jupiter');planet(c,400,65,23,'saturn',-.1);
+ for(let i=0;i<3;i++)ellipse(c,591,65,26+i*5,49+i*2,null,'#a8d9bd44',1);
+ probe(c,586,70,.35,-.18);star(c,144,39,4,'#d8ca9c');star(c,320,32,4,'#d8ca9c');star(c,495,36,4,'#d8ca9c');
+ c.textAlign='center';c.fillStyle='#bfd2c5';c.font='10px sans-serif';
+ for(const [x,name,year] of [[78,'Earth','1977'],[238,'Jupiter','1979'],[400,'Saturn','1980'],[590,'Heliopause','2012']]){c.fillText(t(name),x,125);c.fillStyle='#8ca698';c.font='9px sans-serif';c.fillText(year,x,143);c.fillStyle='#bfd2c5';c.font='10px sans-serif';}
+}
+
+function missionHTML(){return `${missionHistoryHTML()}
+ <details class="mission-instructions"><summary>${t('How to play and the game scale')}</summary>
+ <div class="mission-grid">
+ <div class="explain-card"><span>↗</span><h3>${t('First, the launch')}</h3><p>${t('A Titan IIIE-Centaur leaves Earth. At the end of the launch sequence, it releases Voyager 1 and your flight begins.')}</p></div>
+ <div class="explain-card"><span>♡</span><h3>${t('Three hits, one mission')}</h3><p>${t('Move with the arrow keys, WASD or by dragging. After the third hit, start over from Earth. More obstacles arrive as you advance, and they move faster.')}</p></div>
+ <div class="explain-card"><span>♧</span><h3>${t('Catch a shield')}</h3><p>${t('One appears every 100 million kilometers traveled. You must collect it. It lasts 10 seconds or until it absorbs one impact.')}</p></div>
+ <div class="explain-card"><span>▣</span><h3>${t('Collect discoveries')}</h3><p>${t('At each destination, an illustrated image is saved automatically. Short messages explain what you are seeing.')}</p></div></div>
+ <div class="science-note"><p><b>${t('A game inspired by science.')}</b> ${t('The simulation advances {speed} km per active second. This is accelerated game progress, faster than light, not a physical spacecraft speed. Voyager 1 actually travels at about 17 km/s relative to the Sun. Launch and separation are compressed into an animation.',{speed:SPEED.toLocaleString(numberLocale(),{minimumFractionDigits:2,maximumFractionDigits:2})})}</p>
+ <p>${t('The counter measures game progress from an initial position of 1 AU, about 149.6 million kilometers from the Sun. Milestones use distances from the Sun, not the cumulative length of the real trajectory. The game simplifies the route into outward travel.')}</p>
+ <p>${t('Abundant obstacles are a game adaptation. Nebulae, galaxies and other systems appear as distant scenery; Voyager 1 has not visited them. Its real cameras were switched off in 1990, so the heliopause memory is an artist\'s impression.')}</p></div>
+ </details>
+ <p class="sources">${t('Sources:')} <a href="https://science.nasa.gov/mission/voyager/voyager-1/" target="_blank" rel="noopener">NASA · Voyager 1</a> · <a href="https://science.nasa.gov/mission/voyager/frequently-asked-questions/" target="_blank" rel="noopener">${t('NASA · Cameras and mission')}</a> · <a href="https://ssd.jpl.nasa.gov/horizons/" target="_blank" rel="noopener">${t('JPL Horizons · Distances')}</a></p>
+ <details class="project-extras"><summary>${t("Extras \u00b7 AI use and scientific accuracy")}</summary><p>${t("Created with OpenAI ChatGPT/Codex assistance for code, procedural drawings, animation, interface design, educational wording, translations and documentation. The project creator supplied the concept, mechanics and revisions. These illustrations are drawn by AI-assisted code; they are not NASA photographs.")}</p><p>${t("Sound effects are synthesized by game code written with AI assistance. NASA/JPL supply the historical references and numerical source data; AI is not a scientific source.")}</p><p>${t("For Space Apps: include this disclosure in the project submission AI/tools field and final report too. The in-game notice does not submit it for you.")}</p><p><a href="https://voyager-1-viaje-estelar-h7m4.splendidspoonbill3.chatgpt.site/legal/AI_USE.md" target="_blank" rel="noopener">${t("Full AI disclosure and report text")}</a> · <a href="https://voyager-1-viaje-estelar-h7m4.splendidspoonbill3.chatgpt.site/legal/SCIENCE_REVIEW.md" target="_blank" rel="noopener">${t("Scientific review and simulation limits")}</a></p></details>
+ <p class="sources"><a href="https://voyager-1-viaje-estelar-h7m4.splendidspoonbill3.chatgpt.site/legal/" target="_blank" rel="noopener">${t('Source code, licenses and references ↗')}</a></p>
+ <button class="primary" id="dialogStart">${t(state==='menu'||state==='over'?'Ready for liftoff!':'Back to my journey')} <svg><use href="#i-arrow"/></svg></button>`;}
+function routeHTML(highlight){return `<h2>${t('The path of Voyager 1')}</h2><p>${t('Four discoveries, in the same order as the real mission. Each landscape appears in the distance, grows as you approach and shrinks as you leave it behind. The flight counter preserves your chosen distance scale.')}</p>
+ <table class="route-table"><thead><tr><th>${t('DESTINATION')}</th><th>${t('DISTANCE FROM THE SUN')}</th><th>${t('HISTORICAL DATE')}</th></tr></thead><tbody>${DESTINATIONS.map(d=>`<tr ${highlight===d.id?'style="background:#b8e4b910"':''}><td>${d.symbol} ${t(d.name)}</td><td>≈ ${compact(d.km)} km</td><td>${dateLabel(d)}</td></tr>`).join('')}</tbody></table>
+ ${highlight?`<div class="science-note"><p>${t(DESTINATIONS.find(d=>d.id===highlight).fact)}</p></div>`:''}
+ <div class="science-note"><p>${t('NASA dates the belt crossing from December 10, 1977 to September 8, 1978. The game uses Horizons distance samples on those dates. These are broader crossing markers, not fixed edges of the main belt. Flyby samples use the reported encounter times in UTC; the heliopause sample uses midnight on August 25, 2012. These are approximate model distances, not exact event measurements.')}</p>
+ <p>${t('Each active flight second adds exactly {speed} km. Approximate arrival times are: asteroid belt {belt}, Jupiter {jupiter}, Saturn {saturn}, heliopause {heliopause}. The best pilot award requires {distance} km traveled, approximately {awardTime} of active flight. You can pause and continue your saved flight in this browser.',{speed:SPEED.toLocaleString(numberLocale(),{minimumFractionDigits:2,maximumFractionDigits:2}),belt:time((DESTINATIONS[1].km-AU)/SPEED),jupiter:time((DESTINATIONS[2].km-AU)/SPEED),saturn:time((DESTINATIONS[3].km-AU)/SPEED),heliopause:time((DESTINATIONS[4].km-AU)/SPEED),distance:fmt(LIGHT_DAY),awardTime:time(LIGHT_DAY/SPEED)})}</p>
+ <p>${t('Progress is a radial simplification, not a reconstruction of the real trajectory. Crossing the heliopause does not mean leaving the Milky Way or all of the Sun\'s gravitational influence.')}</p></div>
+ <p class="sources">${t('Sources:')} <a href="https://www.nasa.gov/history/40-years-ago-voyager-1-explores-saturn/" target="_blank" rel="noopener">${t('NASA · Timeline')}</a> · <a href="https://science.nasa.gov/mission/dawn/faq/" target="_blank" rel="noopener">${t('NASA · Asteroid belt')}</a> · <a href="https://ssd.jpl.nasa.gov/horizons/" target="_blank" rel="noopener">JPL Horizons</a></p>`;}
+function albumHTML(){return `<h2>${t('Small memories.')}<br>${t('An immense journey.')}</h2><p>${t('Your collection is saved in this browser, even if the mission ends. Every image is a game illustration. Jupiter and Saturn evoke real observations; the asteroid belt and heliopause are artistic recreations.')}</p>
+ <div class="album-grid">${DESTINATIONS.map(d=>album[d.id]?`<article class="photo"><canvas width="480" height="300" data-photo="${d.id}" aria-label="${t('Illustrated memory of {destination}',{destination:t(d.name)})}"></canvas><h3>${t(d.name)}</h3><p>${t(d.fact)}</p><div class="photo-actions"><small>${dateLabel(d)} · ${t(d.kind==='photo'?'Illustrated image':'Artist\'s impression')}</small><button data-download="${d.id}">${t('Save image ↓')}</button></div></article>`:`<article class="photo locked"><span>${d.symbol}</span><h3>${t(d.short)}</h3><p>${t('A memory waiting to be discovered')}</p><small>${t('{distance} km from the Sun',{distance:compact(d.km)})}</small></article>`).join('')}</div>
+ <p class="empty-note">${t(Object.keys(album).length?'Keep exploring. There are still stories among the stars.':'Your first image awaits when the probe separates from its rocket.')}</p>`;}
+function renderDialog(){
+ const labels={mission:'BEFORE GOING FARTHER',route:'HISTORICAL ROUTE · 1977–2012',album:'MISSION ALBUM',award:'ONE LIGHT-DAY · BEST PILOT AWARD'};
+ $('dialogEyebrow').textContent=t(labels[activeDialog]);
+ const scrollTop=$('infoDialog').scrollTop;
+ $('dialogContent').innerHTML=activeDialog==='mission'?missionHTML():activeDialog==='route'?routeHTML(dialogHighlight):activeDialog==='award'?awardHTML():albumHTML();
+ if(activeDialog==='mission')drawMissionHistory();
+ if(activeDialog==='album')document.querySelectorAll('[data-photo]').forEach(c=>makePhoto(c.dataset.photo,c));
+ $('infoDialog').scrollTop=scrollTop;
+}
+function openDialog(type,highlight){
+ if(state==='playing'){pause(true);modalPaused=true;}else modalPaused=false;
+ activeDialog=type;dialogHighlight=highlight;renderDialog();$('infoDialog').showModal();
+}
+function closeDialog(){$('infoDialog').close();activeDialog=null;if(modalPaused){modalPaused=false;resume();}}
+
+$('closeDialog').addEventListener('click',closeDialog);$('infoDialog').addEventListener('cancel',e=>{e.preventDefault();closeDialog();});$('infoDialog').addEventListener('click',e=>{if(e.target===$('infoDialog')){const r=$('infoDialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closeDialog();}});
+document.addEventListener('click',e=>{if(e.target.closest('#awardContinue')){closeDialog();return;}const dialog=e.target.closest('[data-dialog]');if(dialog)openDialog(dialog.dataset.dialog);const stop=e.target.closest('[data-stop]');if(stop)openDialog('route',stop.dataset.stop);if(e.target.closest('#dialogStart')){closeDialog();if(state==='menu'||state==='over')start();}const dl=e.target.closest('[data-download]');if(dl){const c=document.createElement('canvas');c.width=960;c.height=600;makePhoto(dl.dataset.download,c);const a=document.createElement('a');a.download='Voyager-1-'+dl.dataset.download+'.png';a.href=c.toDataURL('image/png');a.click();}});
+$('startBtn').addEventListener('click',()=>openDialog('mission'));$('resumeBtn').addEventListener('click',()=>start(true));$('retryBtn').addEventListener('click',()=>start());$('continueBtn').addEventListener('click',resume);$('restartPause').addEventListener('click',()=>start());$('pauseBtn').addEventListener('click',()=>state==='paused'?resume():pause());$('soundBtn').addEventListener('click',toggleSound);$('closeDiscovery').addEventListener('click',showNotice);
+const moveKeys=new Set(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d']);
+document.addEventListener('keydown',e=>{if($('infoDialog').open||e.target?.closest?.('select,input,textarea'))return;const k=e.key.length===1?e.key.toLowerCase():e.key;if(moveKeys.has(k)&&(state==='playing'||state==='paused')){e.preventDefault();keys.add(k);}if((k==='p'||k==='Escape')&&!e.repeat){if(state==='playing'){e.preventDefault();pause();}else if(state==='paused'){e.preventDefault();resume();}}});
+document.addEventListener('keyup',e=>keys.delete(e.key.length===1?e.key.toLowerCase():e.key));
+canvas.addEventListener('pointerdown',e=>{if(state!=='playing'||phase!=='cruise')return;canvas.setPointerCapture(e.pointerId);const r=canvas.getBoundingClientRect();pointer={x:e.clientX-r.left,y:e.clientY-r.top};});canvas.addEventListener('pointermove',e=>{if(!pointer)return;const r=canvas.getBoundingClientRect();pointer={x:e.clientX-r.left,y:e.clientY-r.top};});for(const name of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(name,()=>pointer=null);
+window.addEventListener('blur',()=>{keys.clear();pointer=null;if(state==='playing')pause(true);});document.addEventListener('visibilitychange',()=>{if(document.hidden&&state==='playing')pause(true);});window.addEventListener('pagehide',()=>{if(phase==='cruise'&&(state==='playing'||state==='paused'))saveRun();});
+
+document.querySelectorAll('[data-language-select]').forEach(select=>select.addEventListener('change',event=>globalThis.VoyagerI18n.setLanguage(event.target.value)));
+document.addEventListener('voyager:languagechange',()=>{
+ keys.clear();pointer=null;updateHearts();updateUI();
+ if($('infoDialog').open&&activeDialog)renderDialog();
+ if($('infoDialog').open&&activeDialog==='award')$('announcement').textContent=t('Best pilot award! You have traveled beyond one light-day.');
+ else if(state==='over')$('announcement').textContent=t('Three hits. Mission over. You can launch again.');
+ else renderNotice();
+ drawScene();
+});
+$('pauseBtn').disabled=true;$('resumeWrap').hidden=!storedRun;updateHearts();updateUI();requestAnimationFrame(loop);
+})();
+
+</script>
+<script type="application/json" id="license-notices">{"LICENSE": "MIT License\n\nCopyright (c) 2026 Project contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n", "THIRD_PARTY_NOTICES": "# Third-party notices and license scope\n\nProject: Voyager 1 · A little grand adventure\n\n## Original project materials\n\nSPDX license identifier: MIT. The root `LICENSE` applies to the project-specific source code, procedural Canvas drawing code, original SVG icons, translations and accompanying original documentation, to the extent that the project contributors hold rights in those materials. Referenced facts and external resources are not claimed as the contributors' exclusive property.\n\nThe grant does not relicense third-party fonts, NASA materials, trademarks, external websites, hosting services or development tools. Their own terms remain applicable. No NASA sponsorship, partnership or endorsement is claimed.\n\n## Fonts used by both games\n\nThe stylesheet imports DM Sans and Space Grotesk from Google Fonts. The games do not bundle local font binaries. The following complete license notices are included for attribution and for anyone adapting or redistributing the project:\n\n### DM Sans\n\n- Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts)\n- License: SIL Open Font License 1.1 (SPDX: OFL-1.1).\n- Complete preserved notice: `licenses/DM-Sans-OFL.txt` (also published at `legal/DM-Sans-OFL.txt`).\n- Upstream license: https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt\n- Retrieved license SHA-256: `9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1`.\n\n### Space Grotesk\n\n- Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)\n- License: SIL Open Font License 1.1 (SPDX: OFL-1.1).\n- Complete preserved notice: `licenses/Space-Grotesk-OFL.txt` (also published at `legal/Space-Grotesk-OFL.txt`).\n- Upstream license: https://raw.githubusercontent.com/google/fonts/main/ofl/spacegrotesk/OFL.txt\n- Retrieved license SHA-256: `564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72`.\n\nThe OFL permits use and embedding under its conditions. Redistributed font software must keep the applicable copyright and license notices; it must not be sold on its own. Any reserved-font-name restrictions remain applicable. The MIT license of this project does not replace either font's OFL license.\n\nGoogle Fonts documentation: https://developers.google.com/fonts/faq\n\nCSS fallback font names refer to fonts supplied by the user's platform; the source package does not redistribute those font files.\n\n## Scientific references and NASA identifiers\n\nHistorical facts, mission dates, scientific explanations and source links are documented in `SOURCES.md`. Source text in the games summarizes mission information; it does not embed the cited websites or their photographs. The games use project-specific Canvas/SVG illustrations, not downloaded NASA photos, official logos, sprite packs or third-party sound recordings.\n\nNASA's media and brand rules remain separate from this project's MIT license:\nhttps://www.nasa.gov/nasa-brand-center/images-and-media/\n\nA citation is not a claim that every item on a cited website is unrestricted or that its trademarks may be reused. Third-party content appearing on an external NASA page may have its own owner. No such external image files are included in these games.\n\n## Verification tools (not part of the distributed game)\n\n- LinkeDOM 0.18.15 — ISC; used for DOM interaction checks. https://github.com/WebReflection/linkedom\n- @napi-rs/canvas 0.1.100 — MIT; used to render and inspect Canvas artwork during verification. https://github.com/Brooooooklyn/canvas\n\nThese tools were installed in a separate development workspace. Their packages and binaries are not included in the downloadable game source or the deployed application. The application has no bundled third-party JavaScript runtime libraries.\n\n## Distribution\n\nA complete public source snapshot is available at `source.zip`, including the original source files, README, MIT license, scientific references and preserved font notices. It excludes Git history, credentials, browser saves, private hosting configuration and the source ZIP itself. Serve its `dist/` directory over HTTP to run the game.\n\nPublic access and open-source licensing are different: the MIT license and downloadable source provide explicit reuse terms for the original project materials. This documentation does not itself submit the project to Space Apps or certify compliance with every competition rule.\n", "DM_SANS_OFL": "Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts)\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license is copied below, and is also available with a FAQ at:\nhttps://scripts.sil.org/OFL\n\n\n-----------------------------------------------------------\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\n-----------------------------------------------------------\n\nPREAMBLE\nThe goals of the Open Font License (OFL) are to stimulate worldwide\ndevelopment of collaborative font projects, to support the font creation\nefforts of academic and linguistic communities, and to provide a free and\nopen framework in which fonts may be shared and improved in partnership\nwith others.\n\nThe OFL allows the licensed fonts to be used, studied, modified and\nredistributed freely as long as they are not sold by themselves. The\nfonts, including any derivative works, can be bundled, embedded, \nredistributed and/or sold with any software provided that any reserved\nnames are not used by derivative works. The fonts and derivatives,\nhowever, cannot be released under any other type of license. The\nrequirement for fonts to remain under this license does not apply\nto any document created using the fonts or their derivatives.\n\nDEFINITIONS\n\"Font Software\" refers to the set of files released by the Copyright\nHolder(s) under this license and clearly marked as such. This may\ninclude source files, build scripts and documentation.\n\n\"Reserved Font Name\" refers to any names specified as such after the\ncopyright statement(s).\n\n\"Original Version\" refers to the collection of Font Software components as\ndistributed by the Copyright Holder(s).\n\n\"Modified Version\" refers to any derivative made by adding to, deleting,\nor substituting -- in part or in whole -- any of the components of the\nOriginal Version, by changing formats or by porting the Font Software to a\nnew environment.\n\n\"Author\" refers to any designer, engineer, programmer, technical\nwriter or other person who contributed to the Font Software.\n\nPERMISSION & CONDITIONS\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Font Software, to use, study, copy, merge, embed, modify,\nredistribute, and sell modified and unmodified copies of the Font\nSoftware, subject to the following conditions:\n\n1) Neither the Font Software nor any of its individual components,\nin Original or Modified Versions, may be sold by itself.\n\n2) Original or Modified Versions of the Font Software may be bundled,\nredistributed and/or sold with any software, provided that each copy\ncontains the above copyright notice and this license. These can be\nincluded either as stand-alone text files, human-readable headers or\nin the appropriate machine-readable metadata fields within text or\nbinary files as long as those fields can be easily viewed by the user.\n\n3) No Modified Version of the Font Software may use the Reserved Font\nName(s) unless explicit written permission is granted by the corresponding\nCopyright Holder. This restriction only applies to the primary font name as\npresented to the users.\n\n4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font\nSoftware shall not be used to promote, endorse or advertise any\nModified Version, except to acknowledge the contribution(s) of the\nCopyright Holder(s) and the Author(s) or with their explicit written\npermission.\n\n5) The Font Software, modified or unmodified, in part or in whole,\nmust be distributed entirely under this license, and must not be\ndistributed under any other license. The requirement for fonts to\nremain under this license does not apply to any document created\nusing the Font Software.\n\nTERMINATION\nThis license becomes null and void if any of the above conditions are\nnot met.\n\nDISCLAIMER\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\nOF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nINCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL\nDAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM\nOTHER DEALINGS IN THE FONT SOFTWARE.\n", "SPACE_GROTESK_OFL": "Copyright 2020 The Space Grotesk Project Authors (https://github.com/floriankarsten/space-grotesk)\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license is copied below, and is also available with a FAQ at:\nhttp://scripts.sil.org/OFL\n\n\n-----------------------------------------------------------\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\n-----------------------------------------------------------\n\nPREAMBLE\nThe goals of the Open Font License (OFL) are to stimulate worldwide\ndevelopment of collaborative font projects, to support the font creation\nefforts of academic and linguistic communities, and to provide a free and\nopen framework in which fonts may be shared and improved in partnership\nwith others.\n\nThe OFL allows the licensed fonts to be used, studied, modified and\nredistributed freely as long as they are not sold by themselves. The\nfonts, including any derivative works, can be bundled, embedded, \nredistributed and/or sold with any software provided that any reserved\nnames are not used by derivative works. The fonts and derivatives,\nhowever, cannot be released under any other type of license. The\nrequirement for fonts to remain under this license does not apply\nto any document created using the fonts or their derivatives.\n\nDEFINITIONS\n\"Font Software\" refers to the set of files released by the Copyright\nHolder(s) under this license and clearly marked as such. This may\ninclude source files, build scripts and documentation.\n\n\"Reserved Font Name\" refers to any names specified as such after the\ncopyright statement(s).\n\n\"Original Version\" refers to the collection of Font Software components as\ndistributed by the Copyright Holder(s).\n\n\"Modified Version\" refers to any derivative made by adding to, deleting,\nor substituting -- in part or in whole -- any of the components of the\nOriginal Version, by changing formats or by porting the Font Software to a\nnew environment.\n\n\"Author\" refers to any designer, engineer, programmer, technical\nwriter or other person who contributed to the Font Software.\n\nPERMISSION & CONDITIONS\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Font Software, to use, study, copy, merge, embed, modify,\nredistribute, and sell modified and unmodified copies of the Font\nSoftware, subject to the following conditions:\n\n1) Neither the Font Software nor any of its individual components,\nin Original or Modified Versions, may be sold by itself.\n\n2) Original or Modified Versions of the Font Software may be bundled,\nredistributed and/or sold with any software, provided that each copy\ncontains the above copyright notice and this license. These can be\nincluded either as stand-alone text files, human-readable headers or\nin the appropriate machine-readable metadata fields within text or\nbinary files as long as those fields can be easily viewed by the user.\n\n3) No Modified Version of the Font Software may use the Reserved Font\nName(s) unless explicit written permission is granted by the corresponding\nCopyright Holder. This restriction only applies to the primary font name as\npresented to the users.\n\n4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font\nSoftware shall not be used to promote, endorse or advertise any\nModified Version, except to acknowledge the contribution(s) of the\nCopyright Holder(s) and the Author(s) or with their explicit written\npermission.\n\n5) The Font Software, modified or unmodified, in part or in whole,\nmust be distributed entirely under this license, and must not be\ndistributed under any other license. The requirement for fonts to\nremain under this license does not apply to any document created\nusing the Font Software.\n\nTERMINATION\nThis license becomes null and void if any of the above conditions are\nnot met.\n\nDISCLAIMER\nTHE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\nOF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nINCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL\nDAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM\nOTHER DEALINGS IN THE FONT SOFTWARE.\n", "AI_USE": "# AI use disclosure\n\n## Tools and contribution\n\nOpenAI ChatGPT/Codex was used during development to generate and revise substantial portions of the HTML, CSS and JavaScript; procedural illustrations and directional animations; interface layout; synthesized sound-effect code; educational descriptions; English/Spanish localization; documentation; and verification scripts. The project creator supplied the game concept, requested mechanics, artistic direction, feedback and revision decisions. This is an AI-assisted project, not a claim of entirely hand-written code or hand-drawn artwork.\n\nThe visible illustrations are rendered by Canvas/SVG code created with AI assistance. No downloaded NASA photographs, generated-video files or recorded music are bundled. Visible in-game labels identify AI-generated code-drawn artwork, and Voyager's exported memory images include the same label. Audio effects are synthesized at runtime by AI-assisted Web Audio code; no standalone generated audio files are bundled.\n\nNASA/JPL pages and Horizons are the sources of mission history and numerical data. AI helped compile and explain those references; it is not the scientific authority or the origin of the underlying NASA/JPL measurements. See SOURCES.md and SCIENCE_REVIEW.md. Font authors and licenses are listed separately in THIRD_PARTY_NOTICES.md.\n\n## Dates\n\nThe creator reports development on November 14–15, 2026. This is a creator-provided date statement, not an independent certification of the development period or event eligibility. The official 2026 event page lists November 14–15. Code and content continue to receive the revisions documented in source versions.\n\n## Text to reuse in the final report / project submission\n\n> We used OpenAI ChatGPT/Codex to assist with substantial code generation and revision, interface design, procedural artwork, animations, synthesized sound effects, educational text, translations and documentation. The project creator provided the concept, gameplay requirements, artistic direction and iterative feedback. NASA/JPL resources and Horizons provide the cited scientific facts and numerical source data. The games explicitly distinguish historical information from fictional mechanics and accelerated simulation. AI-assisted artwork is labeled. Full sources, licensing, AI-use details and scientific limitations are available through each game's Extras and public documentation.\n\nCopy this disclosure into the official project submission's AI/tools field and relevant final-report section. A notice in the game does not populate or submit the competition form. If the team used additional tools outside this conversation, add them to the disclosure before submission.\n\n## Official guidance checked on November 15, 2026\n\n- Global Organizing Team on AI use, acknowledgments and image labeling: https://github.com/nasa/spaceapps/discussions/1849\n- Global Organizing Team on project submission fields: https://github.com/nasa/spaceapps/discussions/1858\n- Official 2026 event page: https://www.spaceappschallenge.org/2026/\n- Official legal terms: https://www.spaceappschallenge.org/legal/\n\nThis documentation does not certify acceptance or eligibility. The team remains responsible for its submission and the rules of its selected challenge and local event.\n"}</script>
+</body></html>
