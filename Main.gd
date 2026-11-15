@@ -1246,7 +1246,9 @@ func _add_art_disclosure() -> void:
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	layer.add_child(label)
 	label.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
-	label.position = Vector2(8, -24)
+	label.offset_left = 8
+	label.offset_top = -24
+	label.offset_bottom = -4
 	label.add_theme_font_size_override("font_size", 12)
 	label.add_theme_color_override("font_color", Color.WHITE)
 	label.add_theme_color_override("font_shadow_color", Color.BLACK)
